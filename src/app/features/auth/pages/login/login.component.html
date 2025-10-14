@@ -5,6 +5,11 @@
     </mat-card-header>
 
     <mat-card-content>
+      <p class="info-text">
+        Per effettuare l'accesso devi prima generare un token di sessione accedendo con il browser a
+        <a href="https://gorest.co.in/consumer/login" target="_blank" rel="noopener noreferrer">gorest.co.in</a>.
+        Una volta autenticato, copia il Bearer token riportato nella pagina e incollalo qui sotto.
+      </p>
       <mat-form-field appearance="outline">
         <mat-label>Bearer token</mat-label>
         <input matInput [(ngModel)]="token" />

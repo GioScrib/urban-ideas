@@ -57,3 +57,16 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Autenticazione con GoRest
+
+L'applicazione utilizza il token Bearer di [GoRest](https://gorest.co.in/) per autenticare le richieste HTTP verso le REST API.
+Per avviare una sessione valida:
+
+1. Apri il browser e visita la pagina di login consumer di GoRest: <https://gorest.co.in/consumer/login>.
+2. Esegui l'accesso o la registrazione, quindi genera un token personale dalla dashboard.
+3. Copia il token Bearer visualizzato (la stringa lunga che inizia con `ey...`).
+4. Avvia l'app Angular (`ng serve`) e apri `http://localhost:4200`.
+5. Incolla il token nell'apposito campo della schermata di login e premi **Accedi**.
+
+Il token viene salvato in `localStorage` come `auth_token` e viene automaticamente allegato all'header `Authorization` (`Bearer <token>`) di tutte le chiamate HTTP tramite l'interceptor `AuthInterceptor`. Quando il token scade o viene revocato, eliminalo dal `localStorage` e ripeti la procedura per generarne uno nuovo.

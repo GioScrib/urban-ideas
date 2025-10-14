@@ -28,12 +28,21 @@ mat-card-header mat-card-title {
 
 mat-card-content {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  gap: 16px;
 }
 
 mat-card-content mat-form-field {
   width: 90%;
   height: 112px;
+}
+
+.info-text {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 auto;
+  width: 90%;
 }
 
 mat-card-actions {
