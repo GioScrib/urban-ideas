@@ -29,8 +29,18 @@ mat-card-header mat-card-title {
 mat-card-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   gap: 16px;
+}
+
+mat-card-content p {
+  background-color: mistyrose;
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 12px;
+  box-shadow: var(--mdc-elevated-card-container-elevation, 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12));
+
 }
 
 mat-card-content mat-form-field {
@@ -54,5 +64,4 @@ mat-card-actions button {
   height: 60px;
   width: 40%;
   font-size: 22px;
-  //letter-spacing: 3px;
 }
