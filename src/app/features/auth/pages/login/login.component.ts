@@ -33,8 +33,11 @@ export class LoginComponent {
 
   save() {
     if(this.token?.trim()){
+      console.log("Login component dice: " + this.token);
       localStorage.setItem('auth_token', this.token.trim());
       this.router.navigate(['/users']);
+      return;
     }
+    console.log("Login component dice: nessun token fornito");
   }
 }
