@@ -1,0 +1,9 @@
+<app-user-list-header></app-user-list-header>
+
+<mat-grid-list cols="1" rowHeight="2:1">
+  @for (user of users; track user.id) {
+    <mat-grid-tile>
+      <app-user-card [user]="user"></app-user-card>
+    </mat-grid-tile>
+  }
+</mat-grid-list>
