@@ -1,0 +1,20 @@
+mat-accordion {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+}
+
+mat-expansion-panel-header {
+  display: flex;
+  flex-direction: row;
+}
+
+mat-expansion-panel img {
+  margin: 10px;
+  order: 0;
+}
+
+mat-expansion-panel mat-panel-description {
+  margin: 10px;
+  order: 1;
+}
