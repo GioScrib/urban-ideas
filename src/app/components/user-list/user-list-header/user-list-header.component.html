@@ -1,0 +1,53 @@
+<div class="mat-toolbar-container">
+  <mat-toolbar>
+    <div class="left-button-container">
+<!--      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">-->
+<!--        <mat-icon>menu</mat-icon>-->
+<!--      </button>-->
+      <span>My App</span>
+      <span class="example-spacer"></span>
+    </div>
+
+    <div class="right-button-container">
+
+      <div class="search-container">
+        <button mat-icon-button>
+          <mat-icon>search</mat-icon>
+        </button>
+        <input type="text" name="" id="" [(ngModel)]="value">
+      </div>
+
+
+      <button mat-icon-button [matMenuTriggerFor]="elementsMenu" aria-label="Example icon-button with a menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #elementsMenu="matMenu">
+        <button mat-menu-item>
+          <span>10 elementi</span>
+        </button>
+        <button mat-menu-item>
+          <span>20 elementi</span>
+        </button>
+        <button mat-menu-item>
+          <span>30 elementi</span>
+        </button>
+      </mat-menu>
+
+      <button mat-icon-button  [matMenuTriggerFor]="gridMenu" class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>grid_view</mat-icon>
+      </button>
+      <mat-menu #gridMenu="matMenu">
+        <button mat-menu-item>
+          <span>1 col</span>
+        </button>
+        <button mat-menu-item>
+          <span>2 cols</span>
+        </button>
+        <button mat-menu-item>
+          <span>3 cols</span>
+        </button>
+      </mat-menu>
+    </div>
+  </mat-toolbar>
+</div>
+
