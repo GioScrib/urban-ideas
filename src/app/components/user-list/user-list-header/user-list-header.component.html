@@ -1,6 +1,6 @@
 <div class="mat-toolbar-container">
   <mat-toolbar>
-    <div class="left-button-container">
+    <div class="left-container">
 <!--      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">-->
 <!--        <mat-icon>menu</mat-icon>-->
 <!--      </button>-->
@@ -8,7 +8,7 @@
       <span class="example-spacer"></span>
     </div>
 
-    <div class="right-button-container">
+    <div class="right-container">
 
       <div class="search-container">
         <button mat-icon-button>
@@ -17,36 +17,43 @@
         <input type="text" name="" id="" [(ngModel)]="value">
       </div>
 
+      <div class="right-button-container">
+        <button class="new-user-button" mat-fab extended (click)="onClickNewUser()">
+          <mat-icon>add</mat-icon>
+          New user
+        </button>
 
-      <button mat-icon-button [matMenuTriggerFor]="elementsMenu" aria-label="Example icon-button with a menu">
-        <mat-icon>more_vert</mat-icon>
-      </button>
-      <mat-menu #elementsMenu="matMenu">
-        <button mat-menu-item>
-          <span>10 elementi</span>
+        <button class="elements-button" mat-icon-button [matMenuTriggerFor]="elementsMenu" aria-label="Example icon-button with a menu">
+          <mat-icon>more_vert</mat-icon>
         </button>
-        <button mat-menu-item>
-          <span>20 elementi</span>
-        </button>
-        <button mat-menu-item>
-          <span>30 elementi</span>
-        </button>
-      </mat-menu>
+        <mat-menu #elementsMenu="matMenu">
+          <button mat-menu-item>
+            <span>10 elementi</span>
+          </button>
+          <button mat-menu-item>
+            <span>20 elementi</span>
+          </button>
+          <button mat-menu-item>
+            <span>30 elementi</span>
+          </button>
+        </mat-menu>
 
-      <button mat-icon-button  [matMenuTriggerFor]="gridMenu" class="example-icon" aria-label="Example icon-button with share icon">
-        <mat-icon>grid_view</mat-icon>
-      </button>
-      <mat-menu #gridMenu="matMenu">
-        <button mat-menu-item>
-          <span>1 col</span>
+        <button class="grid-button" mat-icon-button  [matMenuTriggerFor]="gridMenu" aria-label="Example icon-button with share icon">
+          <mat-icon>grid_view</mat-icon>
         </button>
-        <button mat-menu-item>
-          <span>2 cols</span>
-        </button>
-        <button mat-menu-item>
-          <span>3 cols</span>
-        </button>
-      </mat-menu>
+        <mat-menu #gridMenu="matMenu">
+          <button mat-menu-item (click)="onClickGridCols(1)">
+            <span>1 col</span>
+          </button>
+          <button mat-menu-item (click)="onClickGridCols(2)">
+            <span>2 cols</span>
+          </button>
+          <button mat-menu-item (click)="onClickGridCols(3)">
+            <span>3 cols</span>
+          </button>
+        </mat-menu>
+      </div>
+
     </div>
   </mat-toolbar>
 </div>

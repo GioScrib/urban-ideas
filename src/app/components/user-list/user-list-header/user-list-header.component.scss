@@ -16,13 +16,13 @@ mat-toolbar {
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
 }
 
-.left-button-container {
+.left-container {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.right-button-container {
+.right-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -41,4 +41,22 @@ input {
   flex-direction: row;
   align-items: center;
   margin-right: 30px;
+}
+
+.new-user-button {
+  height: 100%;
+  background-color: #C6D870 !important;
+  color: #556B2F !important;
+  margin: 0px 5px 0px 5px;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3) !important;
+}
+
+.elements-button {
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+  margin: 0px 5px 0px 5px;
+}
+
+.grid-button {
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+  margin: 0px 5px 0px 5px;
 }

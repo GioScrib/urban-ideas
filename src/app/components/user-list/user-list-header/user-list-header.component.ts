@@ -1,5 +1,5 @@
-import {Component, effect, signal} from '@angular/core';
-import {MatIconButton} from '@angular/material/button';
+import {Component, effect, output, signal} from '@angular/core';
+import {MatFabButton, MatIconButton} from '@angular/material/button';
 import {MatToolbar} from '@angular/material/toolbar';
 import {MatIcon} from '@angular/material/icon';
 import {MatMenu, MatMenuItem, MatMenuTrigger} from '@angular/material/menu';
@@ -16,6 +16,7 @@ import {FormsModule} from '@angular/forms';
     MatMenu,
     MatMenuItem,
     FormsModule,
+    MatFabButton,
   ],
   templateUrl: './user-list-header.component.html',
   styleUrl: './user-list-header.component.scss'
@@ -23,10 +24,22 @@ import {FormsModule} from '@angular/forms';
 export class UserListHeaderComponent {
 
   value = signal<string>('');
+  gridCols = output<number>();
+  newUser = output<void>();
 
   constructor() {
     effect(() => {
       console.log(this.value());
     });
+  }
+
+  onClickGridCols(cols: number) {
+    console.log("user-list-header says grid cols clicked: ", cols);
+    this.gridCols.emit(cols);
+  }
+
+  onClickNewUser(): void {
+    console.log("user-list-header says: new user clicked");
+    this.newUser.emit();
   }
 }
