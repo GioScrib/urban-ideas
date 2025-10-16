@@ -43,4 +43,12 @@ export class UsersService {
   get(id: number) {
     return this.httpClient.get<User>(API + '/users/' + id);
   }
+
+  createUser(params: User) {
+    return this.httpClient.post<User>(API + '/users', params);
+  }
+
+  deleteUser(id: number) {
+    return this.httpClient.delete<void>(API + /users/ + id);
+  }
 }

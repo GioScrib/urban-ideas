@@ -1,10 +1,12 @@
-import {Component, effect, output, signal} from '@angular/core';
+import {Component, effect, inject, output, signal} from '@angular/core';
 import {MatFabButton, MatIconButton} from '@angular/material/button';
 import {MatToolbar} from '@angular/material/toolbar';
 import {MatIcon} from '@angular/material/icon';
 import {MatMenu, MatMenuItem, MatMenuTrigger} from '@angular/material/menu';
 import {MatFormField, MatInput, MatLabel} from '@angular/material/input';
 import {FormsModule} from '@angular/forms';
+import {MatDialog} from '@angular/material/dialog';
+import {CreateUserDialogComponent} from '../create-user-dialog/create-user-dialog.component';
 
 @Component({
   selector: 'app-user-list-header',

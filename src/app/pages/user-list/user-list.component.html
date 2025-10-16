@@ -1,4 +1,4 @@
-<app-user-list-header (gridCols)="onGridCols($event)"></app-user-list-header>
+<app-user-list-header (gridCols)="onGridCols($event)" (newUser)="onNewUser()"></app-user-list-header>
 
 <div class="grid-container" style.--cols={{gridCols}}>
   @for (user of users; track user.id) {

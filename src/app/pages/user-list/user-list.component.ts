@@ -1,4 +1,4 @@
-import {Component, OnInit, signal} from '@angular/core';
+import {Component, inject, OnInit, signal} from '@angular/core';
 import {UsersService} from '../../services/users/users.service';
 import {User} from '../../shared/user';
 import {MatGridList, MatGridTile} from '@angular/material/grid-list';
@@ -13,13 +13,13 @@ import {
 } from '@angular/material/expansion';
 import {UserCardComponent} from '../../components/user-list/user-card/user-card.component';
 import {UserListHeaderComponent} from '../../components/user-list/user-list-header/user-list-header.component';
+import {CreateUserDialogComponent} from '../../components/user-list/create-user-dialog/create-user-dialog.component';
+import {MatDialog} from '@angular/material/dialog';
 
 
 @Component({
   selector: 'app-user-list',
   imports: [
-    MatGridTile,
-    MatGridList,
     UserCardComponent,
     UserListHeaderComponent
   ],
@@ -28,7 +28,8 @@ import {UserListHeaderComponent} from '../../components/user-list/user-list-head
 })
 export class UserListComponent implements OnInit {
 
-  private readonly userService: UsersService;
+  private readonly userService = inject(UsersService);
+  newUserDialog = inject(MatDialog);
 
   users!: User[];
   page: number = 1;
@@ -42,9 +43,7 @@ export class UserListComponent implements OnInit {
   panelOpenState2 = signal<boolean>(false);
 
 
-  constructor(userService: UsersService) {
-    this.userService = userService;
-  }
+  constructor() {}
 
   ngOnInit(): void {
     this.load();
@@ -66,4 +65,13 @@ export class UserListComponent implements OnInit {
     this.gridCols = cols;
   }
 
+  onNewUser(): void {
+    console.log("user-list says: new user clicked");
+    this.openCreateUserDialog();
+  }
+
+  private openCreateUserDialog(): void {
+    console.log("user-list says: opening dialog");
+    this.newUserDialog.open(CreateUserDialogComponent);
+  }
 }
