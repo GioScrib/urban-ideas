@@ -37,6 +37,7 @@ export class UserListComponent implements OnInit {
   // TODO: Implementare name e email come variabili di un formgroup
   name!: string;
   email!: string;
+  gridCols: number = 3;
   panelOpenState1 = signal<boolean>(false);
   panelOpenState2 = signal<boolean>(false);
 
@@ -58,6 +59,11 @@ export class UserListComponent implements OnInit {
         this.total = Number(res.headers.get('x-Pagination-Total') ?? 0);
       }
     );
+  }
+
+  onGridCols(cols: number) {
+    console.log("user-list dice: ", cols);
+    this.gridCols = cols;
   }
 
 }

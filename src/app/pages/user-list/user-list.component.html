@@ -1,9 +1,7 @@
-<app-user-list-header></app-user-list-header>
+<app-user-list-header (gridCols)="onGridCols($event)"></app-user-list-header>
 
-<mat-grid-list cols="3" rowHeight="2:1">
+<div class="grid-container" style.--cols={{gridCols}}>
   @for (user of users; track user.id) {
-    <mat-grid-tile>
-      <app-user-card [user]="user"></app-user-card>
-    </mat-grid-tile>
+    <app-user-card [user]="user"></app-user-card>
   }
-</mat-grid-list>
+</div>
