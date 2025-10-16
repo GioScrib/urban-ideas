@@ -1,0 +1,60 @@
+<div class="dialog-container">
+  <div style="display: flex; flex-direction: row; justify-content: flex-end; width: 100%">
+    <app-custom-button
+      class="close-dialog-button"
+      matIconName="close"
+      backGroundColor="#FFD9E1"
+      textColor="#8F0045"
+    >
+    </app-custom-button>
+  </div>
+
+  <p>Insert new user</p>
+  <form class="new-user-form" [formGroup]="newUserForm">
+    <mat-form-field appearance="outline">
+      <mat-label>Nome</mat-label>
+      <input matInput formControlName="name" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Gender</mat-label>
+      <mat-select>
+        <mat-option value="male">Male</mat-option>
+        <mat-option value="female">Female</mat-option>
+        <mat-option value="other">Other</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Status</mat-label>
+      <mat-select formControlName="status" required>
+        <mat-option value="active">active</mat-option>
+        <mat-option value="inactive">inactive</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+  <div class="form-button-group">
+    <app-custom-button
+      class="add-button"
+      matIconName="add"
+      matButtonContent="Add"
+      backGroundColor="#C6D870"
+      textColor="#556B2F"
+    ></app-custom-button>
+    <app-custom-button
+      class="clear-button"
+      matIconName="delete"
+      matButtonContent="Clear"
+      backGroundColor="#FFD9E1"
+      textColor="#8F0045"
+    ></app-custom-button>
+  </div>
+</div>
+
+
+

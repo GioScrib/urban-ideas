@@ -1,0 +1,19 @@
+@if (matButtonContent()) {
+  <button mat-fab extended
+          [style.--bg-color]="backGroundColor()"
+          [style.--txt-color]="textColor()"
+          (click)="onClick()">
+    <mat-icon>{{matIconName()}}</mat-icon>
+    {{matButtonContent()}}
+  </button>
+} @else {
+  <button mat-fab
+          [style.--bg-color]="backGroundColor()"
+          [style.--txt-color]="textColor()"
+          (click)="onClick()"
+  >
+    <mat-icon>{{matIconName()}}</mat-icon>
+  </button>
+}
+
+
