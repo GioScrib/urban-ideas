@@ -1,33 +1,29 @@
 
 <mat-accordion style="display: flex; flex-direction: column;">
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <img [src]="userImg" style="height: 100px; width: 100px;" alt="user image">
-      <mat-panel-description> This is a summary of the content </mat-panel-description>
-<!--      @if (!panelOpenState1()) {-->
-<!--        <button mat-icon-button aria-label="Example icon-button with a menu">-->
-<!--          <mat-icon>-->
-<!--            expand_content-->
-<!--          </mat-icon>-->
-<!--        </button>-->
-<!--      } @else if (panelOpenState1()) {-->
-<!--        <button mat-icon-button aria-label="Example icon-button with a menu">-->
-<!--          <mat-icon>-->
-<!--            close-->
-<!--          </mat-icon>-->
-<!--        </button>-->
-<!--      }-->
-    </mat-expansion-panel-header>
-<!--    <p>This is the primary content of the panel.</p>-->
-  </mat-expansion-panel>
+    <div class="user-card-header">
+      <img [src]="userImg" alt="user image">
+      <div class="user-card-info">
+        <span>{{user().name}}</span>
+        <span>{{user().gender}}</span>
+        <span>{{user().status}}</span>
+      </div>
+
+    </div>
   <mat-expansion-panel (opened)="panelOpenState2.set(true)" (closed)="panelOpenState2.set(false)">
     <mat-expansion-panel-header>
-      <mat-panel-title> Self aware panel </mat-panel-title>
-      <mat-panel-description>
-        Currently I am {{panelOpenState2() ? 'open' : 'closed'}}
-      </mat-panel-description>
+      <mat-panel-title> More details </mat-panel-title>
     </mat-expansion-panel-header>
-    <p>I'm visible because I am open</p>
+    <div class="card-button-group">
+      <button class="details-button" mat-fab extended>
+        <mat-icon>contact_page</mat-icon>
+        Details
+      </button>
+      <button class="delete-button" mat-fab extended aria-label="delete button">
+        Delete
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+
   </mat-expansion-panel>
 </mat-accordion>
 
