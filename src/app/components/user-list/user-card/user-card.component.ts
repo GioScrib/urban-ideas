@@ -10,6 +10,7 @@ import {
 import {User} from '../../../shared/user';
 import {HttpClient} from '@angular/common/http';
 import {MatIcon} from '@angular/material/icon';
+import {CustomButtonComponent} from '../../shared/custom-button/custom-button.component';
 
 
 @Component({
@@ -21,6 +22,7 @@ import {MatIcon} from '@angular/material/icon';
     MatExpansionPanelTitle,
     MatIcon,
     MatFabButton,
+    CustomButtonComponent,
   ],
   templateUrl: './user-card.component.html',
   styleUrl: './user-card.component.scss'

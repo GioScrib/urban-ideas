@@ -7,6 +7,7 @@ import {MatFormField, MatInput, MatLabel} from '@angular/material/input';
 import {FormsModule} from '@angular/forms';
 import {MatDialog} from '@angular/material/dialog';
 import {CreateUserDialogComponent} from '../create-user-dialog/create-user-dialog.component';
+import {CustomButtonComponent} from '../../shared/custom-button/custom-button.component';
 
 @Component({
   selector: 'app-user-list-header',
@@ -18,7 +19,7 @@ import {CreateUserDialogComponent} from '../create-user-dialog/create-user-dialo
     MatMenu,
     MatMenuItem,
     FormsModule,
-    MatFabButton,
+    CustomButtonComponent,
   ],
   templateUrl: './user-list-header.component.html',
   styleUrl: './user-list-header.component.scss'

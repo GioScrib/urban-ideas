@@ -18,10 +18,16 @@
       </div>
 
       <div class="right-button-container">
-        <button class="new-user-button" mat-fab extended (click)="onClickNewUser()">
-          <mat-icon>add</mat-icon>
-          New user
-        </button>
+
+        <app-custom-button class="new-user-button"
+        matIconName="add"
+        matButtonContent="New user"
+        backGroundColor="#C6D870"
+        textColor="#556B2F"
+        waveColor="#556B2F"
+        (click)="onClickNewUser()"
+        >
+        </app-custom-button>
 
         <button class="elements-button" mat-icon-button [matMenuTriggerFor]="elementsMenu" aria-label="Example icon-button with a menu">
           <mat-icon>more_vert</mat-icon>
