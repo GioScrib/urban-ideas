@@ -1,4 +1,4 @@
-import {Component, input, signal, inject} from '@angular/core';
+import {Component, input, signal, inject, output} from '@angular/core';
 import {MatFabButton} from '@angular/material/button';
 
 import {
@@ -20,8 +20,6 @@ import {CustomButtonComponent} from '../../shared/custom-button/custom-button.co
     MatExpansionPanel,
     MatExpansionPanelHeader,
     MatExpansionPanelTitle,
-    MatIcon,
-    MatFabButton,
     CustomButtonComponent,
   ],
   templateUrl: './user-card.component.html',
@@ -31,12 +29,20 @@ export class UserCardComponent {
 
   private readonly httpUserImg: HttpClient = inject(HttpClient);
 
+  delete = output<number>();
+
   user = input.required<User>();
   userImg!: string;
 
   constructor() {
     const timestamp = new Date().getTime();
     this.userImg = `https://avatar.iran.liara.run/public/girl?${timestamp}`;
+  }
+
+  onClickDeleteButton() {
+    let id = this.user().id
+    console.log('user-card says delete user with id: ', id);
+    this.delete.emit(id);
   }
 
   panelOpenState2 = signal<boolean>(false);

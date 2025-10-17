@@ -1,16 +1,6 @@
 import {Component, inject, OnInit, signal} from '@angular/core';
 import {UsersService} from '../../services/users/users.service';
 import {User} from '../../shared/user';
-import {MatGridList, MatGridTile} from '@angular/material/grid-list';
-import {MatToolbar} from '@angular/material/toolbar';
-import {MatIcon} from '@angular/material/icon';
-import {MatIconButton} from '@angular/material/button';
-import {
-  MatAccordion,
-  MatExpansionPanel, MatExpansionPanelDescription,
-  MatExpansionPanelHeader,
-  MatExpansionPanelTitle
-} from '@angular/material/expansion';
 import {UserCardComponent} from '../../components/user-list/user-card/user-card.component';
 import {UserListHeaderComponent} from '../../components/user-list/user-list-header/user-list-header.component';
 import {CreateUserDialogComponent} from '../../components/user-list/create-user-dialog/create-user-dialog.component';
@@ -46,6 +36,7 @@ export class UserListComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
+    console.log('user-list initialized');
     this.load();
   }
 
@@ -53,7 +44,7 @@ export class UserListComponent implements OnInit {
     this.userService.userList({page: this.page, per_page: this.per_page, name: this.name?? '', email: this.email?? ''}).subscribe(
       res => {
         this.users = res.body?? [];
-        console.log("UserList dice:");
+        console.log("user-list says: ");
         console.log(res.body);
         this.total = Number(res.headers.get('x-Pagination-Total') ?? 0);
       }
@@ -73,5 +64,15 @@ export class UserListComponent implements OnInit {
   private openCreateUserDialog(): void {
     console.log("user-list says: opening dialog");
     this.newUserDialog.open(CreateUserDialogComponent);
+  }
+
+  onDeleteUser(id: number): void {
+    console.log("user-list says deleting user with ", id);
+    this.userService.deleteUser(id).subscribe(
+      res => {
+        console.log(res);
+        this.load();
+      }
+    )
   }
 }
