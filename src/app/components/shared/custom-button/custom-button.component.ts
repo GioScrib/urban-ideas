@@ -18,6 +18,7 @@ export class CustomButtonComponent {
   matButtonContent = input<string>('');
   backGroundColor = input<string>('');
   textColor = input<string>('');
+  waveColor = input<string>('');
   clicked = output<void>();
 
   onClick() {

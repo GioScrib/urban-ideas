@@ -2,6 +2,7 @@
   <button mat-fab extended
           [style.--bg-color]="backGroundColor()"
           [style.--txt-color]="textColor()"
+          [style.--wave-color]="waveColor()"
           (click)="onClick()">
     <mat-icon>{{matIconName()}}</mat-icon>
     {{matButtonContent()}}
@@ -10,6 +11,7 @@
   <button mat-fab
           [style.--bg-color]="backGroundColor()"
           [style.--txt-color]="textColor()"
+          [style.--wave-color]="waveColor()"
           (click)="onClick()"
   >
     <mat-icon>{{matIconName()}}</mat-icon>
