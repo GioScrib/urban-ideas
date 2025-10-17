@@ -1,0 +1,28 @@
+<div class="confirm-dialog-container">
+  <div class="header-group">
+    <h4>{{data.title}}</h4>
+    <p>{{data.content}}</p>
+  </div>
+
+  <div class="button-group">
+    <app-custom-button
+    matIconName="cancel"
+    matButtonContent="Cancel"
+    backGroundColor="#FFD9E1"
+    textColor="#8F0045"
+    waveColor="#8F0045"
+    (click)="close(false)"
+    >
+    </app-custom-button>
+
+    <app-custom-button
+    matIconName="check_circle"
+    matButtonContent="Confrim"
+    backGroundColor="#C6D870"
+    textColor="#556B2F"
+    waveColor="#556B2F"
+    (click)="close(true)"
+    >
+    </app-custom-button>
+  </div>
+</div>
