@@ -41,4 +41,8 @@ export class CreateUserDialogComponent {
     }
     this.dialogRef.close(this.newUserForm.value);
   }
+
+  clearForm() {
+    this.newUserForm.reset();
+  }
 }

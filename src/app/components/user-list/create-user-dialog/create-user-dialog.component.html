@@ -6,6 +6,7 @@
       backGroundColor="#FFD9E1"
       textColor="#8F0045"
       waveColor="#8F0045"
+      (click)="closeDialog()"
     >
     </app-custom-button>
   </div>
@@ -24,7 +25,7 @@
 
     <mat-form-field appearance="outline">
       <mat-label>Gender</mat-label>
-      <mat-select>
+      <mat-select formControlName="gender" required>
         <mat-option value="male">Male</mat-option>
         <mat-option value="female">Female</mat-option>
         <mat-option value="other">Other</mat-option>
@@ -47,7 +48,9 @@
       backGroundColor="#C6D870"
       textColor="#556B2F"
       waveColor="#556B2F"
+      (click)="submitData()"
     ></app-custom-button>
+
     <app-custom-button
       class="clear-button"
       matIconName="delete"
@@ -55,6 +58,7 @@
       backGroundColor="#FFD9E1"
       textColor="#8F0045"
       waveColor="#8F0045"
+      (click)="clearForm()"
     ></app-custom-button>
   </div>
 </div>
