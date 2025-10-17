@@ -24,6 +24,8 @@ export class CreateUserDialogComponent {
   private dialogRef = inject(MatDialogRef<CreateUserDialogComponent>);
   private fb = inject(FormBuilder);
 
+  isInvalid: boolean = false;
+
   newUserForm: FormGroup = this.fb.group({
     name: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required, Validators.email]),
@@ -37,8 +39,12 @@ export class CreateUserDialogComponent {
 
   submitData(): void {
     if(this.newUserForm.invalid) {
+      console.log("create-user-dialog says: form invalid");
+      this.isInvalid = true;
       return
     }
+    this.isInvalid = true;
+    console.log("create-user-dialog says: ", this.newUserForm);
     this.dialogRef.close(this.newUserForm.value);
   }
 

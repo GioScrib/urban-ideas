@@ -40,6 +40,11 @@
       </mat-select>
     </mat-form-field>
   </form>
+
+  @if (isInvalid) {
+    <p style="color: #BA1A1A">*Invalid data</p>
+  }
+
   <div class="form-button-group">
     <app-custom-button
       class="add-button"
