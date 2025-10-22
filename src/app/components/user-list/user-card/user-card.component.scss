@@ -7,7 +7,7 @@ mat-accordion {
 .user-card-header {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: #FFF8F8;
   border-radius: 15px;
@@ -18,7 +18,9 @@ mat-accordion {
 .user-card-header img {
   width: 100px;
   height: 100px;
-  margin: 10px 10px 10px 30px;
+  margin: 30px 30px 30px 30px;
+  border-radius: 15px;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
 }
 
 .user-card-header span {
@@ -29,6 +31,7 @@ mat-accordion {
   display: flex;
   flex-direction: column;
   margin-top: 20px;
+  margin-right: 50px;
   margin-bottom: 20px;
 }
 

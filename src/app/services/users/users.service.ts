@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpParams} from '@angular/common/http';
 import {User} from '../../shared/user';
+import {Post} from '../../shared/post.model';
 
 const API = "https://gorest.co.in/public/v2";
 
@@ -40,8 +41,23 @@ export class UsersService {
     return this.httpClient.get<User[]>(API + '/users/', {params: p, observe: 'response'});
   }
 
-  get(id: number) {
+  getUser(id: number) {
     return this.httpClient.get<User>(API + '/users/' + id);
+  }
+
+  // GET /public/v2/users/7508084/posts
+  getUserPosts(userId: number) {
+    return this.httpClient.get<Post[]>(API + '/users/' + userId + '/posts');
+  }
+
+  // GET /public/v2/posts/7508084/comments	Retrieves post comments
+  getCommentsForPost(postId: number) {
+    return this.httpClient.get<Comment[]>(API + '/posts/' + postId + '/comments');
+  }
+
+  // POST /public/v2/posts/7508084/comments	Creates a post comment
+  addNewComment(postId: number, comment: Comment) {
+    return this.httpClient.post<Comment>(API + '/posts' + postId + '/comments', comment);
   }
 
   createUser(params: User) {
