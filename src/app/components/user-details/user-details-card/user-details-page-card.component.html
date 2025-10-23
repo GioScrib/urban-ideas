@@ -1,11 +1,19 @@
-<div>
-  <div>
+<div class="card-container">
+  <div class="card-header">
     <img src="{{usrImg()}}">
-    <div>
-      <p>{{this.user()?.name}}</p>
-      <p>{{this.user()?.email}}</p>
-      <p>{{this.user()?.gender}}</p>
-      <p>{{this.user()?.status}}</p>
+    <div class="card-details">
+        <div class="card-row">
+          <p class="detail-name">Name: </p><p>{{this.user()?.name}}</p>
+        </div>
+        <div class="card-row">
+          <p class="detail-name">Email: </p><p>{{this.user()?.email}}</p>
+        </div>
+        <div class="card-row">
+          <p class="detail-name">Gender: </p><p>{{this.user()?.gender}}</p>
+        </div>
+        <div class="card-row">
+          <p class="detail-name">Status:</p><p>{{this.user()?.status}}</p>
+        </div>
     </div>
   </div>
 </div>
