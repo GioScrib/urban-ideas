@@ -11,7 +11,8 @@ const API = "https://gorest.co.in/public/v2";
 export class UsersService {
 
   private readonly httpClient: HttpClient;
-  private authToken: string | null;
+  private readonly authToken: string | null;
+  private mapUsrIdImg: Map<number, string> = new Map();
 
   constructor(httpClient: HttpClient) {
     this.httpClient = httpClient;
@@ -66,5 +67,18 @@ export class UsersService {
 
   deleteUser(id: number) {
     return this.httpClient.delete<void>(API + /users/ + id);
+  }
+
+  addUserIdImgMapping(userId: number, img: string) {
+    if(this.mapUsrIdImg.has(userId)) {
+      this.mapUsrIdImg.delete(userId);
+      console.log('UserService says: deleted existing mapping for id: ' + userId);
+    }
+    this.mapUsrIdImg.set(userId, img);
+    console.log('UserService says: added new mapping', userId, img);
+  }
+
+  getImgForUser(id: number) {
+    return this.mapUsrIdImg.get(id);
   }
 }

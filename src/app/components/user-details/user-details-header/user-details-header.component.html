@@ -1,0 +1,71 @@
+<div class="mat-toolbar-container">
+  <mat-toolbar>
+    <div class="left-container">
+      <a routerLink="/users">
+        <app-custom-button
+          matIconName="arrow_back"
+          matButtonContent="back"
+          backGroundColor="#ADD8E6"
+          textColor="#00008B"
+          waveColor="#00008B"
+        >
+        </app-custom-button>
+      </a>
+    </div>
+
+    <div class="right-container">
+
+      <div class="search-container">
+        <button mat-icon-button>
+          <mat-icon>search</mat-icon>
+        </button>
+        <input type="text" name="" id="" [(ngModel)]="value">
+      </div>
+
+      <div class="right-button-container">
+
+<!--        <app-custom-button class="new-user-button"-->
+<!--        matIconName="add"-->
+<!--        matButtonContent="New user"-->
+<!--        backGroundColor="#C6D870"-->
+<!--        textColor="#556B2F"-->
+<!--        waveColor="#556B2F"-->
+<!--        (click)="onClickNewUser()"-->
+<!--        >-->
+<!--        </app-custom-button>-->
+
+        <button class="elements-button" mat-icon-button [matMenuTriggerFor]="elementsMenu" aria-label="Example icon-button with a menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #elementsMenu="matMenu">
+          <button mat-menu-item>
+            <span>10 elementi</span>
+          </button>
+          <button mat-menu-item>
+            <span>20 elementi</span>
+          </button>
+          <button mat-menu-item>
+            <span>30 elementi</span>
+          </button>
+        </mat-menu>
+
+        <button class="grid-button" mat-icon-button  [matMenuTriggerFor]="gridMenu" aria-label="Example icon-button with share icon">
+          <mat-icon>grid_view</mat-icon>
+        </button>
+        <mat-menu #gridMenu="matMenu">
+          <button mat-menu-item (click)="onClickGridCols(1)">
+            <span>1 col</span>
+          </button>
+          <button mat-menu-item (click)="onClickGridCols(2)">
+            <span>2 cols</span>
+          </button>
+          <button mat-menu-item (click)="onClickGridCols(3)">
+            <span>3 cols</span>
+          </button>
+        </mat-menu>
+      </div>
+
+    </div>
+  </mat-toolbar>
+</div>
+

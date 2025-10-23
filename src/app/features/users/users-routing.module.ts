@@ -5,8 +5,8 @@ import {UserListComponent} from '../../pages/user-list/user-list.component';
 const routes: Routes = [
   { path: '', component: UserListComponent },
   {path: ':id', loadComponent: () =>
-      import('../../pages/user-details/user-details.component')
-      .then(m => m.UserDetailsComponent)},
+      import('../../pages/user-details-page/user-details-page.component')
+      .then(m => m.UserDetailsPageComponent)},
 ];
 
 @NgModule({
