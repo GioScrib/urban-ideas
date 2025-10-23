@@ -1,0 +1,7 @@
+.grid-container {
+  display: grid;
+  //repeat(X, Y) → ripete X volte il modello Y. Qui si
+  // ripete la definizione di colonna X volte (dove X è --cols).
+  grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr));
+  gap: 30px;
+}
