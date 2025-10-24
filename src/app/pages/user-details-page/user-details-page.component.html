@@ -9,6 +9,7 @@
   @for (post of this.posts(); track post.id) {
     <app-user-post-card
     [post]="post"
+    (clickComments)="onClickComment()"
     >
     </app-user-post-card>
   }

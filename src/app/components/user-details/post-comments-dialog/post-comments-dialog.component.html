@@ -1,0 +1,84 @@
+<app-custom-dialog-container>
+  <app-custom-post-card-header
+  [title]="this.data.post.title"
+  [body]="this.data.post.body"
+  >
+  </app-custom-post-card-header>
+
+  <div class="dialog-comment-container">
+    <h3 class="dialog-comment-container-title"> Comments </h3>
+    @for (comment of postComments; track comment.id) {
+      <app-custom-post-card-header
+      [title]="comment.name"
+      [body]="comment.body"
+    >
+    </app-custom-post-card-header>
+    }
+  </div>
+
+  @if (this.postComments.length === 0) {
+    <p> No comments yet </p>
+  }
+
+  @if (addingComment) {
+    <div #commentFormContainer class="new-comment-form-container">
+      <h3>Insert new comment</h3>
+      <form class="new-comment-form" [formGroup]="newCommentForm">
+        <mat-form-field>
+          <mat-label>Title</mat-label>
+          <input matInput formControlName="title" required>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" required>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Comment</mat-label>
+          <input matInput formControlName="comment" required>
+        </mat-form-field>
+      </form>
+
+      <div class="form-button-group">
+        <app-custom-button
+        matIconName="check"
+        matButtonContent="Confirm"
+        backGroundColor="#C6D870"
+        textColor="#556B2F"
+        waveColor="#556B2F"
+        (click)="submitData()"
+        >
+        </app-custom-button>
+
+        <app-custom-button
+          class="clear-button"
+          matIconName="close"
+          matButtonContent="Close"
+          backGroundColor="#FFD9E1"
+          textColor="#8F0045"
+          waveColor="#8F0045"
+          (click)="onCloseButton()"
+        >
+        </app-custom-button>
+      </div>
+    </div>
+
+  }
+
+  @if (!addingComment) {
+    <div class="form-button-group">
+      <app-custom-button
+        class="add-button"
+        matIconName="add"
+        matButtonContent="Add comment"
+        backGroundColor="#C6D870"
+        textColor="#556B2F"
+        waveColor="#556B2F"
+        (click)="onAddComment()"
+      >
+      </app-custom-button>
+    </div>
+  }
+
+</app-custom-dialog-container>

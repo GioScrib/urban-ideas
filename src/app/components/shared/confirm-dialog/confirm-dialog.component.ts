@@ -17,7 +17,7 @@ export interface ConfirmDialogData {
 })
 export class ConfirmDialogComponent {
 
-  private ref = inject(MatDialogRef<ConfirmDialogComponent>);
+  private readonly ref = inject(MatDialogRef<ConfirmDialogComponent>);
   data = inject<ConfirmDialogData>(MAT_DIALOG_DATA);
 
   close(v: boolean): void {

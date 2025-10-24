@@ -10,6 +10,10 @@ import {
 import {CustomGridComponent} from '../../components/shared/custom-grid/custom-grid.component';
 import {UserPostCardComponent} from '../../components/user-details/user-post-card/user-post-card.component';
 import {Comment} from '../../shared/comment.model';
+import {MatDialog} from '@angular/material/dialog';
+import {
+  PostCommentsDialogComponent
+} from '../../components/user-details/post-comments-dialog/post-comments-dialog.component';
 
 @Component({
   selector: 'app-user-details-page',

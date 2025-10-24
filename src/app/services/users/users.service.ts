@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpParams} from '@angular/common/http';
 import {User} from '../../shared/user';
 import {Post} from '../../shared/post.model';
+import {Comment} from '../../shared/comment.model';
 
 const API = "https://gorest.co.in/public/v2";
 
@@ -58,7 +59,7 @@ export class UsersService {
 
   // POST /public/v2/posts/7508084/comments	Creates a post comment
   addNewComment(postId: number, comment: Comment) {
-    return this.httpClient.post<Comment>(API + '/posts' + postId + '/comments', comment);
+    return this.httpClient.post<Comment>(API + '/posts/' + postId + '/comments', comment);
   }
 
   createUser(params: User) {

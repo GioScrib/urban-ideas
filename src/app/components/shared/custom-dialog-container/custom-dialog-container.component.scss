@@ -2,8 +2,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-height: 80vh;
+  overflow-y: auto;
+
 }
 
 .close-dialog-button {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: white;
   margin: 20px 20px 0px 0px;
 }
