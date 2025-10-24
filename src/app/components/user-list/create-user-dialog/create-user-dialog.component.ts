@@ -4,6 +4,7 @@ import {MatDialogRef} from '@angular/material/dialog';
 import {MatFormField, MatInput, MatLabel} from '@angular/material/input';
 import {MatOption, MatSelect} from '@angular/material/select';
 import {CustomButtonComponent} from '../../shared/custom-button/custom-button.component';
+import {CustomDialogContainerComponent} from '../../shared/custom-dialog-container/custom-dialog-container.component';
 
 @Component({
   selector: 'app-create-user-dialog',
@@ -15,14 +16,15 @@ import {CustomButtonComponent} from '../../shared/custom-button/custom-button.co
     MatSelect,
     MatOption,
     CustomButtonComponent,
+    CustomDialogContainerComponent,
   ],
   templateUrl: './create-user-dialog.component.html',
   styleUrl: './create-user-dialog.component.scss'
 })
 export class CreateUserDialogComponent {
 
-  private dialogRef = inject(MatDialogRef<CreateUserDialogComponent>);
   private fb = inject(FormBuilder);
+  private dialogRef = inject(MatDialogRef<CreateUserDialogComponent>);
 
   isInvalid: boolean = false;
 
@@ -32,10 +34,6 @@ export class CreateUserDialogComponent {
     gender: new FormControl('', [Validators.required]),
     status: new FormControl('', [Validators.required]),
   });
-
-  closeDialog(): void {
-    this.dialogRef.close();
-  }
 
   submitData(): void {
     if(this.newUserForm.invalid) {

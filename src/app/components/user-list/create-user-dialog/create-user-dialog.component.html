@@ -1,16 +1,4 @@
-<div class="dialog-container">
-  <div style="display: flex; flex-direction: row; justify-content: flex-end; width: 100%">
-    <app-custom-button
-      class="close-dialog-button"
-      matIconName="close"
-      backGroundColor="#FFD9E1"
-      textColor="#8F0045"
-      waveColor="#8F0045"
-      (click)="closeDialog()"
-    >
-    </app-custom-button>
-  </div>
-
+<app-custom-dialog-container>
   <p>Insert new user</p>
   <form class="new-user-form" [formGroup]="newUserForm">
     <mat-form-field appearance="outline">
@@ -66,7 +54,9 @@
       (click)="clearForm()"
     ></app-custom-button>
   </div>
-</div>
+</app-custom-dialog-container>
+
+
 
 
 
