@@ -45,9 +45,19 @@ export class UserCardComponent implements OnInit{
   ngOnInit(): void {
     const timestamp = new Date().getTime();
     if(this.user().gender === 'male'){
-      this.userImg = `https://api.dicebear.com/7.x/avataaars/svg?seed=${this.user().id}&gender=male`;
+      // Avataaars
+      // this.userImg = `https://api.dicebear.com/7.x/avataaars/svg?seed=${this.user().id}&gender=male`;
+      //Notionists
+      this.userImg = `https://api.dicebear.com/9.x/notionists/svg?seed=${this.user().id}&gender=female`;
+      // Robots
+      // this.userImg = `https://api.dicebear.com/9.x/bottts/svg?seed=${this.user().id}&gender=female`;
     } else {
-      this.userImg = `https://api.dicebear.com/7.x/avataaars/svg?seed=${this.user().id}&gender=female`;
+      // Avataaars
+      // this.userImg = `https://api.dicebear.com/7.x/avataaars/svg?seed=${this.user().id}&gender=female`;
+      //Notionists
+      this.userImg = `https://api.dicebear.com/9.x/notionists/svg?seed=${this.user().id}&gender=female`;
+      //Robots
+      // this.userImg = `https://api.dicebear.com/9.x/bottts/svg?seed=${this.user().id}&gender=female`;
     }
     this.userService.addUserIdImgMapping(this.user().id, this.userImg);
     console.log('UserCardComponent says user img requested on: ', this.userImg);

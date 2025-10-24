@@ -7,13 +7,15 @@ import {CreateUserDialogComponent} from '../../components/user-list/create-user-
 import {MatDialog} from '@angular/material/dialog';
 import {ConfirmDialogComponent} from '../../components/shared/confirm-dialog/confirm-dialog.component';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import {CustomGridComponent} from '../../components/shared/custom-grid/custom-grid.component';
 
 
 @Component({
   selector: 'app-user-list',
   imports: [
     UserCardComponent,
-    UserListHeaderComponent
+    UserListHeaderComponent,
+    CustomGridComponent
   ],
   templateUrl: './user-list.component.html',
   styleUrl: './user-list.component.scss'

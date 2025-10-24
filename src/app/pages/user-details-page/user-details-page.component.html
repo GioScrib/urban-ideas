@@ -1,2 +1,15 @@
-<app-user-details-page-header></app-user-details-page-header>
+<app-user-details-page-header
+(gridCols)="onGridCols($event)"
+></app-user-details-page-header>
 <app-user-details-page-card [user]="this.user" [usrImg]="userImg"></app-user-details-page-card>
+
+<app-custom-grid
+[gridCols]="this.gridCols"
+>
+  @for (post of this.posts(); track post.id) {
+    <app-user-post-card
+    [post]="post"
+    >
+    </app-user-post-card>
+  }
+</app-custom-grid>

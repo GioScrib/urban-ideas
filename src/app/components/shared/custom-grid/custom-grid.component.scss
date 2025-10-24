@@ -4,4 +4,5 @@
   // ripete la definizione di colonna X volte (dove X è --cols).
   grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr));
   gap: 30px;
+  margin: 20px;
 }

@@ -12,7 +12,7 @@ export class UsersService {
 
   private readonly httpClient: HttpClient;
   private readonly authToken: string | null;
-  private mapUsrIdImg: Map<number, string> = new Map();
+  private readonly mapUsrIdImg: Map<number, string> = new Map();
 
   constructor(httpClient: HttpClient) {
     this.httpClient = httpClient;
