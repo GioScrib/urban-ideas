@@ -1,0 +1,14 @@
+<div class="dialog-container">
+  <div style="display: flex; flex-direction: row; justify-content: flex-end; width: 100%">
+    <app-custom-button
+      class="close-dialog-button"
+      matIconName="close"
+      backGroundColor="#FFD9E1"
+      textColor="#8F0045"
+      waveColor="#8F0045"
+      (click)="closeDialog()"
+    >
+    </app-custom-button>
+  </div>
+  <ng-content></ng-content>
+</div>
