@@ -1,5 +1,5 @@
 import {Component, inject, OnInit, signal} from '@angular/core';
-import {UsersService} from '../../services/users/users.service';
+import {ApiService} from '../../services/users/api.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {User} from '../../shared/user';
 import {Post} from '../../shared/post.model';
@@ -8,7 +8,7 @@ import {
   UserDetailsPageCardComponent
 } from '../../components/user-details/user-details-card/user-details-page-card.component';
 import {CustomGridComponent} from '../../components/shared/custom-grid/custom-grid.component';
-import {UserPostCardComponent} from '../../components/user-details/user-post-card/user-post-card.component';
+import {UserPostCardComponent} from '../../components/shared/user-post-card/user-post-card.component';
 import {Comment} from '../../shared/comment.model';
 import {MatDialog} from '@angular/material/dialog';
 import {
@@ -28,7 +28,7 @@ import {
 })
 export class UserDetailsPageComponent implements OnInit {
 
-  private readonly userService = inject(UsersService);
+  private readonly apiService = inject(ApiService);
   private readonly router = inject(Router);
   private readonly activatedRoute = inject(ActivatedRoute);
 
@@ -42,13 +42,13 @@ export class UserDetailsPageComponent implements OnInit {
 
   ngOnInit(): void {
     let id = this.activatedRoute.snapshot.paramMap.get('id');
-    this.userService.getUser(Number.parseInt(id? id : '0')).subscribe(usr => {
+    this.apiService.getUser(Number.parseInt(id? id : '0')).subscribe(usr => {
       this.user = usr;
-      this.userImg = this.userService.getImgForUser(this.user.id);
+      this.userImg = this.apiService.getImgForUser(this.user.id);
       console.log('User details says: user fetched:', this.user);
     });
 
-    this.userService.getUserPosts(Number.parseInt(id? id : '0')).subscribe({
+    this.apiService.getUserPosts(Number.parseInt(id? id : '0')).subscribe({
       next: posts => {
         this.posts.set(posts);
         console.log('User details component says: posts fetched', this.posts());

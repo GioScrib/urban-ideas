@@ -5,12 +5,12 @@ import {
   MatExpansionPanelHeader,
   MatExpansionPanelTitle
 } from '@angular/material/expansion';
-import {CustomButtonComponent} from '../../shared/custom-button/custom-button.component';
+import {CustomButtonComponent} from '../custom-button/custom-button.component';
 import {Post} from '../../../shared/post.model';
-import {PostCommentsDialogComponent} from '../post-comments-dialog/post-comments-dialog.component';
+import {PostCommentsDialogComponent} from '../../user-details/post-comments-dialog/post-comments-dialog.component';
 import {MatDialog} from '@angular/material/dialog';
-import {CustomPostCardHeaderComponent} from '../../shared/custom-post-card-header/custom-post-card-header.component';
-import {UsersService} from '../../../services/users/users.service';
+import {CustomPostCardHeaderComponent} from '../custom-post-card-header/custom-post-card-header.component';
+import {ApiService} from '../../../services/users/api.service';
 import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
@@ -29,7 +29,7 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 export class UserPostCardComponent implements OnInit {
 
   private readonly dialog = inject(MatDialog);
-  private readonly userService = inject(UsersService);
+  private readonly apiService = inject(ApiService);
 
   post = input.required<Post>()
   clickComments = output();
@@ -50,7 +50,7 @@ export class UserPostCardComponent implements OnInit {
         if (!data) {
           return;
         }
-        this.userService.addNewComment(this.post().id, data).subscribe(
+        this.apiService.addNewComment(this.post().id, data).subscribe(
         )
       }
     )

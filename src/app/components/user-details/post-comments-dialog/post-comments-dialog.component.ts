@@ -2,7 +2,7 @@ import {Component, effect, ElementRef, inject, OnInit, ViewChild} from '@angular
 import {CustomDialogContainerComponent} from '../../shared/custom-dialog-container/custom-dialog-container.component';
 import {Post} from '../../../shared/post.model';
 import {CustomButtonComponent} from '../../shared/custom-button/custom-button.component';
-import {UsersService} from '../../../services/users/users.service';
+import {ApiService} from '../../../services/users/api.service';
 import {Comment} from '../../../shared/comment.model';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import {CreateUserDialogComponent} from '../../user-list/create-user-dialog/create-user-dialog.component';
@@ -33,7 +33,7 @@ export interface PostCommentsDialogData {
 })
 export class PostCommentsDialogComponent implements OnInit {
 
-  private readonly userService: UsersService = inject(UsersService);
+  private readonly apiService: ApiService = inject(ApiService);
   private readonly dialogRef = inject(MatDialogRef<CreateUserDialogComponent>);
   private readonly fb = inject(FormBuilder);
   snackBar = inject(MatSnackBar);
@@ -59,7 +59,7 @@ export class PostCommentsDialogComponent implements OnInit {
   }
 
   loadPostComments(){
-    this.userService.getCommentsForPost(this.data.post?.id).subscribe(comments => {
+    this.apiService.getCommentsForPost(this.data.post?.id).subscribe(comments => {
       this.postComments = comments;
       console.log('post-comments-dialog says comments fetched for post with id: ' + this.data.post.id, comments);
     })
@@ -90,7 +90,7 @@ export class PostCommentsDialogComponent implements OnInit {
 
     let newComment = this.newCommentForm.value;
     let postId = this.data.post.id;
-    this.userService.addNewComment(postId, newComment).subscribe({
+    this.apiService.addNewComment(postId, newComment).subscribe({
         next: () => {
           this.loadPostComments();
           this.snackBar.open('Comment added successfully', 'OK', {duration: 3000});

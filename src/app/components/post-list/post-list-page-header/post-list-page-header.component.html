@@ -1,24 +1,19 @@
 <div class="mat-toolbar-container">
   <mat-toolbar>
     <div class="left-container">
-<!--      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">-->
-<!--        <mat-icon>menu</mat-icon>-->
-<!--      </button>-->
-      <span>My App</span>
-      <span class="example-spacer"></span>
-    </div>
-
-    <div class="right-container">
-
+      <a routerLink="/users">
         <app-custom-button
-          matIconName="web_stories"
-          matButtonContent="See all posts"
+          matIconName="arrow_back"
+          matButtonContent="back"
           backGroundColor="#ADD8E6"
           textColor="#00008B"
           waveColor="#00008B"
-          (click)="seeAllPosts()"
         >
         </app-custom-button>
+      </a>
+    </div>
+
+    <div class="right-container">
 
       <div class="search-container">
         <button mat-icon-button>
@@ -29,15 +24,15 @@
 
       <div class="right-button-container">
 
-        <app-custom-button class="new-user-button"
-        matIconName="add"
-        matButtonContent="New user"
-        backGroundColor="#C6D870"
-        textColor="#556B2F"
-        waveColor="#556B2F"
-        (click)="onClickNewUser()"
-        >
-        </app-custom-button>
+                <app-custom-button class="new-user-button"
+                matIconName="add"
+                matButtonContent="New Post"
+                backGroundColor="#C6D870"
+                textColor="#556B2F"
+                waveColor="#556B2F"
+                (click)="onClickNewPost()"
+                >
+                </app-custom-button>
 
         <button class="elements-button" mat-icon-button [matMenuTriggerFor]="elementsMenu" aria-label="Example icon-button with a menu">
           <mat-icon>more_vert</mat-icon>

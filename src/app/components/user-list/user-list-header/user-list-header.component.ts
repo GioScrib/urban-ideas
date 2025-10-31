@@ -3,11 +3,11 @@ import {MatFabButton, MatIconButton} from '@angular/material/button';
 import {MatToolbar} from '@angular/material/toolbar';
 import {MatIcon} from '@angular/material/icon';
 import {MatMenu, MatMenuItem, MatMenuTrigger} from '@angular/material/menu';
-import {MatFormField, MatInput, MatLabel} from '@angular/material/input';
 import {FormsModule} from '@angular/forms';
 import {MatDialog} from '@angular/material/dialog';
 import {CreateUserDialogComponent} from '../create-user-dialog/create-user-dialog.component';
 import {CustomButtonComponent} from '../../shared/custom-button/custom-button.component';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-user-list-header',
@@ -19,12 +19,14 @@ import {CustomButtonComponent} from '../../shared/custom-button/custom-button.co
     MatMenu,
     MatMenuItem,
     FormsModule,
-    CustomButtonComponent,
+    CustomButtonComponent
   ],
   templateUrl: './user-list-header.component.html',
   styleUrl: './user-list-header.component.scss'
 })
 export class UserListHeaderComponent {
+
+  private router: Router = inject(Router);
 
   value = signal<string>('');
   gridCols = output<number>();
@@ -44,5 +46,10 @@ export class UserListHeaderComponent {
   onClickNewUser(): void {
     console.log("user-list-header says: new user clicked");
     this.newUser.emit();
+  }
+
+  seeAllPosts() {
+    this.router.navigate(['posts']).catch(e => console.error(e))
+      .then(() => console.log('Navigated to posts'));
   }
 }

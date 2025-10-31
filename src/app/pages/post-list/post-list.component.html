@@ -1,0 +1,16 @@
+<app-post-list-page-header
+(gridCols)="onClickGridCols($event)"
+(newPostClick)="onClickNewPost()"
+>
+</app-post-list-page-header>
+
+<app-custom-grid
+[gridCols]="gridCols"
+>
+  @for (post of posts; track post.id) {
+    <app-user-post-card
+    [post]="post"
+    >
+    </app-user-post-card>
+  }
+</app-custom-grid>

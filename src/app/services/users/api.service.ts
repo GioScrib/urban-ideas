@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient, HttpParams} from '@angular/common/http';
 import {User} from '../../shared/user';
 import {Post} from '../../shared/post.model';
@@ -9,7 +9,7 @@ const API = "https://gorest.co.in/public/v2";
 @Injectable({
   providedIn: 'root'
 })
-export class UsersService {
+export class ApiService {
 
   private readonly httpClient: HttpClient;
   private readonly authToken: string | null;
@@ -28,19 +28,47 @@ export class UsersService {
   }) {
     let p = new HttpParams();
 
-    if(params['page']) {
+    if (params['page']) {
       p.set('page', params['page']);
     }
-    if(params['per_page']) {
+    if (params['per_page']) {
       p.set('per_page', params['per_page']);
     }
-    if(params['name']) {
+    if (params['name']) {
       p.set('name', params['name']);
     }
-    if(params['email']) {
+    if (params['email']) {
       p.set('email', params['email']);
     }
-    return this.httpClient.get<User[]>(API + '/users/', {params: p, observe: 'response'});
+    return this.httpClient.get<User[]>(API + '/users', {params: p, observe: 'response'});
+  }
+
+  getPostList(params: {
+    page?: number,
+    per_page?: number,
+    name?: string,
+    email?: string
+  }) {
+    let p = new HttpParams();
+
+    if (params['page']) {
+      /**
+       * HttpParams.set() returns a new HttpParams instance and does not
+       * mutate the original. The returned value must be assigned back to
+       * 'p'.
+       */
+      p = p.set('page', params['page']);
+    }
+    if (params['per_page']) {
+      p = p.set('per_page', params['per_page']);
+    }
+    if (params['name']) {
+      p = p.set('name', params['name']);
+    }
+    if (params['email']) {
+      p = p.set('email', params['email']);
+    }
+    return this.httpClient.get<Post[]>(API + '/posts', {params: p, observe: 'response'});
   }
 
   getUser(id: number) {
@@ -71,12 +99,12 @@ export class UsersService {
   }
 
   addUserIdImgMapping(userId: number, img: string) {
-    if(this.mapUsrIdImg.has(userId)) {
+    if (this.mapUsrIdImg.has(userId)) {
       this.mapUsrIdImg.delete(userId);
-      console.log('UserService says: deleted existing mapping for id: ' + userId);
+      console.log('ApiService says: deleted existing mapping for id: ' + userId);
     }
     this.mapUsrIdImg.set(userId, img);
-    console.log('UserService says: added new mapping', userId, img);
+    console.log('ApiService says: added new mapping', userId, img);
   }
 
   getImgForUser(id: number) {

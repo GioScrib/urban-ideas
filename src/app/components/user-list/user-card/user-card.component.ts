@@ -11,9 +11,8 @@ import {User} from '../../../shared/user';
 import {HttpClient} from '@angular/common/http';
 import {MatIcon} from '@angular/material/icon';
 import {CustomButtonComponent} from '../../shared/custom-button/custom-button.component';
-import {provideRouter, Router, RouterLink} from '@angular/router';
-import {routes} from '../../../app.routes';
-import {UsersService} from '../../../services/users/users.service';
+import {Router} from '@angular/router';
+import {ApiService} from '../../../services/users/api.service';
 
 
 @Component({
@@ -32,7 +31,7 @@ export class UserCardComponent implements OnInit{
 
   private readonly httpUserImg: HttpClient = inject(HttpClient);
   private router: Router = inject(Router);
-  private userService: UsersService = inject(UsersService);
+  private apiService: ApiService = inject(ApiService);
 
   delete = output<number>();
 
@@ -59,7 +58,7 @@ export class UserCardComponent implements OnInit{
       //Robots
       // this.userImg = `https://api.dicebear.com/9.x/bottts/svg?seed=${this.user().id}&gender=female`;
     }
-    this.userService.addUserIdImgMapping(this.user().id, this.userImg);
+    this.apiService.addUserIdImgMapping(this.user().id, this.userImg);
     console.log('UserCardComponent says user img requested on: ', this.userImg);
   }
 

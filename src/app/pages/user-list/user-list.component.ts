@@ -1,5 +1,5 @@
 import {Component, inject, OnInit, signal} from '@angular/core';
-import {UsersService} from '../../services/users/users.service';
+import {ApiService} from '../../services/users/api.service';
 import {User} from '../../shared/user';
 import {UserCardComponent} from '../../components/user-list/user-card/user-card.component';
 import {UserListHeaderComponent} from '../../components/user-list/user-list-header/user-list-header.component';
@@ -22,7 +22,7 @@ import {CustomGridComponent} from '../../components/shared/custom-grid/custom-gr
 })
 export class UserListComponent implements OnInit {
 
-  private readonly userService = inject(UsersService);
+  private readonly apiService = inject(ApiService);
 
   dialog = inject(MatDialog);
   snackBar = inject(MatSnackBar) ;
@@ -32,7 +32,7 @@ export class UserListComponent implements OnInit {
   total: number = 0;
   name!: string;
   email!: string;
-  gridCols: number = 3;
+  gridCols: number = 2;
   panelOpenState1 = signal<boolean>(false);
   panelOpenState2 = signal<boolean>(false);
 
@@ -45,7 +45,7 @@ export class UserListComponent implements OnInit {
   }
 
   load(){
-    this.userService.userList({page: this.page, per_page: this.per_page, name: this.name?? '', email: this.email?? ''}).subscribe(
+    this.apiService.userList({page: this.page, per_page: this.per_page, name: this.name?? '', email: this.email?? ''}).subscribe(
       res => {
         this.users = res.body?? [];
         console.log("user-list says: ");
@@ -73,7 +73,7 @@ export class UserListComponent implements OnInit {
         if(!data) {
           return;
         }
-        this.userService.createUser(data).subscribe({
+        this.apiService.createUser(data).subscribe({
           next: () => {
             this.snackBar.open('User created successfully', 'OK', {duration: 3000});
             this.load();
@@ -100,7 +100,7 @@ export class UserListComponent implements OnInit {
       if (!ok) {
         return
       }
-      this.userService.deleteUser(id).subscribe({
+      this.apiService.deleteUser(id).subscribe({
         next: () => {
           this.snackBar.open('User deleted successfully.', 'OK', {duration: 3000});
           this.load();
