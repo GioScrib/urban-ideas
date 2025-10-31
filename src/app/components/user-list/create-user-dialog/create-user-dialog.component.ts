@@ -41,7 +41,7 @@ export class CreateUserDialogComponent {
       this.isInvalid = true;
       return
     }
-    this.isInvalid = true;
+    this.isInvalid = false;
     console.log("create-user-dialog says: ", this.newUserForm);
     this.dialogRef.close(this.newUserForm.value);
   }

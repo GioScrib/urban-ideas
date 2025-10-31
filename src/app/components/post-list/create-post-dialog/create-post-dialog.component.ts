@@ -1,0 +1,67 @@
+import {Component, inject, OnInit} from '@angular/core';
+import {MatDialogRef} from '@angular/material/dialog';
+import {FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
+import {CustomButtonComponent} from '../../shared/custom-button/custom-button.component';
+import {CustomDialogContainerComponent} from '../../shared/custom-dialog-container/custom-dialog-container.component';
+import {MatFormField, MatInput, MatLabel} from '@angular/material/input';
+import {ApiService} from '../../../services/users/api.service';
+import {User} from '../../../shared/user';
+import {MatOption, MatSelect} from '@angular/material/select';
+
+@Component({
+  selector: 'app-create-post-dialog',
+  imports: [
+    CustomButtonComponent,
+    CustomDialogContainerComponent,
+    FormsModule,
+    MatFormField,
+    MatInput,
+    MatLabel,
+    MatOption,
+    MatSelect,
+    ReactiveFormsModule
+  ],
+  templateUrl: './create-post-dialog.component.html',
+  styleUrl: './create-post-dialog.component.scss'
+})
+export class CreatePostDialogComponent implements OnInit{
+
+  private fb = inject(FormBuilder);
+  private dialogRef = inject(MatDialogRef<CreatePostDialogComponent>);
+  private apiService = inject(ApiService);
+
+  isInvalid: boolean = false;
+  userList: User[] | null = [];
+
+  ngOnInit() {
+    this.loadUsers();
+  }
+
+  loadUsers() {
+    this.apiService.userList({}).subscribe(res => {
+      this.userList = res.body;
+      console.log("create-post-dialog says: loaded users", this.userList);
+    })
+  }
+
+  newPostForm: FormGroup = this.fb.group({
+    userName: new FormControl('', [Validators.required]),
+    title: new FormControl('', [Validators.required]),
+    body: new FormControl('', [Validators.maxLength(1000), Validators.required])
+  })
+
+  submitData() {
+    if(this.newPostForm.invalid){
+      console.log("new-poster-dialog says: form invalid");
+      this.isInvalid = true;
+      return;
+    }
+    this.isInvalid=false;
+    console.log("new-poster-dialog says: ", this.newPostForm);
+    this.dialogRef.close(this.newPostForm.value);
+  }
+
+  clearForm() {
+    this.newPostForm.reset();
+  }
+}

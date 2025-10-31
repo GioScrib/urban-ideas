@@ -1,0 +1,57 @@
+<app-custom-dialog-container>
+  <p>Insert new Post</p>
+  <form class="new-post-form" [formGroup]="newPostForm">
+    <mat-form-field appearance="outline">
+      <mat-label>Username</mat-label>
+      <mat-select formControlName="userName">
+        @for (user of userList; track user.id) {
+          <mat-option value="{{user.email}}">{{user.email}}</mat-option>
+        }
+
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Title</mat-label>
+      <input matInput formControlName="title">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Body</mat-label>
+      <input matInput formControlName="body">
+    </mat-form-field>
+
+  </form>
+
+  @if (isInvalid) {
+    <p style="color: #BA1A1A">*Invalid data</p>
+  }
+
+  <div class="form-button-group">
+    <app-custom-button
+      class="add-button"
+      matIconName="add"
+      matButtonContent="Add"
+      backGroundColor="#C6D870"
+      textColor="#556B2F"
+      waveColor="#556B2F"
+      (click)="submitData()"
+    ></app-custom-button>
+
+    <app-custom-button
+      class="clear-button"
+      matIconName="delete"
+      matButtonContent="Clear"
+      backGroundColor="#FFD9E1"
+      textColor="#8F0045"
+      waveColor="#8F0045"
+      (click)="clearForm()"
+    >
+    </app-custom-button>
+  </div>
+</app-custom-dialog-container>
+
+
+
+
+

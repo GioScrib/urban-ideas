@@ -6,6 +6,8 @@ import {UserPostCardComponent} from '../../components/shared/user-post-card/user
 import {
   PostListPageHeaderComponent
 } from '../../components/post-list/post-list-page-header/post-list-page-header.component';
+import {MatDialog} from '@angular/material/dialog';
+import {CreatePostDialogComponent} from '../../components/post-list/create-post-dialog/create-post-dialog.component';
 
 @Component({
   selector: 'app-post-list',
@@ -21,6 +23,8 @@ import {
 export class PostListComponent {
 
   private apiService = inject(ApiService);
+  private dialog = inject(MatDialog);
+  private snackBar = inject(MatDialog);
 
   posts: Post[] = [];
   page: number = 1;
@@ -29,7 +33,6 @@ export class PostListComponent {
   name!: string;
   email!: string;
   gridCols = 2;
-
 
 
   constructor() {
@@ -58,8 +61,20 @@ export class PostListComponent {
 
   onClickNewPost() {
     console.log("post-list-component says: new post clicked");
+    this.openCreatePostDialog()
   }
 
+  openCreatePostDialog() {
+    console.log("post-list-component says: open create post dialog");
+    this.dialog.open(CreatePostDialogComponent).afterClosed().subscribe(
+      data => {
+        console.log("post-list-component says: dialog closed with data: ", data);
+        if(!data) {
+          return;
+        }
+      }
+    )
+  }
 
 
 }
