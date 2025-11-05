@@ -12,6 +12,7 @@ import {MatDialog} from '@angular/material/dialog';
 import {CustomPostCardHeaderComponent} from '../custom-post-card-header/custom-post-card-header.component';
 import {ApiService} from '../../../services/users/api.service';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import {AddCommentDialogComponent} from '../add-comment-dialog/add-comment-dialog.component';
 
 @Component({
   selector: 'app-user-post-card',
@@ -63,4 +64,25 @@ export class UserPostCardComponent implements OnInit {
       }
     )
   }
+
+  onClickAddComment() {
+    this.dialog.open(AddCommentDialogComponent, {
+      data: { post: this.post() }
+    }).afterClosed().subscribe(data => {
+      console.log("user-post-card says: saving new comment...", data);
+      if (!data) {
+        return;
+      }
+      this.apiService.addNewComment(this.post().id, data).subscribe({
+        next: () => {
+          this.snackBar.open('Comment added successfully', 'OK', { duration: 3000 });
+        },
+        error: (err) => {
+          const msgError = err?.error?.message || "Creation error";
+          this.snackBar.open(msgError, 'Chiudi', { duration: 3000 });
+        }
+      });
+    });
+  }
+
 }

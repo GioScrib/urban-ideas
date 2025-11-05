@@ -1,15 +1,11 @@
 import {Component, effect, ElementRef, inject, OnInit, ViewChild} from '@angular/core';
 import {CustomDialogContainerComponent} from '../../shared/custom-dialog-container/custom-dialog-container.component';
 import {Post} from '../../../shared/post.model';
-import {CustomButtonComponent} from '../../shared/custom-button/custom-button.component';
 import {ApiService} from '../../../services/users/api.service';
 import {Comment} from '../../../shared/comment.model';
-import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
-import {CreateUserDialogComponent} from '../../user-list/create-user-dialog/create-user-dialog.component';
+import {MAT_DIALOG_DATA} from '@angular/material/dialog';
 import {CustomPostCardHeaderComponent} from '../../shared/custom-post-card-header/custom-post-card-header.component';
-import {FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
-import {MatFormField, MatInput, MatLabel} from '@angular/material/input';
-import {MatSnackBar} from '@angular/material/snack-bar';
+import {ReactiveFormsModule} from '@angular/forms';
 
 export interface PostCommentsDialogData {
   post: Post;
@@ -19,14 +15,8 @@ export interface PostCommentsDialogData {
   selector: 'app-post-comments-dialog',
   imports: [
     CustomDialogContainerComponent,
-    CustomButtonComponent,
     CustomPostCardHeaderComponent,
-    ReactiveFormsModule,
-    MatFormField,
-    MatLabel,
-    MatInput,
-    MatFormField,
-    MatLabel
+    ReactiveFormsModule
   ],
   templateUrl: './post-comments-dialog.component.html',
   styleUrl: './post-comments-dialog.component.scss'
@@ -34,20 +24,10 @@ export interface PostCommentsDialogData {
 export class PostCommentsDialogComponent implements OnInit {
 
   private readonly apiService: ApiService = inject(ApiService);
-  private readonly dialogRef = inject(MatDialogRef<CreateUserDialogComponent>);
-  private readonly fb = inject(FormBuilder);
   @ViewChild('commentFormContainer') commentFormContainer!: ElementRef;
 
   data = inject<PostCommentsDialogData>(MAT_DIALOG_DATA);
   postComments: Comment[] = [];
-  addingComment: boolean = false;
-  isValidForm: boolean = false;
-
-  newCommentForm: FormGroup = this.fb.group({
-    name: new FormControl('', [Validators.required]),
-    email: new FormControl('', [Validators.required, Validators.email]),
-    body: new FormControl('', [Validators.required]),
-  })
 
   constructor() {
   }
@@ -63,38 +43,4 @@ export class PostCommentsDialogComponent implements OnInit {
       console.log('post-comments-dialog says comments fetched for post with id: ' + this.data.post.id, comments);
     })
   }
-
-  onAddComment() {
-    this.addingComment = true;
-    // Attendi che il DOM si aggiorni prima di scrollare
-    setTimeout(() => {
-      this.commentFormContainer?.nativeElement.scrollIntoView({
-        behavior: 'smooth',
-        block: 'end'
-      });
-    }, 0);
-  }
-
-  onCloseButton() {
-    this.addingComment = false;
-    this.newCommentForm.reset();
-  }
-
-  submitData() {
-    if(this.newCommentForm.invalid) {
-      console.log("create-user-dialog says: form invalid");
-      this.isValidForm = false;
-    }
-    this.isValidForm = true;
-
-    let newComment = {
-      post_id: this.data.post.id,
-      name: this.newCommentForm.value.name,
-      email: this.newCommentForm.value.email,
-      body: this.newCommentForm.value.body
-    };
-
-    this.dialogRef.close(newComment);
-  }
-
 }

@@ -1,0 +1,50 @@
+<app-custom-dialog-container>
+  <app-custom-post-card-header
+    [title]="this.data.post.title"
+    [body]="this.data.post.body"
+    >
+  </app-custom-post-card-header>
+
+  <div #commentFormContainer class="new-comment-form-container">
+    <h3>Insert new comment</h3>
+    <form class="new-comment-form" [formGroup]="newCommentForm">
+      <mat-form-field>
+        <mat-label>Title</mat-label>
+        <input matInput formControlName="name" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Comment</mat-label>
+        <input matInput formControlName="body" required>
+      </mat-form-field>
+    </form>
+
+    <div class="form-button-group">
+      <app-custom-button
+        matIconName="check"
+        matButtonContent="Confirm"
+        backGroundColor="#C6D870"
+        textColor="#556B2F"
+        waveColor="#556B2F"
+        (click)="submitData()"
+      >
+      </app-custom-button>
+
+      <app-custom-button
+        class="clear-button"
+        matIconName="close"
+        matButtonContent="Clear"
+        backGroundColor="#FFD9E1"
+        textColor="#8F0045"
+        waveColor="#8F0045"
+        (click)="onClearButton()"
+      >
+      </app-custom-button>
+    </div>
+  </div>
+</app-custom-dialog-container>
