@@ -36,7 +36,6 @@ export class PostCommentsDialogComponent implements OnInit {
   private readonly apiService: ApiService = inject(ApiService);
   private readonly dialogRef = inject(MatDialogRef<CreateUserDialogComponent>);
   private readonly fb = inject(FormBuilder);
-  snackBar = inject(MatSnackBar);
   @ViewChild('commentFormContainer') commentFormContainer!: ElementRef;
 
   data = inject<PostCommentsDialogData>(MAT_DIALOG_DATA);
@@ -45,9 +44,9 @@ export class PostCommentsDialogComponent implements OnInit {
   isValidForm: boolean = false;
 
   newCommentForm: FormGroup = this.fb.group({
-    title: new FormControl('', [Validators.required]),
+    name: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required, Validators.email]),
-    comment: new FormControl('', [Validators.required]),
+    body: new FormControl('', [Validators.required]),
   })
 
   constructor() {
@@ -88,19 +87,14 @@ export class PostCommentsDialogComponent implements OnInit {
     }
     this.isValidForm = true;
 
-    let newComment = this.newCommentForm.value;
-    let postId = this.data.post.id;
-    this.apiService.addNewComment(postId, newComment).subscribe({
-        next: () => {
-          this.loadPostComments();
-          this.snackBar.open('Comment added successfully', 'OK', {duration: 3000});
-        },
-        error: (err) => {
-          const msgError = err?.error?.message || "Creation error";
-          this.snackBar.open(msgError, 'Chiudi', {duration: 3000});
-        }
-      }
-    )
+    let newComment = {
+      post_id: this.data.post.id,
+      name: this.newCommentForm.value.name,
+      email: this.newCommentForm.value.email,
+      body: this.newCommentForm.value.body
+    };
+
+    this.dialogRef.close(newComment);
   }
 
 }

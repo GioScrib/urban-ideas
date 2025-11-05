@@ -30,6 +30,7 @@ export class UserPostCardComponent implements OnInit {
 
   private readonly dialog = inject(MatDialog);
   private readonly apiService = inject(ApiService);
+  private readonly snackBar = inject(MatSnackBar);
 
   post = input.required<Post>()
   clickComments = output();
@@ -50,8 +51,15 @@ export class UserPostCardComponent implements OnInit {
         if (!data) {
           return;
         }
-        this.apiService.addNewComment(this.post().id, data).subscribe(
-        )
+        this.apiService.addNewComment(this.post().id, data).subscribe({
+          next: () => {
+            this.snackBar.open('Comment added successfully', 'OK', {duration: 3000});
+          },
+          error: (err) => {
+            const msgError = err?.error?.message || "Creation error";
+            this.snackBar.open(msgError, 'Chiudi', {duration: 3000});
+          }
+        })
       }
     )
   }
