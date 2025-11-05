@@ -8,7 +8,6 @@ mat-toolbar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border: rosybrown 1px solid;
   border-radius: 12px;
   margin-top: 15px;
   min-width: 435px;
@@ -29,11 +28,17 @@ mat-toolbar {
   //width: 10%;
 }
 
-input {
-  height: 60%;
+.search-input {
+  height: 90%;
   border-radius: 12px;
   padding: 0 10px 0 10px;
   background-color: #FFF8F8;
+}
+
+.search-button {
+  margin-right: 10px;
+  //background-color: ;
+  //color: ;
 }
 
 .search-container {

@@ -26,7 +26,8 @@ export class UserListComponent implements OnInit {
 
   dialog = inject(MatDialog);
   snackBar = inject(MatSnackBar) ;
-  users!: User[];
+  protected users!: User[];
+  protected filteredUsers!: User[];
   page: number = 1;
   per_page: number = 10;
   total: number = 0;
@@ -48,8 +49,10 @@ export class UserListComponent implements OnInit {
     this.apiService.userList({page: this.page, per_page: this.per_page, name: this.name?? '', email: this.email?? ''}).subscribe(
       res => {
         this.users = res.body?? [];
+        this.filteredUsers = this.users;
         console.log("user-list says: ");
-        console.log(res.body);
+        console.log(this.users);
+        console.log('user-list-says: filtered users', this.filteredUsers);
         this.total = Number(res.headers.get('x-Pagination-Total') ?? 0);
       }
     );
@@ -112,5 +115,15 @@ export class UserListComponent implements OnInit {
     })
   }
 
+  onSearchKey(value: string): void {
+    if(!value || value.length === 0) {
+      this.filteredUsers = this.users;
+      return;
+    }
+    this.filteredUsers = this.users.filter(user => {
+      return user.name.toLowerCase().includes(value.toLowerCase())
+        || user.email.toLowerCase().includes(value.toLowerCase());
+    })
+  }
 
 }

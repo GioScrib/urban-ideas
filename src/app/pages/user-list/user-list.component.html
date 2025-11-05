@@ -1,11 +1,22 @@
-<app-user-list-header (gridCols)="onGridCols($event)" (newUser)="onNewUser()"></app-user-list-header>
+<app-user-list-header (gridCols)="onGridCols($event)"
+                      (newUser)="onNewUser()"
+                      (searchKey)="onSearchKey($event)"
+>
+</app-user-list-header>
+@if (filteredUsers?.length === 0) {
+  <div style="display: flex; justify-content: center; align-items: center; height: 50vh;">
+    <h2>No users found</h2>
+  </div>
 
-<app-custom-grid [gridCols]="this.gridCols">
-  @for (user of users; track user.id) {
-    <app-user-card
-      [user]="user"
-      (delete)="onDeleteUser($event)"
-    ></app-user-card>
-  }
-</app-custom-grid>
+} @else {
+  <app-custom-grid [gridCols]="this.gridCols">
+    @for (user of filteredUsers; track user.id) {
+      <app-user-card
+        [user]="user"
+        (delete)="onDeleteUser($event)"
+      ></app-user-card>
+    }
+  </app-custom-grid>
+}
+
 

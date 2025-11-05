@@ -31,10 +31,13 @@ export class UserListHeaderComponent {
   value = signal<string>('');
   gridCols = output<number>();
   newUser = output<void>();
+  searchKey = output<string>();
+  isSearchVisible: boolean = false;
 
   constructor() {
     effect(() => {
       console.log(this.value());
+      this.searchKey.emit(this.value());
     });
   }
 
@@ -51,5 +54,14 @@ export class UserListHeaderComponent {
   seeAllPosts() {
     this.router.navigate(['posts']).catch(e => console.error(e))
       .then(() => console.log('Navigated to posts'));
+  }
+
+  onClickSearch() {
+    this.isSearchVisible = !this.isSearchVisible;
+
+    if(!this.isSearchVisible) {
+      this.value.set('');
+      this.searchKey.emit(this.value());
+    }
   }
 }

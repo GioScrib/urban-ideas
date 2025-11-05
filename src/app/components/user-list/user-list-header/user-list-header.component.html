@@ -1,45 +1,68 @@
 <div class="mat-toolbar-container">
   <mat-toolbar>
     <div class="left-container">
-<!--      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">-->
-<!--        <mat-icon>menu</mat-icon>-->
-<!--      </button>-->
-      <span>My App</span>
+      <app-custom-button
+        matIconName="web_stories"
+        matButtonContent="See all posts"
+        backGroundColor="#ADD8E6"
+        textColor="#00008B"
+        waveColor="#00008B"
+        (click)="seeAllPosts()"
+      >
+      </app-custom-button>
       <span class="example-spacer"></span>
     </div>
 
     <div class="right-container">
 
-        <app-custom-button
-          matIconName="web_stories"
-          matButtonContent="See all posts"
-          backGroundColor="#ADD8E6"
-          textColor="#00008B"
-          waveColor="#00008B"
-          (click)="seeAllPosts()"
-        >
-        </app-custom-button>
 
       <div class="search-container">
-        <button mat-icon-button>
-          <mat-icon>search</mat-icon>
-        </button>
-        <input type="text" name="" id="" [(ngModel)]="value">
+        @if (!isSearchVisible) {
+          <app-custom-button
+            class="search-button"
+            matIconName="search"
+            matButtonContent=""
+            backGroundColor="#ADD8E6"
+            textColor="#00008B"
+            waveColor="#00008B"
+            (click)="onClickSearch()"
+          >
+          </app-custom-button>
+        }
+
+        @if (isSearchVisible) {
+          <app-custom-button
+            class="search-button"
+            matIconName="close"
+            matButtonContent=""
+            backGroundColor="#ADD8E6"
+            textColor="#00008B"
+            waveColor="#00008B"
+            (click)="onClickSearch()"
+          >
+          </app-custom-button>
+          <input class="search-input"
+                 type="text"
+                 name=""
+                 id="" [(ngModel)]="value">
+        }
+
       </div>
 
       <div class="right-button-container">
 
         <app-custom-button class="new-user-button"
-        matIconName="add"
-        matButtonContent="New user"
-        backGroundColor="#C6D870"
-        textColor="#556B2F"
-        waveColor="#556B2F"
-        (click)="onClickNewUser()"
+                           matIconName="add"
+                           matButtonContent="New user"
+                           backGroundColor="#C6D870"
+                           textColor="#556B2F"
+                           waveColor="#556B2F"
+                           (click)="onClickNewUser()"
         >
         </app-custom-button>
 
-        <button class="elements-button" mat-icon-button [matMenuTriggerFor]="elementsMenu" aria-label="Example icon-button with a menu">
+        <button class="elements-button" mat-icon-button [matMenuTriggerFor]="elementsMenu"
+                aria-label="Example icon-button with a menu">
           <mat-icon>more_vert</mat-icon>
         </button>
         <mat-menu #elementsMenu="matMenu">
@@ -54,7 +77,8 @@
           </button>
         </mat-menu>
 
-        <button class="grid-button" mat-icon-button  [matMenuTriggerFor]="gridMenu" aria-label="Example icon-button with share icon">
+        <button class="grid-button" mat-icon-button [matMenuTriggerFor]="gridMenu"
+                aria-label="Example icon-button with share icon">
           <mat-icon>grid_view</mat-icon>
         </button>
         <mat-menu #gridMenu="matMenu">
