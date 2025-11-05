@@ -58,7 +58,14 @@ export class CreatePostDialogComponent implements OnInit{
     }
     this.isInvalid=false;
     console.log("new-poster-dialog says: ", this.newPostForm);
-    this.dialogRef.close(this.newPostForm.value);
+    let selectedUser = this.userList?.find(user => user.email === this.newPostForm.value.userName);
+    let post = {
+      user_id: selectedUser?.id,
+      title: this.newPostForm.value.title,
+      body: this.newPostForm.value.body
+    }
+    console.log("new-poster-dialog-says: post created", post);
+    this.dialogRef.close(post);
   }
 
   clearForm() {

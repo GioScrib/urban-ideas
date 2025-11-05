@@ -110,4 +110,9 @@ export class ApiService {
   getImgForUser(id: number) {
     return this.mapUsrIdImg.get(id);
   }
+
+// /public/v2/users/7583009/posts
+  addUserPost(post: Post) {
+    return this.httpClient.post<Post>(API + '/users/' + post.user_id + '/posts', post);
+  }
 }

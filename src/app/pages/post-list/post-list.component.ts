@@ -8,6 +8,7 @@ import {
 } from '../../components/post-list/post-list-page-header/post-list-page-header.component';
 import {MatDialog} from '@angular/material/dialog';
 import {CreatePostDialogComponent} from '../../components/post-list/create-post-dialog/create-post-dialog.component';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-post-list',
@@ -24,7 +25,7 @@ export class PostListComponent {
 
   private apiService = inject(ApiService);
   private dialog = inject(MatDialog);
-  private snackBar = inject(MatDialog);
+  private snackBar = inject(MatSnackBar);
 
   posts: Post[] = [];
   page: number = 1;
@@ -72,6 +73,17 @@ export class PostListComponent {
         if(!data) {
           return;
         }
+        this.apiService.addUserPost(data).subscribe({
+          next: () => {
+            this.snackBar.open('Post created successfully','OK', {duration: 3000});
+            this.load();
+          },
+          error: (err) => {
+            const msgError = err?.error?.message || "Creation error";
+            this.snackBar.open(msgError, 'Chiudi', {duration: 3000});
+          }
+          }
+        );
       }
     )
   }
