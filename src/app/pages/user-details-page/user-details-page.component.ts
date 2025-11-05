@@ -36,7 +36,7 @@ export class UserDetailsPageComponent implements OnInit {
   userImg!: string|undefined;
   posts = signal<Post[]>([]);
   comments = signal<Comment[]>([]);
-  gridCols: number = 1;
+  gridCols: number = 2;
 
   postLoading: boolean = true;
 
