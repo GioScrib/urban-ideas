@@ -15,25 +15,22 @@
 
     <div class="right-container">
 
-      <div class="search-container">
-        <button mat-icon-button>
-          <mat-icon>search</mat-icon>
-        </button>
-        <input type="text" name="" id="" [(ngModel)]="value">
-      </div>
+      <app-custom-search
+      (searchKey)="onSearchKey($event)"
+      >
+      </app-custom-search>
+
+      <app-custom-button class="new-user-button"
+                         matIconName="add"
+                         matButtonContent="New Post"
+                         backGroundColor="#C6D870"
+                         textColor="#556B2F"
+                         waveColor="#556B2F"
+                         (click)="onClickNewPost()"
+      >
+      </app-custom-button>
 
       <div class="right-button-container">
-
-                <app-custom-button class="new-user-button"
-                matIconName="add"
-                matButtonContent="New Post"
-                backGroundColor="#C6D870"
-                textColor="#556B2F"
-                waveColor="#556B2F"
-                (click)="onClickNewPost()"
-                >
-                </app-custom-button>
-
         <button class="elements-button" mat-icon-button [matMenuTriggerFor]="elementsMenu" aria-label="Example icon-button with a menu">
           <mat-icon>more_vert</mat-icon>
         </button>

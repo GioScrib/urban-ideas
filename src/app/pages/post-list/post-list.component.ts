@@ -28,6 +28,7 @@ export class PostListComponent {
   private snackBar = inject(MatSnackBar);
 
   posts: Post[] = [];
+  filteredPosts: Post[] = [];
   page: number = 1;
   per_page: number = 10;
   total: number = 0;
@@ -49,6 +50,7 @@ export class PostListComponent {
       email: this.email?? ''}).subscribe(
       res => {
         this.posts = res.body?? [];
+        this.filteredPosts = this.posts;
         console.log('post-list-component says: ', this.posts);
         this.total = Number(res.headers.get('x-Pagination-Total') ?? 0);
       }
@@ -88,5 +90,16 @@ export class PostListComponent {
     )
   }
 
+  onSearchKeyValue(value: string) {
+    console.log("post-list says: searching for key ", value);
+    if(!value || value.length === 0) {
+      this.filteredPosts = this.posts;
+      return;
+    }
+    this.filteredPosts = this.posts.filter((post: Post) => {
+      return post.title.toLowerCase().includes(value.toLowerCase())
+      || post.body.toLowerCase().includes(value.toLowerCase());
+    })
+  }
 
 }

@@ -6,6 +6,7 @@ import {MatMenu, MatMenuItem, MatMenuTrigger} from '@angular/material/menu';
 import {MatToolbar} from '@angular/material/toolbar';
 import {RouterLink} from '@angular/router';
 import {MatIcon} from '@angular/material/icon';
+import {CustomSearchComponent} from '../../shared/custom-search/custom-search.component';
 
 @Component({
   selector: 'app-post-list-page-header',
@@ -18,22 +19,17 @@ import {MatIcon} from '@angular/material/icon';
     MatMenuItem,
     MatToolbar,
     RouterLink,
-    MatMenuTrigger
+    MatMenuTrigger,
+    CustomSearchComponent
   ],
   templateUrl: './post-list-page-header.component.html',
   styleUrl: './post-list-page-header.component.scss'
 })
 export class PostListPageHeaderComponent {
 
-  value = signal<string>('');
+  searchKey = output<string>();
   gridCols = output<number>();
   newPostClick = output<void>();
-
-  constructor() {
-    effect(() => {
-      console.log(this.value());
-    });
-  }
 
   onClickGridCols(cols: number) {
     console.log("post-list-page-header says grid cols clicked: ", cols);
@@ -43,5 +39,9 @@ export class PostListPageHeaderComponent {
   onClickNewPost(): void {
     console.log("post-list-page-header says: new post clicked");
     this.newPostClick.emit();
+  }
+
+  onSearchKey(value: string): void {
+    this.searchKey.emit(value);
   }
 }
