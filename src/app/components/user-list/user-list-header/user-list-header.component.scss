@@ -1,7 +1,13 @@
+/* ==========================================
+   USER LIST HEADER - Responsive
+   Modifica: user-list-header.component.scss
+   ========================================== */
+
 .mat-toolbar-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  padding: 0 10px;
 }
 
 mat-toolbar {
@@ -10,44 +16,102 @@ mat-toolbar {
   justify-content: space-between;
   border-radius: 12px;
   margin-top: 15px;
-  //min-width: 435px;
-  //altezza standard di Material
-  height: 65px;
+  min-height: 65px;
   width: 99%;
+  max-width: 100%;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+  padding: 8px 12px;
+  flex-wrap: wrap;
 }
 
 .left-container {
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .right-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  //width: 10%;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .funct-container {
   display: flex;
   flex-direction: row;
-  //stretch sui container per far sì che gli elementi figli occupino tutta l'altezza
   align-items: stretch;
-  margin-right: 30px;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .new-user-button {
-  margin: 0px 5px 0px 5px;
+  margin: 0;
 }
 
-.elements-button {
-  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
-  margin: 0px 5px 0px 5px;
+.right-button-container {
+  display: flex;
+  gap: 5px;
 }
 
+.elements-button,
 .grid-button {
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
-  margin: 0px 5px 0px 5px;
+  margin: 0;
+}
+
+/* Mobile Small (< 480px) */
+@media (max-width: 479px) {
+  mat-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 12px 8px;
+    gap: 12px;
+    min-height: auto;
+  }
+
+  .left-container,
+  .right-container {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .funct-container {
+    width: 100%;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .right-button-container {
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* Nascondi testo bottoni su mobile molto piccolo */
+  ::ng-deep .mat-mdc-button-touch-target {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+
+/* Mobile (480px - 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+  mat-toolbar {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .right-container {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 8px;
+  }
+
+  .funct-container {
+    flex: 1;
+  }
 }

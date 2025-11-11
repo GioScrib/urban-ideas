@@ -1,7 +1,27 @@
+/* ==========================================
+   CUSTOM BUTTON - Responsive
+   ========================================== */
+
 button {
   height: 40px;
   background-color: var(--bg-color) !important;
   color: var(--txt-color) !important;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3) !important;
-  --mat-sys-on-primary-container: var(--wave-color) !important;/* Or any color you want */
+  --mat-sys-on-primary-container: var(--wave-color) !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 479px) {
+  button {
+    height: 36px;
+    font-size: 13px;
+  }
+
+  button mat-icon {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+  }
 }
