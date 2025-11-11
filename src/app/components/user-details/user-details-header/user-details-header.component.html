@@ -15,12 +15,10 @@
 
     <div class="right-container">
 
-      <div class="search-container">
-        <button mat-icon-button>
-          <mat-icon>search</mat-icon>
-        </button>
-        <input type="text" name="" id="" [(ngModel)]="value">
-      </div>
+      <app-custom-search
+      (searchKey)="onSearchKey($event)"
+      >
+      </app-custom-search>
 
       <div class="right-button-container">
 

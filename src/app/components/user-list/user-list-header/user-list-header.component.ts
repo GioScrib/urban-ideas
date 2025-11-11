@@ -8,6 +8,7 @@ import {MatDialog} from '@angular/material/dialog';
 import {CreateUserDialogComponent} from '../create-user-dialog/create-user-dialog.component';
 import {CustomButtonComponent} from '../../shared/custom-button/custom-button.component';
 import {Router} from '@angular/router';
+import {CustomSearchComponent} from '../../shared/custom-search/custom-search.component';
 
 @Component({
   selector: 'app-user-list-header',
@@ -19,7 +20,8 @@ import {Router} from '@angular/router';
     MatMenu,
     MatMenuItem,
     FormsModule,
-    CustomButtonComponent
+    CustomButtonComponent,
+    CustomSearchComponent
   ],
   templateUrl: './user-list-header.component.html',
   styleUrl: './user-list-header.component.scss'
@@ -28,18 +30,11 @@ export class UserListHeaderComponent {
 
   private router: Router = inject(Router);
 
-  value = signal<string>('');
+  inputValue = output<string>();
   gridCols = output<number>();
   newUser = output<void>();
-  searchKey = output<string>();
   isSearchVisible: boolean = false;
 
-  constructor() {
-    effect(() => {
-      console.log(this.value());
-      this.searchKey.emit(this.value());
-    });
-  }
 
   onClickGridCols(cols: number) {
     console.log("user-list-header says grid cols clicked: ", cols);
@@ -56,12 +51,8 @@ export class UserListHeaderComponent {
       .then(() => console.log('Navigated to posts'));
   }
 
-  onClickSearch() {
-    this.isSearchVisible = !this.isSearchVisible;
-
-    if(!this.isSearchVisible) {
-      this.value.set('');
-      this.searchKey.emit(this.value());
-    }
+  onInputSearch(value: string): void {
+    this.inputValue.emit(value);
   }
+
 }

@@ -1,0 +1,32 @@
+<div class="search-container">
+  @if (!isSearchVisible) {
+    <app-custom-button
+      class="search-button"
+      matIconName="search"
+      matButtonContent=""
+      backGroundColor="#ADD8E6"
+      textColor="#00008B"
+      waveColor="#00008B"
+      (click)="onClickSearch()"
+    >
+    </app-custom-button>
+  } @else {
+    <app-custom-button
+      class="search-button"
+      matIconName="close"
+      matButtonContent=""
+      backGroundColor="#ADD8E6"
+      textColor="#00008B"
+      waveColor="#00008B"
+      (click)="onClickSearch()"
+    >
+    </app-custom-button>
+    <input class="search-input"
+           type="text"
+           name=""
+           id=""
+           [ngModel]="inputValue()"
+           (ngModelChange)="inputValue.set($event)"
+    >
+  }
+</div>

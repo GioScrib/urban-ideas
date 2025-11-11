@@ -10,7 +10,9 @@ mat-toolbar {
   justify-content: space-between;
   border-radius: 12px;
   margin-top: 15px;
-  min-width: 435px;
+  //min-width: 435px;
+  //altezza standard di Material
+  height: 65px;
   width: 99%;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
 }
@@ -28,23 +30,11 @@ mat-toolbar {
   //width: 10%;
 }
 
-.search-input {
-  height: 90%;
-  border-radius: 12px;
-  padding: 0 10px 0 10px;
-  background-color: #FFF8F8;
-}
-
-.search-button {
-  margin-right: 10px;
-  //background-color: ;
-  //color: ;
-}
-
-.search-container {
+.funct-container {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  //stretch sui container per far sì che gli elementi figli occupino tutta l'altezza
+  align-items: stretch;
   margin-right: 30px;
 }
 

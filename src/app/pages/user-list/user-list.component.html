@@ -1,6 +1,6 @@
 <app-user-list-header (gridCols)="onGridCols($event)"
                       (newUser)="onNewUser()"
-                      (searchKey)="onSearchKey($event)"
+                      (inputValue)="onSearchKey($event)"
 >
 </app-user-list-header>
 @if (filteredUsers?.length === 0) {

@@ -16,40 +16,13 @@
     <div class="right-container">
 
 
-      <div class="search-container">
-        @if (!isSearchVisible) {
-          <app-custom-button
-            class="search-button"
-            matIconName="search"
-            matButtonContent=""
-            backGroundColor="#ADD8E6"
-            textColor="#00008B"
-            waveColor="#00008B"
-            (click)="onClickSearch()"
-          >
-          </app-custom-button>
-        }
+      <div class="funct-container">
 
-        @if (isSearchVisible) {
-          <app-custom-button
-            class="search-button"
-            matIconName="close"
-            matButtonContent=""
-            backGroundColor="#ADD8E6"
-            textColor="#00008B"
-            waveColor="#00008B"
-            (click)="onClickSearch()"
-          >
-          </app-custom-button>
-          <input class="search-input"
-                 type="text"
-                 name=""
-                 id="" [(ngModel)]="value">
-        }
-
-      </div>
-
-      <div class="right-button-container">
+        <app-custom-search
+          class="search-component"
+        (searchKey)="onInputSearch($event)"
+        >
+        </app-custom-search>
 
         <app-custom-button class="new-user-button"
                            matIconName="add"
@@ -60,6 +33,12 @@
                            (click)="onClickNewUser()"
         >
         </app-custom-button>
+
+      </div>
+
+      <div class="right-button-container">
+
+
 
         <button class="elements-button" mat-icon-button [matMenuTriggerFor]="elementsMenu"
                 aria-label="Example icon-button with a menu">

@@ -35,6 +35,7 @@ export class UserDetailsPageComponent implements OnInit {
   user!: User;
   userImg!: string|undefined;
   posts = signal<Post[]>([]);
+  filteredPosts: Post[] = [];
   comments = signal<Comment[]>([]);
   gridCols: number = 2;
 
@@ -51,6 +52,7 @@ export class UserDetailsPageComponent implements OnInit {
     this.apiService.getUserPosts(Number.parseInt(id? id : '0')).subscribe({
       next: posts => {
         this.posts.set(posts);
+        this.filteredPosts = this.posts();
         console.log('User details component says: posts fetched', this.posts());
       },
       complete: () => {this.postLoading = false}
@@ -66,5 +68,16 @@ export class UserDetailsPageComponent implements OnInit {
 
   onClickComment() {
 
+  }
+
+  onSearchKeyValue(value: string) {
+    console.log("user-details-page says: search key value", value);
+    if(!value || value.length === 0) {
+      this.filteredPosts = this.posts();
+    }
+    this.filteredPosts = this.posts().filter((post: Post) => {
+      return post.title.toLowerCase().includes(value.toLowerCase())
+        || post.body.toLowerCase().includes(value.toLowerCase());
+    })
   }
 }
