@@ -5,7 +5,7 @@
 >
 </app-post-list-page-header>
 
-@if (filteredPosts.length === 0) {
+@if (filteredPosts.length === 0 && !isLoading) {
   <div style="display: flex; justify-content: center; align-items: center; height: 50vh;">
     <h2>No match found</h2>
   </div>

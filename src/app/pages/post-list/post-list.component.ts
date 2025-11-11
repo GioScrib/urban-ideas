@@ -1,4 +1,4 @@
-import {Component, inject} from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import {CustomGridComponent} from '../../components/shared/custom-grid/custom-grid.component';
 import {ApiService} from '../../services/users/api.service';
 import {Post} from '../../shared/post.model';
@@ -21,11 +21,11 @@ import {MatSnackBar} from '@angular/material/snack-bar';
   templateUrl: './post-list.component.html',
   styleUrl: './post-list.component.scss'
 })
-export class PostListComponent {
+export class PostListComponent implements OnInit {
 
-  private apiService = inject(ApiService);
-  private dialog = inject(MatDialog);
-  private snackBar = inject(MatSnackBar);
+  private readonly apiService = inject(ApiService);
+  private readonly dialog = inject(MatDialog);
+  private readonly snackBar = inject(MatSnackBar);
 
   posts: Post[] = [];
   filteredPosts: Post[] = [];
@@ -36,8 +36,9 @@ export class PostListComponent {
   email!: string;
   gridCols = 2;
 
+  isLoading: boolean = true;
 
-  constructor() {
+  ngOnInit() {
     console.log('PostListComponent says: initialized');
     this.load();
   }
@@ -51,8 +52,10 @@ export class PostListComponent {
       res => {
         this.posts = res.body?? [];
         this.filteredPosts = this.posts;
-        console.log('post-list-component says: ', this.posts);
         this.total = Number(res.headers.get('x-Pagination-Total') ?? 0);
+        this.isLoading = false;
+        console.log('post-list-component says: ', this.posts);
+
       }
     )
   }
