@@ -15,10 +15,7 @@
 @media (max-width: 479px) {
   .card-button-group {
     flex-direction: column;
-    width: 100%;
-  }
-
-  .card-button-group app-custom-button {
-    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 }

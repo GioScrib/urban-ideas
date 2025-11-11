@@ -20,7 +20,8 @@
   background-color: #FFF8F8;
   box-sizing: border-box;
   border: 1px solid #ddd;
-  min-width: 150px;
+  min-width: 150px;  // Dimensione minima
+  flex: 1;
 }
 
 .search-button {
@@ -35,7 +36,8 @@
   }
 
   .search-input {
-    width: 100%;
-    min-width: auto;
+    width: 100%;        // Forza larghezza completa
+    min-width: auto;    // Rimuove il minimo
+    flex: 1;
   }
 }

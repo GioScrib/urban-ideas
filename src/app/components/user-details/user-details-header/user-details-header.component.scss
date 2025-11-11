@@ -92,21 +92,50 @@ mat-toolbar {
   }
 }
 
-/* Mobile (480px - 767px) */
-@media (min-width: 480px) and (max-width: 767px) {
-  mat-toolbar {
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 10px;
-  }
+///* Mobile (480px - 767px) */
+//@media (min-width: 480px) and (max-width: 767px) {
+//  mat-toolbar {
+//    flex-direction: column;
+//    align-items: stretch;
+//    gap: 10px;
+//    padding: 10px 8px;
+//    min-height: auto;
+//  }
+//
+//  .left-container {
+//    width: 100%;
+//    justify-content: center;
+//  }
+//
+//  .right-container {
+//    width: 100%;
+//    justify-content: center;
+//    flex-direction: column;
+//    gap: 10px;
+//  }
+//
+//  .funct-container {
+//    width: 100%;
+//    justify-content: center;
+//    gap: 10px;
+//  }
+//
+//  .right-button-container {
+//    width: 100%;
+//    justify-content: center;
+//  }
+//}
 
-  .right-container {
+
+.mobile-header-layout {
+  display: contents; // Si comporta come se non esistesse su desktop
+}
+
+@media (max-width: 767px) {
+  .mobile-header-layout {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    justify-content: space-between;
-    margin-top: 8px;
-  }
-
-  .funct-container {
-    flex: 1;
+    gap: 10px;
   }
 }
