@@ -8,25 +8,32 @@ mat-toolbar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   border: rosybrown 1px solid;
   border-radius: 12px;
   margin-top: 15px;
-  min-width: 435px;
   width: 99%;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 10px 16px;
+  box-sizing: border-box;
 }
 
 .left-container {
   display: flex;
   flex-direction: row;
   align-items: center;
+  gap: 12px;
 }
 
 .right-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  //width: 10%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
 }
 
 input {
@@ -40,19 +47,50 @@ input {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-right: 30px;
+  margin-right: 0;
 }
 
 .new-user-button {
-  margin: 0px 5px 0px 5px;
+  margin: 0;
 }
 
 .elements-button {
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
-  margin: 0px 5px 0px 5px;
+  margin: 0;
 }
 
 .grid-button {
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
-  margin: 0px 5px 0px 5px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  mat-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .left-container,
+  .right-container {
+    width: 100%;
+  }
+
+  .right-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .right-button-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .right-button-container {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }

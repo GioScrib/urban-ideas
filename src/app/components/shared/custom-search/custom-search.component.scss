@@ -4,6 +4,7 @@
   align-items: center;
   margin-right: 30px;
   height: 100%;
+  gap: 10px;
 }
 
 .search-input {
@@ -16,6 +17,35 @@
 
 .search-button {
   margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .search-container {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .search-input {
+    flex: 1;
+    height: 42px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .search-button {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .search-input {
+    width: 100%;
+  }
 }
 
 

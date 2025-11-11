@@ -12,15 +12,19 @@ mat-accordion {
   background-color: #FFF8F8;
   border-radius: 15px;
   margin: 10px;
+  padding: 10px 20px;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+  gap: 16px;
+  box-sizing: border-box;
 }
 
 .user-card-header img {
   width: 100px;
   height: 100px;
-  margin: 30px 30px 30px 30px;
+  margin: 10px;
   border-radius: 15px;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
 }
 
 .user-card-info {
@@ -30,9 +34,7 @@ mat-accordion {
   justify-content: center;
   border-radius: 15px;
   padding: 20px;
-  margin-top: 20px;
-  margin-right: 50px;
-  margin-bottom: 20px;
+  margin: 10px 20px 10px 0;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
 }
 
@@ -49,6 +51,8 @@ mat-expansion-panel-header mat-panel-title{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 button {
@@ -59,4 +63,40 @@ button {
 .details-button {
   background-color: lightblue !important;
   color: darkblue;
+}
+
+@media (max-width: 768px) {
+  .user-card-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .user-card-info {
+    margin: 0;
+    width: 100%;
+  }
+
+  .card-button-group {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  mat-accordion {
+    width: 100%;
+  }
+
+  .user-card-header img {
+    width: 80px;
+    height: 80px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .card-button-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
