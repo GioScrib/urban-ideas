@@ -1,17 +1,79 @@
 import { TestBed } from '@angular/core/testing';
-import { HttpInterceptorFn } from '@angular/common/http';
-
+import { HttpInterceptorFn, HttpRequest, HttpHandlerFn, HttpEvent } from '@angular/common/http';
 import { authInterceptor } from './auth.interceptor';
+import { Observable, of } from 'rxjs';
 
 describe('authInterceptor', () => {
-  const interceptor: HttpInterceptorFn = (req, next) => 
-    TestBed.runInInjectionContext(() => authInterceptor(req, next));
+  let mockNext: jasmine.Spy<HttpHandlerFn>;
 
   beforeEach(() => {
+    // Mock localStorage
+    let store: { [key: string]: string } = {};
+    const mockLocalStorage = {
+      getItem: (key: string): string | null => {
+        return key in store ? store[key] : null;
+      },
+      setItem: (key: string, value: string) => {
+        store[key] = `${value}`;
+      },
+      removeItem: (key: string) => {
+        delete store[key];
+      },
+      clear: () => {
+        store = {};
+      }
+    };
+
+    spyOn(localStorage, 'getItem').and.callFake(mockLocalStorage.getItem);
+    spyOn(localStorage, 'setItem').and.callFake(mockLocalStorage.setItem);
+
+    mockNext = jasmine.createSpy('next').and.returnValue(of({} as HttpEvent<unknown>));
+
     TestBed.configureTestingModule({});
   });
 
-  it('should be created', () => {
-    expect(interceptor).toBeTruthy();
+  it('should add Authorization header when token exists', () => {
+    localStorage.setItem('auth_token', 'test-token');
+
+    const req = new HttpRequest('GET', '/api/test');
+
+    authInterceptor(req, mockNext);
+
+    expect(mockNext).toHaveBeenCalled();
+    const modifiedReq = mockNext.calls.mostRecent().args[0] as HttpRequest<unknown>;
+    expect(modifiedReq.headers.get('Authorization')).toBe('Bearer test-token');
+  });
+
+  it('should not add Authorization header when token does not exist', () => {
+    localStorage.removeItem('auth_token');
+
+    const req = new HttpRequest('GET', '/api/test');
+
+    authInterceptor(req, mockNext);
+
+    expect(mockNext).toHaveBeenCalled();
+    const modifiedReq = mockNext.calls.mostRecent().args[0] as HttpRequest<unknown>;
+    expect(modifiedReq.headers.has('Authorization')).toBe(false);
+  });
+
+  it('should pass through the request when no token', () => {
+    localStorage.removeItem('auth_token');
+
+    const req = new HttpRequest('GET', '/api/test');
+
+    authInterceptor(req, mockNext);
+
+    expect(mockNext).toHaveBeenCalledWith(req);
+  });
+
+  it('should handle empty token as no token', () => {
+    localStorage.setItem('auth_token', '');
+
+    const req = new HttpRequest('GET', '/api/test');
+
+    authInterceptor(req, mockNext);
+
+    const modifiedReq = mockNext.calls.mostRecent().args[0] as HttpRequest<unknown>;
+    expect(modifiedReq.headers.has('Authorization')).toBe(false);
   });
 });

@@ -26,8 +26,8 @@ export class UserListComponent implements OnInit {
 
   dialog = inject(MatDialog);
   snackBar = inject(MatSnackBar) ;
-  protected users!: User[];
-  protected filteredUsers!: User[];
+  users!: User[];
+  filteredUsers!: User[];
   page: number = 1;
   per_page: number = 10;
   total: number = 0;
