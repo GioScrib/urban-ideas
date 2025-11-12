@@ -29,7 +29,7 @@ export interface CommentsDialogData {
 export class AddCommentDialogComponent {
   private fb = inject(FormBuilder);
   private dialogRef = inject(MatDialogRef<AddCommentDialogComponent>);
-  protected data = inject<CommentsDialogData>(MAT_DIALOG_DATA);
+  data = inject<CommentsDialogData>(MAT_DIALOG_DATA);
   isValidForm: boolean = false;
 
   newCommentForm: FormGroup = this.fb.group({

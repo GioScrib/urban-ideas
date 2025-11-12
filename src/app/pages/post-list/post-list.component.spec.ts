@@ -5,6 +5,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { provideRouter } from '@angular/router';
 import { of, throwError } from 'rxjs';
 import { Post } from '../../shared/post.model';
 import {HttpHeaders, HttpResponse} from '@angular/common/http';
@@ -46,7 +47,8 @@ describe('PostListComponent', () => {
       providers: [
         { provide: ApiService, useValue: mockApiService },
         { provide: MatDialog, useValue: mockDialog },
-        { provide: MatSnackBar, useValue: mockSnackBar }
+        { provide: MatSnackBar, useValue: mockSnackBar },
+        provideRouter([])
       ]
     }).compileComponents();
 

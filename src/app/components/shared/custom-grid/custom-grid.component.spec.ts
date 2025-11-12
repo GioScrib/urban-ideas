@@ -4,6 +4,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-test-host',
+  standalone: true,
+  imports: [CustomGridComponent],
   template: `
     <app-custom-grid [gridCols]="cols">
       <div class="test-item">Item 1</div>
@@ -69,8 +71,7 @@ describe('CustomGridComponent with projected content', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CustomGridComponent],
-      declarations: [TestHostComponent]
+      imports: [CustomGridComponent, TestHostComponent]
     }).compileComponents();
 
     fixture = TestBed.createComponent(TestHostComponent);
