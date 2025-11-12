@@ -1,11 +1,8 @@
 import {Component, effect, inject, output, signal} from '@angular/core';
-import {MatFabButton, MatIconButton} from '@angular/material/button';
-import {MatToolbar} from '@angular/material/toolbar';
+import {MatIconButton} from '@angular/material/button';
 import {MatIcon} from '@angular/material/icon';
 import {MatMenu, MatMenuItem, MatMenuTrigger} from '@angular/material/menu';
 import {FormsModule} from '@angular/forms';
-import {MatDialog} from '@angular/material/dialog';
-import {CreateUserDialogComponent} from '../create-user-dialog/create-user-dialog.component';
 import {CustomButtonComponent} from '../../shared/custom-button/custom-button.component';
 import {Router} from '@angular/router';
 import {CustomSearchComponent} from '../../shared/custom-search/custom-search.component';
@@ -15,7 +12,6 @@ import {CustomSearchComponent} from '../../shared/custom-search/custom-search.co
   imports: [
     MatIcon,
     MatIconButton,
-    MatToolbar,
     MatMenuTrigger,
     MatMenu,
     MatMenuItem,
