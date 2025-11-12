@@ -17,7 +17,6 @@ import {CustomSearchComponent} from '../../shared/custom-search/custom-search.co
     MatIconButton,
     MatMenu,
     MatMenuItem,
-    MatToolbar,
     RouterLink,
     MatMenuTrigger,
     CustomSearchComponent

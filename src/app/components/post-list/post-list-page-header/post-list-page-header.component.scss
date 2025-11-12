@@ -5,7 +5,7 @@
   padding: 0 10px;
 }
 
-mat-toolbar {
+.mat-toolbar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -58,52 +58,15 @@ mat-toolbar {
   margin: 0;
 }
 
-/* Mobile Small (< 480px) */
-@media (max-width: 479px) {
-  .mat-toolbar-container {
-    padding: 0 5px;
-  }
-
-  mat-toolbar {
+/* Mobile (< 500px) */
+@media (min-width: 410px) and (max-width: 640px) {
+  .mat-toolbar {
+    display: flex;
     flex-direction: column;
-    align-items: stretch;
-    padding: 12px 8px;
-    gap: 12px;
-    min-height: auto;
-  }
-
-  .left-container,
-  .right-container {
-    width: 100%;
     justify-content: center;
-  }
-
-  .funct-container {
-    width: 100%;
-    justify-content: center;
-    margin: 0;
-  }
-
-  .right-button-container {
-    justify-content: center;
-    width: 100%;
-  }
-
-  /* Nascondi testo bottoni su mobile molto piccolo */
-  ::ng-deep .mat-mdc-button-touch-target {
-    width: 40px !important;
-    height: 40px !important;
-  }
-}
-
-/* Mobile (480px - 767px) */
-@media (min-width: 480px) and (max-width: 767px) {
-  mat-toolbar {
-    flex-direction: column;
-    align-items: stretch;
+    align-items: center;
     gap: 10px;
     padding: 10px 8px;
-    min-height: auto;
   }
 
   .left-container {
@@ -112,10 +75,51 @@ mat-toolbar {
   }
 
   .right-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .funct-container {
     width: 100%;
     justify-content: center;
-    flex-direction: column;
     gap: 10px;
+  }
+
+  .right-button-container {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 409px) {
+
+  .mat-toolbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 8px;
+  }
+
+  .left-container {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .right-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   .funct-container {
