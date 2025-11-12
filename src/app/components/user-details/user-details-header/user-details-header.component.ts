@@ -13,7 +13,6 @@ import {CustomSearchComponent} from '../../shared/custom-search/custom-search.co
   imports: [
     MatIcon,
     MatIconButton,
-    MatToolbar,
     MatMenuTrigger,
     MatMenu,
     MatMenuItem,
