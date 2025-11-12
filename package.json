@@ -6,8 +6,15 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
+    "serve:ssr:urban-ideas": "node dist/urban-ideas/server/server.mjs",
     "test": "ng test",
-    "serve:ssr:urban-ideas": "node dist/urban-ideas/server/server.mjs"
+    "test:ci": "ng test --watch=false --browsers=ChromeHeadlessCI --code-coverage",
+    "test:coverage": "ng test --code-coverage --watch=false",
+    "test:watch": "ng test --watch=true",
+    "test:headless": "ng test --watch=false --browsers=ChromeHeadless",
+    "test:debug": "ng test --browsers=Chrome --source-map",
+    "coverage:open": "open coverage/urban-ideas/index.html",
+    "coverage:check": "node scripts/check-coverage.js"
   },
   "private": true,
   "dependencies": {
