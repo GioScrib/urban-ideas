@@ -1,8 +1,39 @@
+/* ==========================================
+   CUSTOM GRID - Responsive
+   Modifica: custom-grid.component.scss
+   ========================================== */
+
 .grid-container {
   display: grid;
-  //repeat(X, Y) → ripete X volte il modello Y. Qui si
-  // ripete la definizione di colonna X volte (dove X è --cols).
   grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr));
-  gap: 30px;
+  gap: 20px;
   margin: 20px;
+  padding: 0 10px;
+}
+
+/* Mobile Small - Forza 1 colonna */
+@media (max-width: 649px) {
+  .grid-container {
+    grid-template-columns: 1fr !important;
+    gap: 15px;
+    margin: 10px;
+    padding: 0 5px;
+  }
+}
+
+/* Mobile - Massimo 2 colonne */
+@media (min-width: 650px) and (max-width: 767px) {
+  .grid-container {
+    grid-template-columns: repeat(min(var(--cols, 2), 2), minmax(0, 1fr)) !important;
+    gap: 15px;
+    margin: 15px;
+  }
+}
+
+/* Tablet - Massimo 3 colonne */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .grid-container {
+    grid-template-columns: repeat(min(var(--cols, 3), 3), minmax(0, 1fr)) !important;
+    gap: 20px;
+  }
 }

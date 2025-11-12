@@ -1,16 +1,29 @@
+/* Custom Dialog Container */
 .dialog-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   max-height: 80vh;
   overflow-y: auto;
-
+  width: 100%;
+  padding: 10px;
 }
 
-.close-dialog-button {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background-color: white;
-  margin: 20px 20px 0px 0px;
+@media (max-width: 479px) {
+  .dialog-container {
+    max-height: 90vh;
+    padding: 5px;
+  }
+
+  ::ng-deep .mat-mdc-dialog-container {
+    max-width: 95vw !important;
+    width: 95vw !important;
+  }
 }
+//.close-dialog-button {
+//  position: sticky;
+//  top: 0;
+//  z-index: 10;
+//  background-color: white;
+//  margin: 20px 20px 0px 0px;
+//}

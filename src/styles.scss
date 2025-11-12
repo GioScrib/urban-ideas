@@ -1,4 +1,130 @@
-/* You can add global styles to this file, and also import other style files */
+/* Variabili per breakpoints */
+:root {
+  --mobile-small: 320px;
+  --mobile: 480px;
+  --tablet: 768px;
+  --desktop: 1024px;
+  --desktop-large: 1440px;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Reset e base responsive */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* ==========================================
+   MATERIAL OVERRIDES - Responsive
+   ========================================== */
+
+/* Material Toolbar responsive */
+@media (max-width: 767px) {
+  ::ng-deep .mat-toolbar {
+    min-height: auto !important;
+    height: auto !important;
+  }
+}
+
+/* Material Dialog responsive */
+@media (max-width: 479px) {
+  ::ng-deep .mat-mdc-dialog-container {
+    max-width: 95vw !important;
+    max-height: 90vh !important;
+  }
+}
+
+/* Material Form Field responsive */
+@media (max-width: 479px) {
+  ::ng-deep .mat-mdc-form-field {
+    width: 100% !important;
+    font-size: 14px !important;
+  }
+
+  ::ng-deep .mat-mdc-text-field-wrapper {
+    width: 100% !important;
+  }
+}
+
+/* Material Buttons responsive */
+@media (max-width: 479px) {
+  ::ng-deep .mat-mdc-fab,
+  ::ng-deep .mat-mdc-mini-fab {
+    width: 36px !important;
+    height: 36px !important;
+  }
+}
+
+/* ==========================================
+   UTILITY CLASSES - Responsive
+   ========================================== */
+
+/* Nascondi su mobile */
+.hide-mobile {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+/* Mostra solo su mobile */
+.show-mobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .show-mobile {
+    display: block !important;
+  }
+}
+
+/* Text responsive */
+@media (max-width: 479px) {
+  h1 { font-size: 24px !important; }
+  h2 { font-size: 20px !important; }
+  h3 { font-size: 18px !important; }
+  h4 { font-size: 16px !important; }
+  p, span { font-size: 14px !important; }
+}
+
+/* Padding responsive */
+@media (max-width: 479px) {
+  .mat-mdc-card {
+    padding: 12px !important;
+  }
+}
+
+/* ==========================================
+   SCROLLBAR RESPONSIVE
+   ========================================== */
+
+/* Custom scrollbar per mobile */
+@media (max-width: 767px) {
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
