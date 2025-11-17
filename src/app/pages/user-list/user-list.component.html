@@ -1,6 +1,7 @@
 <app-user-list-header (gridCols)="onGridCols($event)"
                       (newUser)="onNewUser()"
                       (inputValue)="onSearchKey($event)"
+                      (elementsPerPage)="onElementsPerPage($event)"
 >
 </app-user-list-header>
 @if (filteredUsers.length === 0) {
@@ -18,4 +19,9 @@
   </app-custom-grid>
 }
 
-
+<app-custom-paginator
+[pageSize]="per_page"
+[length]="filteredUsers.length"
+(pageChange)="onPageChange($event)"
+>
+</app-custom-paginator>

@@ -26,6 +26,7 @@ export class UserListHeaderComponent {
 
   private router: Router = inject(Router);
 
+  elementsPerPage = output<number>();
   inputValue = output<string>();
   gridCols = output<number>();
   newUser = output<void>();
@@ -49,6 +50,11 @@ export class UserListHeaderComponent {
 
   onInputSearch(value: string): void {
     this.inputValue.emit(value);
+  }
+
+  onElementsPerPage(value: number) {
+    console.log("user-list-header says: elements per page", value);
+    this.elementsPerPage.emit(value);
   }
 
 }

@@ -8,6 +8,8 @@ import {MatDialog} from '@angular/material/dialog';
 import {ConfirmDialogComponent} from '../../components/shared/confirm-dialog/confirm-dialog.component';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {CustomGridComponent} from '../../components/shared/custom-grid/custom-grid.component';
+import {CustomPaginatorComponent} from '../../components/shared/custom-paginator/custom-paginator.component';
+import {PageEvent} from '@angular/material/paginator';
 
 
 @Component({
@@ -15,7 +17,8 @@ import {CustomGridComponent} from '../../components/shared/custom-grid/custom-gr
   imports: [
     UserCardComponent,
     UserListHeaderComponent,
-    CustomGridComponent
+    CustomGridComponent,
+    CustomPaginatorComponent
   ],
   templateUrl: './user-list.component.html',
   styleUrl: './user-list.component.scss'
@@ -29,7 +32,7 @@ export class UserListComponent implements OnInit {
   users!: User[];
   filteredUsers!: User[];
   page: number = 1;
-  per_page: number = 10;
+  per_page: number = 5;
   total: number = 0;
   name!: string;
   email!: string;
@@ -124,6 +127,18 @@ export class UserListComponent implements OnInit {
       return user.name.toLowerCase().includes(value.toLowerCase())
         || user.email.toLowerCase().includes(value.toLowerCase());
     })
+  }
+
+  onElementsPerPage(value: number) {
+    this.per_page = value;
+    console.log("user-list says: elements per page", value);
+    this.load();
+  }
+
+  onPageChange(event: PageEvent): void {
+    this.per_page = event.pageSize;
+    console.log("user-list says: per page changed", this.per_page);
+    this.load();
   }
 
 }
