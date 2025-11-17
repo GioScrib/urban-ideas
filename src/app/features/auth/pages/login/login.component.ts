@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import {Router} from '@angular/router';
 import {MatFormField, MatInput, MatLabel} from '@angular/material/input';
 import {FormsModule} from '@angular/forms';
 import {MatButton} from '@angular/material/button';
 import {MatCard, MatCardActions, MatCardContent, MatCardHeader, MatCardTitle} from '@angular/material/card';
+import { AuthService } from '../../../../core/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -25,19 +25,10 @@ import {MatCard, MatCardActions, MatCardContent, MatCardHeader, MatCardTitle} fr
 export class LoginComponent {
 
   token: string = '';
-  private router: Router;
 
-  constructor(router: Router) {
-    this.router = router;
-  }
+  constructor(private authService: AuthService) {}
 
   save() {
-    if(this.token?.trim()){
-      console.log("Login component dice: " + this.token);
-      localStorage.setItem('auth_token', this.token.trim());
-      this.router.navigate(['/users']);
-      return;
-    }
-    console.log("Login component dice: nessun token fornito");
+    this.authService.login(this.token);
   }
 }
