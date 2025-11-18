@@ -5,15 +5,15 @@
 >
 </app-post-list-page-header>
 
-@if (filteredPosts.length === 0 && !isLoading) {
+@if (filteredPosts().length === 0 && !isLoading) {
   <div style="display: flex; justify-content: center; align-items: center; height: 50vh;">
     <h2>No match found</h2>
   </div>
 } @else {
   <app-custom-grid
-    [gridCols]="gridCols"
+    [gridCols]="gridCols()"
   >
-    @for (post of this.filteredPosts; track post.id) {
+    @for (post of filteredPosts(); track post.id) {
       <app-user-post-card
         [post]="post"
       >
@@ -21,4 +21,11 @@
     }
   </app-custom-grid>
 }
+
+<app-custom-paginator
+  [pageSize]="per_page"
+  [length]="total()"
+  (pageChange)="onPageChange($event)"
+>
+</app-custom-paginator>
 

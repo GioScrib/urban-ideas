@@ -63,7 +63,7 @@ describe('PostListComponent', () => {
 
   it('should load posts on init', () => {
     expect(mockApiService.getPostList).toHaveBeenCalled();
-    expect(component.posts).toEqual(mockPosts);
+    expect(component.allPosts).toEqual(mockPosts);
     expect(component.filteredPosts).toEqual(mockPosts);
     expect(component.total).toBe(3);
     expect(component.isLoading).toBe(false);

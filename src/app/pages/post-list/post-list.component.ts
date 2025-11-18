@@ -1,4 +1,4 @@
-import {Component, inject, OnInit} from '@angular/core';
+import {Component, computed, inject, OnInit, signal} from '@angular/core';
 import {CustomGridComponent} from '../../components/shared/custom-grid/custom-grid.component';
 import {ApiService} from '../../services/users/api.service';
 import {Post} from '../../shared/post.model';
@@ -9,6 +9,8 @@ import {
 import {MatDialog} from '@angular/material/dialog';
 import {CreatePostDialogComponent} from '../../components/post-list/create-post-dialog/create-post-dialog.component';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import {CustomPaginatorComponent} from '../../components/shared/custom-paginator/custom-paginator.component';
+import {PageEvent} from '@angular/material/paginator';
 
 @Component({
   selector: 'app-post-list',
@@ -16,7 +18,8 @@ import {MatSnackBar} from '@angular/material/snack-bar';
   imports: [
     CustomGridComponent,
     UserPostCardComponent,
-    PostListPageHeaderComponent
+    PostListPageHeaderComponent,
+    CustomPaginatorComponent
   ],
   templateUrl: './post-list.component.html',
   styleUrl: './post-list.component.scss'
@@ -27,16 +30,40 @@ export class PostListComponent implements OnInit {
   private readonly dialog = inject(MatDialog);
   private readonly snackBar = inject(MatSnackBar);
 
-  posts: Post[] = [];
-  filteredPosts: Post[] = [];
-  page: number = 1;
-  per_page: number = 10;
-  total: number = 0;
-  name!: string;
-  email!: string;
-  gridCols = 2;
+  allPosts = signal<Post[]>([]);
+  private searchTerm = signal<string>('');
+  private pageIndex = signal<number>(0);
+  private pageSize = signal<number>(5);
+  gridCols = signal<number>(2);
 
   isLoading: boolean = true;
+
+  // ✅ Getter per template binding
+  get page(): number {
+    return this.pageIndex();
+  }
+
+  get per_page(): number {
+    return this.pageSize();
+  }
+
+  private searchedPosts = computed(() => {
+    const term = this.searchTerm().toLowerCase();
+    if(!term) {
+      return this.allPosts();
+    }
+    return this.allPosts().filter(post =>
+      post.title.includes(term) || post.body.includes(term));
+  });
+
+  filteredPosts = computed(() => {
+    const posts = this.searchedPosts();
+    const start = this.pageSize() * this.pageIndex();
+    const end = start + this.pageSize();
+    return posts.slice(start, end);
+  })
+
+  total = computed(() => this.searchedPosts().length);
 
   ngOnInit() {
     console.log('PostListComponent says: initialized');
@@ -47,14 +74,13 @@ export class PostListComponent implements OnInit {
     this.apiService.getPostList({
       page: this.page,
       per_page: this.per_page,
-      name: this.name?? '',
-      email: this.email?? ''}).subscribe(
+      name: '',
+      email: ''}).subscribe(
       res => {
-        this.posts = res.body?? [];
-        this.filteredPosts = this.posts;
-        this.total = Number(res.headers.get('x-Pagination-Total') ?? 0);
+        this.allPosts.set(res.body?? []);
+        // this.total = Number(res.headers.get('x-Pagination-Total') ?? 0);
         this.isLoading = false;
-        console.log('post-list-component says: ', this.posts);
+        console.log('post-list-component says: ', this.allPosts);
 
       }
     )
@@ -62,7 +88,7 @@ export class PostListComponent implements OnInit {
 
   onClickGridCols(cols: number) {
     console.log("post-list-component says grid cols clicked: ", cols);
-    this.gridCols = cols;
+    this.gridCols.set(cols);
   }
 
   onClickNewPost() {
@@ -94,15 +120,15 @@ export class PostListComponent implements OnInit {
   }
 
   onSearchKeyValue(value: string) {
+    this.searchTerm.set(value);
+    this.pageIndex.set(0); // Reset to first page on new search
     console.log("post-list says: searching for key ", value);
-    if(!value || value.length === 0) {
-      this.filteredPosts = this.posts;
-      return;
-    }
-    this.filteredPosts = this.posts.filter((post: Post) => {
-      return post.title.toLowerCase().includes(value.toLowerCase())
-      || post.body.toLowerCase().includes(value.toLowerCase());
-    })
   }
 
+
+  onPageChange(event: PageEvent) {
+    this.pageIndex.set(event.pageIndex);
+    this.pageSize.set(event.pageSize);
+    console.log("post-list says: page changed ", event);
+  }
 }
