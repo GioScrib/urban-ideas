@@ -30,16 +30,13 @@ export class UserListComponent implements OnInit {
   dialog = inject(MatDialog);
   snackBar = inject(MatSnackBar) ;
   users!: User[];
-  filteredUsers!: User[];
-  page: number = 1;
+  filteredUsers = signal<User[]>([]);
+  page: number = 0;
   per_page: number = 5;
   total: number = 0;
   name!: string;
   email!: string;
   gridCols: number = 2;
-  panelOpenState1 = signal<boolean>(false);
-  panelOpenState2 = signal<boolean>(false);
-
 
   constructor() {}
 
@@ -52,11 +49,14 @@ export class UserListComponent implements OnInit {
     this.apiService.userList({page: this.page, per_page: this.per_page, name: this.name?? '', email: this.email?? ''}).subscribe(
       res => {
         this.users = res.body?? [];
-        this.filteredUsers = this.users;
+        this.filterUsersOnPageChange(this.per_page, this.page, 0);
         console.log("user-list says: ");
         console.log(this.users);
         console.log('user-list-says: filtered users', this.filteredUsers);
         this.total = Number(res.headers.get('x-Pagination-Total') ?? 0);
+      },
+      error => {
+        console.log("Errore ",error);
       }
     );
   }
@@ -120,25 +120,31 @@ export class UserListComponent implements OnInit {
 
   onSearchKey(value: string): void {
     if(!value || value.length === 0) {
-      this.filteredUsers = this.users;
+      this.filteredUsers.set(this.users)
       return;
     }
-    this.filteredUsers = this.users.filter(user => {
+    this.filteredUsers.set(this.users.filter(user => {
       return user.name.toLowerCase().includes(value.toLowerCase())
         || user.email.toLowerCase().includes(value.toLowerCase());
-    })
+    }));
   }
 
   onElementsPerPage(value: number) {
     this.per_page = value;
     console.log("user-list says: elements per page", value);
-    this.load();
+    // this.load();
   }
 
   onPageChange(event: PageEvent): void {
     this.per_page = event.pageSize;
     console.log("user-list says: per page changed", this.per_page);
-    this.load();
+    console.log(event);
+    this.filterUsersOnPageChange(event.pageSize, event.pageIndex, event.previousPageIndex);
+  }
+
+  private filterUsersOnPageChange(pageSize: number, pageIndex: number, previousPageIndex: number = 0): void {
+      this.filteredUsers.set(this.users.slice((pageSize*pageIndex), (pageSize*(pageIndex + 1))));
+      console.log("user-list says: curr index > prev index", this.filteredUsers());
   }
 
 }

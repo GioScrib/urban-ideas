@@ -4,13 +4,13 @@
                       (elementsPerPage)="onElementsPerPage($event)"
 >
 </app-user-list-header>
-@if (filteredUsers.length === 0) {
+@if (filteredUsers()!.length === 0) {
   <div style="display: flex; justify-content: center; align-items: center; height: 50vh;">
     <h2>No match found</h2>
   </div>
 } @else {
   <app-custom-grid [gridCols]="this.gridCols">
-    @for (user of filteredUsers; track user.id) {
+    @for (user of filteredUsers(); track user.id) {
       <app-user-card
         [user]="user"
         (delete)="onDeleteUser($event)"
@@ -21,7 +21,7 @@
 
 <app-custom-paginator
 [pageSize]="per_page"
-[length]="filteredUsers.length"
+[length]="users.length"
 (pageChange)="onPageChange($event)"
 >
 </app-custom-paginator>
