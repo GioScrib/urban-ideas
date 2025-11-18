@@ -9,7 +9,7 @@
     <h2>No match found</h2>
   </div>
 } @else {
-  <app-custom-grid [gridCols]="this.gridCols">
+  <app-custom-grid [gridCols]="this.gridCols()">
     @for (user of filteredUsers(); track user.id) {
       <app-user-card
         [user]="user"
@@ -21,7 +21,7 @@
 
 <app-custom-paginator
 [pageSize]="per_page"
-[length]="users.length"
+[length]="total()"
 (pageChange)="onPageChange($event)"
 >
 </app-custom-paginator>
