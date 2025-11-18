@@ -5,6 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { Router, RouterModule } from '@angular/router';
 import { AuthService } from '../../../core/services/auth.service';
 import { CommonModule } from '@angular/common';
+import {CustomButtonComponent} from '../custom-button/custom-button.component';
 
 @Component({
   selector: 'app-toolbar',
@@ -14,7 +15,8 @@ import { CommonModule } from '@angular/common';
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    RouterModule
+    RouterModule,
+    CustomButtonComponent
   ],
   templateUrl: './toolbar.component.html',
   styleUrls: ['./toolbar.component.scss']
