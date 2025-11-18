@@ -1,4 +1,4 @@
-import {Component, inject, OnInit, signal} from '@angular/core';
+import {Component, computed, inject, OnInit, signal} from '@angular/core';
 import {ApiService} from '../../services/users/api.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {User} from '../../shared/user';
@@ -14,6 +14,8 @@ import {MatDialog} from '@angular/material/dialog';
 import {
   PostCommentsDialogComponent
 } from '../../components/user-details/post-comments-dialog/post-comments-dialog.component';
+import {CustomPaginatorComponent} from '../../components/shared/custom-paginator/custom-paginator.component';
+import {PageEvent} from '@angular/material/paginator';
 
 @Component({
   selector: 'app-user-details-page',
@@ -21,7 +23,8 @@ import {
     UserDetailsPageCardComponent,
     UserDetailsHeaderComponent,
     CustomGridComponent,
-    UserPostCardComponent
+    UserPostCardComponent,
+    CustomPaginatorComponent
   ],
   templateUrl: './user-details-page.component.html',
   styleUrl: './user-details-page.component.scss'
@@ -34,12 +37,41 @@ export class UserDetailsPageComponent implements OnInit {
 
   user!: User;
   userImg!: string|undefined;
-  posts = signal<Post[]>([]);
-  filteredPosts: Post[] = [];
-  comments = signal<Comment[]>([]);
-  gridCols: number = 2;
+  allPosts = signal<Post[]>([]);
+  searchTerm = signal<string>('');
+  pageIndex = signal<number>(0);
+  pageSize = signal<number>(5);
+  allComments = signal<Comment[]>([]);
+  gridCols = signal<number>(2);
 
   postLoading: boolean = true;
+
+  private searchedPosts = computed(() => {
+    const term = this.searchTerm().toLowerCase();
+    if(!term) {
+      return this.allPosts();
+    }
+    return this.allPosts().filter(post =>
+      post.title.includes(term) || post.body.includes(term));
+  })
+
+  filteredPosts = computed(() => {
+    const posts = this.searchedPosts();
+    const start = this.pageSize() * this.pageIndex();
+    const end = start + this.pageSize();
+    return posts.slice(start, end);
+  })
+
+  totalPosts = computed(() => this.searchedPosts().length);
+
+  // ✅ Getter per template binding
+  get page(): number {
+    return this.pageIndex();
+  }
+
+  get per_page(): number {
+    return this.pageSize();
+  }
 
   ngOnInit(): void {
     let id = this.activatedRoute.snapshot.paramMap.get('id');
@@ -51,9 +83,8 @@ export class UserDetailsPageComponent implements OnInit {
 
     this.apiService.getUserPosts(Number.parseInt(id? id : '0')).subscribe({
       next: posts => {
-        this.posts.set(posts);
-        this.filteredPosts = this.posts();
-        console.log('User details component says: posts fetched', this.posts());
+        this.allPosts.set(posts);
+        console.log('User details component says: posts fetched', this.allPosts());
       },
       complete: () => {this.postLoading = false}
     })
@@ -62,7 +93,7 @@ export class UserDetailsPageComponent implements OnInit {
   }
 
   onGridCols(gridCols: number): void {
-    this.gridCols = gridCols;
+    this.gridCols.set(gridCols);
     console.log('user-details-page says, set gridCols value with: ', gridCols);
   }
 
@@ -71,13 +102,14 @@ export class UserDetailsPageComponent implements OnInit {
   }
 
   onSearchKeyValue(value: string) {
-    console.log("user-details-page says: search key value", value);
-    if(!value || value.length === 0) {
-      this.filteredPosts = this.posts();
-    }
-    this.filteredPosts = this.posts().filter((post: Post) => {
-      return post.title.toLowerCase().includes(value.toLowerCase())
-        || post.body.toLowerCase().includes(value.toLowerCase());
-    })
+    this.searchTerm.set(value);
+    this.pageIndex.set(0);
+    console.log('user-details-page says: search term set to ', value);
+  }
+
+  onPageChange(event: PageEvent) {
+    this.pageSize.set(event.pageSize);
+    this.pageIndex.set(event.pageIndex);
+    console.log('user-details-page says: page changed to index ', event.pageIndex, ' with size ', event.pageSize);
   }
 }

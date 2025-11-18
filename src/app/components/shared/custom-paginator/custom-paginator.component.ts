@@ -13,7 +13,7 @@ export class CustomPaginatorComponent {
   length = input<number>(0);
   pageSize = input<number>(10);
   pageIndex = input<number>(0);
-  pageSizeOptions = input<number[]>([2, 5, 10, 20, 30]);
+  pageSizeOptions = input<number[]>([1, 2, 3, 5, 10, 20, 30]);
   showFirstLastButtons = input<boolean>(true);
   disabled = input<boolean>(false);
 
