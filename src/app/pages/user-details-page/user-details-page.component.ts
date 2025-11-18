@@ -44,7 +44,7 @@ export class UserDetailsPageComponent implements OnInit {
   allComments = signal<Comment[]>([]);
   gridCols = signal<number>(2);
 
-  postLoading: boolean = true;
+  isLoading = signal<boolean>(true);
 
   private searchedPosts = computed(() => {
     const term = this.searchTerm().toLowerCase();
@@ -86,7 +86,7 @@ export class UserDetailsPageComponent implements OnInit {
         this.allPosts.set(posts);
         console.log('User details component says: posts fetched', this.allPosts());
       },
-      complete: () => {this.postLoading = false}
+      complete: () => {this.isLoading.set(false);}
     })
 
     console.log('User details component loaded for user with id: ', id);

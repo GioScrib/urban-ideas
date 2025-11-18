@@ -75,14 +75,18 @@ export class PostListComponent implements OnInit {
       page: this.page,
       per_page: this.per_page,
       name: '',
-      email: ''}).subscribe(
-      res => {
+      email: ''}).subscribe({
+      next: res => {
         this.allPosts.set(res.body?? []);
         // this.total = Number(res.headers.get('x-Pagination-Total') ?? 0);
-        this.isLoading = false;
+        // this.isLoading = false;
         console.log('post-list-component says: ', this.allPosts);
-
+      },
+      complete: () => {
+        this.isLoading = false;
       }
+    }
+
     )
   }
 

@@ -1,0 +1,18 @@
+:host {
+  display: block;
+  /* Add padding-bottom to prevent content from being hidden behind fixed paginator */
+  padding-bottom: 100px;
+}
+
+/* Responsive adjustments for padding */
+@media (max-width: 479px) {
+  :host {
+    padding-bottom: 120px; /* Slightly more space on mobile */
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  :host {
+    padding-bottom: 110px;
+  }
+}

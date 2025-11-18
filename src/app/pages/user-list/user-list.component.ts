@@ -36,6 +36,8 @@ export class UserListComponent implements OnInit {
 
   gridCols = signal<number>(2);
 
+  isLoading = signal<boolean>(true);
+
   // ✅ Computed per filtrare gli utenti in base alla ricerca
   private searchedUsers = computed(() => {
     const term = this.searchTerm().toLowerCase();
@@ -87,6 +89,9 @@ export class UserListComponent implements OnInit {
       error: (error) => {
         console.error('Error loading users:', error);
         this.snackBar.open('Error loading users', 'Close', {duration: 3000});
+      },
+      complete: () => {
+        this.isLoading.set(false)
       }
     });
   }
@@ -172,5 +177,4 @@ export class UserListComponent implements OnInit {
     console.log("user-list says: per page changed", this.pageSize());
     console.log(event);
   }
-
 }
