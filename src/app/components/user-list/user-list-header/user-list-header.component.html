@@ -37,36 +37,6 @@
       </div>
 
       <div class="right-button-container">
-
-
-
-        <button class="elements-button" mat-icon-button [matMenuTriggerFor]="elementsMenu"
-                aria-label="Example icon-button with a menu">
-          <mat-icon>more_vert</mat-icon>
-        </button>
-        <mat-menu #elementsMenu="matMenu">
-          <button mat-menu-item
-                  (click)="onElementsPerPage(5)"
-          >
-            <span>5 elementi</span>
-          </button>
-          <button mat-menu-item
-          (click)="onElementsPerPage(10)"
-          >
-            <span>10 elementi</span>
-          </button>
-          <button mat-menu-item
-          (click)="onElementsPerPage(20)"
-          >
-            <span>20 elementi</span>
-          </button>
-          <button mat-menu-item
-          (click)="onElementsPerPage(30)"
-          >
-            <span>30 elementi</span>
-          </button>
-        </mat-menu>
-
         <button class="grid-button" mat-icon-button [matMenuTriggerFor]="gridMenu"
                 aria-label="">
           <mat-icon>grid_view</mat-icon>
