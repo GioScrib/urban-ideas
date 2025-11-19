@@ -3,7 +3,7 @@ import {MatDialogRef} from '@angular/material/dialog';
 import {FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
 import {CustomButtonComponent} from '../../shared/custom-button/custom-button.component';
 import {CustomDialogContainerComponent} from '../../shared/custom-dialog-container/custom-dialog-container.component';
-import {MatFormField, MatInput, MatLabel} from '@angular/material/input';
+import {MatError, MatFormField, MatInput, MatLabel} from '@angular/material/input';
 import {ApiService} from '../../../services/users/api.service';
 import {User} from '../../../shared/user';
 import {MatOption, MatSelect} from '@angular/material/select';
@@ -19,7 +19,8 @@ import {MatOption, MatSelect} from '@angular/material/select';
     MatLabel,
     MatOption,
     MatSelect,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatError
   ],
   templateUrl: './create-post-dialog.component.html',
   styleUrl: './create-post-dialog.component.scss'
@@ -53,10 +54,8 @@ export class CreatePostDialogComponent implements OnInit{
   submitData() {
     if(this.newPostForm.invalid){
       console.log("new-poster-dialog says: form invalid");
-      this.isInvalid = true;
       return;
     }
-    this.isInvalid=false;
     console.log("new-poster-dialog says: ", this.newPostForm);
     let selectedUser = this.userList?.find(user => user.email === this.newPostForm.value.userName);
     let post = {

@@ -1,31 +1,56 @@
 <app-custom-dialog-container>
   <p>Insert new Post</p>
   <form class="new-post-form" [formGroup]="newPostForm">
-    <mat-form-field appearance="outline">
+
+<!--    username-->
+    <mat-form-field
+      class="mat-form-field-medium-space"
+      appearance="outline">
       <mat-label>Username</mat-label>
       <mat-select formControlName="userName">
         @for (user of userList; track user.id) {
           <mat-option value="{{user.email}}">{{user.email}}</mat-option>
         }
-
       </mat-select>
+      @if (newPostForm.controls['userName'].invalid && newPostForm.controls['userName'].touched) {
+        <mat-error>
+          @if (newPostForm.controls['userName'].hasError('required')) {
+            Select user
+          }
+        </mat-error>
+      }
     </mat-form-field>
 
-    <mat-form-field appearance="outline">
+<!--    Tile-->
+    <mat-form-field
+      class="mat-form-field-medium-space"
+      appearance="outline">
       <mat-label>Title</mat-label>
       <input matInput formControlName="title">
+      @if (newPostForm.controls['title'].invalid && newPostForm.controls['title'].touched){
+        <mat-error>
+          @if (newPostForm.controls['title'].hasError('required')){
+            Title required
+          }
+        </mat-error>
+      }
     </mat-form-field>
 
-    <mat-form-field appearance="outline">
+<!--    Body-->
+    <mat-form-field
+      class="mat-form-field-medium-space"
+      appearance="outline">
       <mat-label>Body</mat-label>
-      <input matInput formControlName="body">
+      <textarea matInput formControlName="body"> </textarea>
+      @if (newPostForm.controls['body'].invalid && newPostForm.controls['body'].touched){
+        <mat-error>
+          @if (newPostForm.controls['body'].hasError('required')){
+            Body required
+          }
+        </mat-error>
+      }
     </mat-form-field>
-
   </form>
-
-  @if (isInvalid) {
-    <p style="color: #BA1A1A">*Invalid data</p>
-  }
 
   <div class="form-button-group">
     <app-custom-button

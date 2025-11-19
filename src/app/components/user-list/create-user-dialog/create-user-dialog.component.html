@@ -1,37 +1,73 @@
 <app-custom-dialog-container>
   <p>Insert new user</p>
   <form class="new-user-form" [formGroup]="newUserForm">
-    <mat-form-field appearance="outline">
+    <!-- Campo Name -->
+    <mat-form-field class="mat-form-field-medium-space" appearance="outline">
       <mat-label>Name</mat-label>
       <input matInput formControlName="name" required>
+      @if (newUserForm.controls['name'].invalid && newUserForm.controls['name'].touched) {
+        <mat-error class="mat-error">
+          @if (newUserForm.controls['name'].hasError('required')) {
+            Il nome è obbligatorio
+          }
+        </mat-error>
+      }
     </mat-form-field>
 
-    <mat-form-field appearance="outline">
+    <!-- Campo Email -->
+    <mat-form-field
+      class="mat-form-field-large-space"
+      appearance="outline">
       <mat-label>Email</mat-label>
       <input matInput formControlName="email" required>
+      @if (newUserForm.controls['email'].invalid && newUserForm.controls['email'].touched) {
+        <mat-error>
+          @if (newUserForm.controls['email'].hasError('required')) {
+            L'email è obbligatoria
+          }
+          @if (newUserForm.controls['email'].hasError('email')) {
+            Inserisci un'email valida (es. nome@esempio.com)
+          }
+        </mat-error>
+      }
     </mat-form-field>
 
-    <mat-form-field appearance="outline">
+    <!-- Campo Gender -->
+    <mat-form-field
+      class="mat-form-field-medium-space"
+      appearance="outline">
       <mat-label>Gender</mat-label>
       <mat-select formControlName="gender" required>
         <mat-option value="male">Male</mat-option>
         <mat-option value="female">Female</mat-option>
-        <mat-option value="other">Other</mat-option>
       </mat-select>
+      @if (newUserForm.controls['gender'].invalid && newUserForm.controls['gender'].touched) {
+        <mat-error>
+          @if (newUserForm.controls['gender'].hasError('required')) {
+            Seleziona un genere
+          }
+        </mat-error>
+      }
     </mat-form-field>
 
-    <mat-form-field appearance="outline">
+    <!-- Campo Status -->
+    <mat-form-field
+      class="mat-form-field-medium-space"
+      appearance="outline">
       <mat-label>Status</mat-label>
       <mat-select formControlName="status" required>
         <mat-option value="active">active</mat-option>
         <mat-option value="inactive">inactive</mat-option>
       </mat-select>
+      @if (newUserForm.controls['status'].invalid && newUserForm.controls['status'].touched) {
+        <mat-error>
+          @if (newUserForm.controls['status'].hasError('required')) {
+            Seleziona uno stato
+          }
+        </mat-error>
+      }
     </mat-form-field>
   </form>
-
-  @if (isInvalid) {
-    <p style="color: #BA1A1A">*Invalid data</p>
-  }
 
   <div class="form-button-group">
     <app-custom-button
@@ -56,8 +92,3 @@
     </app-custom-button>
   </div>
 </app-custom-dialog-container>
-
-
-
-
-
