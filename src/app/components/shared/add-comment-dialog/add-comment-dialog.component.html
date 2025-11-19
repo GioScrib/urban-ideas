@@ -51,7 +51,7 @@
         </textarea>
         @if (newCommentForm.controls['body'].invalid && newCommentForm.controls['body'].touched){
           <mat-error>
-            @if (newCommentForm.controls['body'].hasError('body')) {
+            @if (newCommentForm.controls['body'].hasError('required')) {
               Body required
             }
           </mat-error>
