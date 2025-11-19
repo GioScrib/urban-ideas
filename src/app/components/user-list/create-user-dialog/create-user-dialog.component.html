@@ -8,7 +8,7 @@
       @if (newUserForm.controls['name'].invalid && newUserForm.controls['name'].touched) {
         <mat-error class="mat-error">
           @if (newUserForm.controls['name'].hasError('required')) {
-            Il nome è obbligatorio
+            name is required
           }
         </mat-error>
       }
@@ -23,10 +23,10 @@
       @if (newUserForm.controls['email'].invalid && newUserForm.controls['email'].touched) {
         <mat-error>
           @if (newUserForm.controls['email'].hasError('required')) {
-            L'email è obbligatoria
+            email is required
           }
           @if (newUserForm.controls['email'].hasError('email')) {
-            Inserisci un'email valida (es. nome@esempio.com)
+            insert a vaild mail (eg. name@example.com)
           }
         </mat-error>
       }
@@ -44,7 +44,7 @@
       @if (newUserForm.controls['gender'].invalid && newUserForm.controls['gender'].touched) {
         <mat-error>
           @if (newUserForm.controls['gender'].hasError('required')) {
-            Seleziona un genere
+            gender is required
           }
         </mat-error>
       }
@@ -62,7 +62,7 @@
       @if (newUserForm.controls['status'].invalid && newUserForm.controls['status'].touched) {
         <mat-error>
           @if (newUserForm.controls['status'].hasError('required')) {
-            Seleziona uno stato
+            status is required
           }
         </mat-error>
       }

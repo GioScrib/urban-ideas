@@ -6,7 +6,7 @@ import {Post} from '../../../shared/post.model';
 import {CustomDialogContainerComponent} from '../custom-dialog-container/custom-dialog-container.component';
 import {CustomPostCardHeaderComponent} from '../custom-post-card-header/custom-post-card-header.component';
 import {CustomButtonComponent} from '../custom-button/custom-button.component';
-import {MatFormField, MatInput, MatLabel} from '@angular/material/input';
+import {MatError, MatFormField, MatInput, MatLabel} from '@angular/material/input';
 
 export interface CommentsDialogData {
   post: Post;
@@ -21,7 +21,8 @@ export interface CommentsDialogData {
     MatFormField,
     MatInput,
     MatLabel,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatError
   ],
   templateUrl: './add-comment-dialog.component.html',
   styleUrl: './add-comment-dialog.component.scss'
@@ -30,7 +31,6 @@ export class AddCommentDialogComponent {
   private fb = inject(FormBuilder);
   private dialogRef = inject(MatDialogRef<AddCommentDialogComponent>);
   data = inject<CommentsDialogData>(MAT_DIALOG_DATA);
-  isValidForm: boolean = false;
 
   newCommentForm: FormGroup = this.fb.group({
     name: new FormControl('', [Validators.required]),
@@ -38,21 +38,18 @@ export class AddCommentDialogComponent {
     body: new FormControl('', [Validators.required]),
   })
 
-
   submitData() {
     if(this.newCommentForm.invalid) {
       console.log("create-user-dialog says: form invalid");
-      this.isValidForm = false;
+      return
     }
-    this.isValidForm = true;
-
     let newComment = {
       post_id: this.data.post.id,
       name: this.newCommentForm.value.name,
       email: this.newCommentForm.value.email,
       body: this.newCommentForm.value.body
     };
-
+    console.log("add-comment-dialog says: form submitted", this.newCommentForm);
     this.dialogRef.close(newComment);
   }
 

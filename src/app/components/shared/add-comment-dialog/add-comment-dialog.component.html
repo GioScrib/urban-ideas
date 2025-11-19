@@ -7,21 +7,57 @@
 
   <div #commentFormContainer class="new-comment-form-container">
     <h3>Insert new comment</h3>
+
     <form class="new-comment-form" [formGroup]="newCommentForm">
-      <mat-form-field>
+<!--      name-->
+      <mat-form-field
+        class="mat-form-field-medium-space"
+        appearance="outline">
         <mat-label>Title</mat-label>
         <input matInput formControlName="name" required>
+        @if (newCommentForm.controls['name'].invalid && newCommentForm.controls['name'].touched) {
+          <mat-error class="mat-error">
+            @if (newCommentForm.controls['name'].hasError('required')) {
+              Name is required
+            }
+          </mat-error>
+        }
       </mat-form-field>
 
-      <mat-form-field>
+<!--      email-->
+      <mat-form-field
+        class="mat-form-field-large-space"
+        appearance="outline">
         <mat-label>Email</mat-label>
         <input matInput formControlName="email" required>
+        @if (newCommentForm.controls['email'].invalid && newCommentForm.controls['email'].touched) {
+          <mat-error>
+            @if (newCommentForm.controls['email'].hasError('required')) {
+              email is required
+            }
+            @if (newCommentForm.controls['email'].hasError('email')) {
+              Insert a vaild mail (eg. name@example.com)
+            }
+          </mat-error>
+        }
       </mat-form-field>
 
-      <mat-form-field>
+<!--      comment-->
+      <mat-form-field
+        class="mat-form-field-medium-space"
+        appearance="outline">
         <mat-label>Comment</mat-label>
-        <input matInput formControlName="body" required>
+        <textarea matInput formControlName="body" required>
+        </textarea>
+        @if (newCommentForm.controls['body'].invalid && newCommentForm.controls['body'].touched){
+          <mat-error>
+            @if (newCommentForm.controls['body'].hasError('body')) {
+              Body required
+            }
+          </mat-error>
+        }
       </mat-form-field>
+
     </form>
 
     <div class="form-button-group">

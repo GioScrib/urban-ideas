@@ -15,7 +15,7 @@
       @if (newPostForm.controls['userName'].invalid && newPostForm.controls['userName'].touched) {
         <mat-error>
           @if (newPostForm.controls['userName'].hasError('required')) {
-            Select user
+            user is required
           }
         </mat-error>
       }
@@ -30,7 +30,7 @@
       @if (newPostForm.controls['title'].invalid && newPostForm.controls['title'].touched){
         <mat-error>
           @if (newPostForm.controls['title'].hasError('required')){
-            Title required
+            title is required
           }
         </mat-error>
       }
@@ -45,7 +45,7 @@
       @if (newPostForm.controls['body'].invalid && newPostForm.controls['body'].touched){
         <mat-error>
           @if (newPostForm.controls['body'].hasError('required')){
-            Body required
+            body is required
           }
         </mat-error>
       }
