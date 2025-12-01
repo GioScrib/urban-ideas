@@ -9,6 +9,8 @@
         <mat-error class="mat-error">
           @if (newUserForm.controls['name'].hasError('required')) {
             name is required
+          } @else if (newUserForm.controls['name'].hasError('minlength')) {
+            min length is 3 letters
           }
         </mat-error>
       }

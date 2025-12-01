@@ -28,7 +28,7 @@ export class CreateUserDialogComponent {
   private dialogRef = inject(MatDialogRef<CreateUserDialogComponent>);
 
   newUserForm: FormGroup = this.fb.group({
-    name: new FormControl('', [Validators.required]),
+    name: new FormControl('', [Validators.required, Validators.minLength(3)]),
     email: new FormControl('', [Validators.required, Validators.email]),
     gender: new FormControl('', [Validators.required]),
     status: new FormControl('', [Validators.required]),
