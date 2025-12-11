@@ -136,7 +136,6 @@ L'applicazione permette agli utenti di:
 **Visualizzazione Lista Post**:
 - Vista a griglia con post di tutti gli utenti
 - Layout responsive con colonne adattive
-- Conteggio totale dei post visualizzato nell'header
 - Paginazione con dimensioni personalizzabili
 
 **Ricerca Post**:
@@ -173,14 +172,13 @@ L'applicazione permette agli utenti di:
 - Dialog modale che mostra tutti i commenti di un post
 - Header con titolo e corpo del post per contesto
 - Lista scrollabile di commenti
-- Ogni commento mostra: nome autore, email e corpo del messaggio
 
 **Aggiunta Nuovo Commento**:
 - Form integrato nel dialog dei commenti
 - Campi richiesti:
   - Nome (minimo 3 caratteri)
   - Email (validazione formato)
-  - Messaggio (minimo 10 caratteri)
+  - Messaggio (massimo 1000 caratteri)
 - Validazione in tempo reale con messaggi di errore specifici
 - Aggiornamento automatico della lista dopo l'invio
 - Messaggio di conferma con snackbar
@@ -813,7 +811,6 @@ npm run build
 - Source maps completi per debug
 - No minificazione
 - No ottimizzazioni aggressive
-- Build time: ~30-60 secondi
 
 ### Build di Produzione
 
@@ -835,8 +832,6 @@ npm run build:prod
 **Budget Size** (configurato in `angular.json`):
 - Initial bundle: 500 kB (warning), 1 MB (error)
 - Lazy loaded chunks: nessun limite
-
-**Build time**: ~60-120 secondi
 
 ### Deployment su GitHub Pages
 
@@ -872,47 +867,7 @@ Se il deploy automatico non funziona:
 
 Dopo qualche minuto, l'app sarà disponibile all'URL GitHub Pages.
 
-### Deploy su Altri Hosting
 
-#### Netlify
-
-```bash
-# Build
-npm run build:prod
-
-# Crea file netlify.toml
-```
-
-**netlify.toml**:
-```toml
-[build]
-  publish = "dist/urban-ideas/browser"
-  command = "npm run build:prod"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-```
-
-#### Vercel
-
-```bash
-# Installa Vercel CLI
-npm i -g vercel
-
-# Deploy
-vercel
-```
-
-**vercel.json**:
-```json
-{
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
-  ]
-}
-```
 
 #### Server Node.js (SSR)
 
@@ -925,33 +880,6 @@ npm run serve:ssr:urban-ideas
 ```
 
 L'app sarà disponibile su `http://localhost:4000/`
-
-### Variabili d'Ambiente
-
-L'applicazione attualmente non usa variabili d'ambiente. Se vuoi aggiungerne:
-
-1. Crea file `src/environments/environment.ts`:
-```typescript
-export const environment = {
-  production: false,
-  apiUrl: 'https://gorest.co.in/public/v2'
-};
-```
-
-2. Crea `src/environments/environment.prod.ts`:
-```typescript
-export const environment = {
-  production: true,
-  apiUrl: 'https://gorest.co.in/public/v2'
-};
-```
-
-3. Usa in `api.service.ts`:
-```typescript
-import { environment } from '../environments/environment';
-
-private apiUrl = environment.apiUrl;
-```
 
 ---
 
@@ -1322,40 +1250,8 @@ console.table(array); // Per array/oggetti
 - **Angular CLI Docs**: [https://angular.dev/tools/cli](https://angular.dev/tools/cli)
 
 ---
-
-## 📞 Supporto
-
-Per problemi, bug o domande:
-
-1. **Issues GitHub**: Apri una issue nel repository
-2. **Documentazione**: Consulta questa guida e la documentazione Angular
-3. **Community**: Angular Discord, Stack Overflow
-
----
-
 ## 📄 Licenza
 
 Questo progetto è stato generato con [Angular CLI](https://github.com/angular/angular-cli) versione 19.2.17.
 
 ---
-
-## 🎓 Risorse per Imparare
-
-### Tutorial Angular
-- [Tour of Heroes (ufficiale)](https://angular.dev/tutorials/first-app)
-- [Angular University](https://angular-university.io/)
-
-### Material Design
-- [Material Design Guidelines](https://m3.material.io/)
-- [Angular Material Components](https://material.angular.io/components/categories)
-
-### TypeScript
-- [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
-
-### RxJS
-- [Learn RxJS](https://www.learnrxjs.io/)
-- [RxJS Marbles (visualizza operatori)](https://rxmarbles.com/)
-
----
-
-**Buon sviluppo! 🚀**
