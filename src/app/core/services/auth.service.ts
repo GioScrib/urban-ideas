@@ -33,6 +33,16 @@ export class AuthService {
   }
 
   /**
+   * Rimuove il token e reindirizza al login con un messaggio di errore
+   * @param errorMessage - Il messaggio di errore da mostrare nella pagina di login
+   */
+  logoutWithError(errorMessage: string): void {
+    localStorage.removeItem(this.TOKEN_KEY);
+    console.log('AuthService: logout con errore -', errorMessage);
+    this.router.navigate(['/auth'], { queryParams: { error: errorMessage } });
+  }
+
+  /**
    * Verifica se l'utente è autenticato
    * @returns true se il token esiste, false altrimenti
    */
