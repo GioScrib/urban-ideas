@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build:prod": "ng build --configuration production --base-href /urban-ideas/",
-    "predeploy": "npm run build:prod && cd dist/urban-ideas/browser && mv index.csr.html index.html 2>/dev/null || true && cp index.html 404.html",
+    "predeploy": "npm run build:prod && shx mv -f dist/urban-ideas/browser/index.csr.html dist/urban-ideas/browser/index.html && shx cp dist/urban-ideas/browser/index.html dist/urban-ideas/browser/404.html",
     "deploy": "npm run predeploy && npx angular-cli-ghpages --dir=dist/urban-ideas/browser",
     "watch": "ng build --watch --configuration development",
     "serve:ssr:urban-ideas": "node dist/urban-ideas/server/server.mjs",
@@ -52,6 +52,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "shx": "^0.4.0",
     "typescript": "~5.9.3"
   }
 }
