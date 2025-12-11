@@ -31,6 +31,8 @@
         <mat-error>
           @if (newPostForm.controls['title'].hasError('required')){
             title is required
+          } @else {
+            min lenght is 5
           }
         </mat-error>
       }

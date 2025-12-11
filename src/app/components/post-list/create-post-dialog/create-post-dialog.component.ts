@@ -47,8 +47,8 @@ export class CreatePostDialogComponent implements OnInit{
 
   newPostForm: FormGroup = this.fb.group({
     userName: new FormControl('', [Validators.required]),
-    title: new FormControl('', [Validators.required]),
-    body: new FormControl('', [Validators.maxLength(1000), Validators.required])
+    title: new FormControl('', [Validators.required, Validators.minLength(5)]),
+    body: new FormControl('', [Validators.maxLength(1000), Validators.minLength(10), Validators.required])
   })
 
   submitData() {

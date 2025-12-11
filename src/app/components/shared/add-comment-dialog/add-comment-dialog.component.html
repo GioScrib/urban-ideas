@@ -14,11 +14,13 @@
         class="mat-form-field-medium-space"
         appearance="outline">
         <mat-label>Title</mat-label>
-        <input matInput formControlName="name" required>
-        @if (newCommentForm.controls['name'].invalid && newCommentForm.controls['name'].touched) {
+        <input matInput formControlName="title" required>
+        @if (newCommentForm.controls['title'].invalid && newCommentForm.controls['title'].touched) {
           <mat-error class="mat-error">
-            @if (newCommentForm.controls['name'].hasError('required')) {
-              Name is required
+            @if (newCommentForm.controls['title'].hasError('required')) {
+              Title is required
+            } @else {
+              min lenght is 5
             }
           </mat-error>
         }

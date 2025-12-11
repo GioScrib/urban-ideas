@@ -33,9 +33,9 @@ export class AddCommentDialogComponent {
   data = inject<CommentsDialogData>(MAT_DIALOG_DATA);
 
   newCommentForm: FormGroup = this.fb.group({
-    name: new FormControl('', [Validators.required]),
+    title: new FormControl('', [Validators.required, Validators.minLength(3)]),
     email: new FormControl('', [Validators.required, Validators.email]),
-    body: new FormControl('', [Validators.required]),
+    body: new FormControl('', [Validators.required, Validators.maxLength(1000)]),
   })
 
   submitData() {
