@@ -45,7 +45,7 @@ export class AddCommentDialogComponent {
     }
     let newComment = {
       post_id: this.data.post.id,
-      name: this.newCommentForm.value.name,
+            name: this.newCommentForm.value.title,
       email: this.newCommentForm.value.email,
       body: this.newCommentForm.value.body
     };
