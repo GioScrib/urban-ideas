@@ -1,5 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { of } from 'rxjs';
 import { AuthGuard } from './auth.guard';
 
 describe('AuthGuard', () => {
@@ -34,7 +36,8 @@ describe('AuthGuard', () => {
     TestBed.configureTestingModule({
       providers: [
         AuthGuard,
-        { provide: Router, useValue: mockRouter }
+        { provide: Router, useValue: mockRouter },
+        { provide: HttpClient, useValue: jasmine.createSpyObj('HttpClient', { get: of({}) }) }
       ]
     });
 

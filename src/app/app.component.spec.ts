@@ -1,13 +1,16 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { provideRouter } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { of } from 'rxjs';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [AppComponent],
       providers: [
-        provideRouter([])
+        provideRouter([]),
+        { provide: HttpClient, useValue: jasmine.createSpyObj('HttpClient', { get: of({}) }) }
       ]
     }).compileComponents();
   });

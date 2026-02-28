@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Router, ActivatedRoute } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 import { of } from 'rxjs';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login.component';
@@ -50,7 +51,8 @@ describe('LoginComponent', () => {
       ],
       providers: [
         { provide: ActivatedRoute, useValue: { queryParams: of({}) } },
-        { provide: Router, useValue: mockRouter }
+        { provide: Router, useValue: mockRouter },
+        { provide: HttpClient, useValue: jasmine.createSpyObj('HttpClient', { get: of({}) }) }
       ]
     }).compileComponents();
 

@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { HttpInterceptorFn, HttpRequest, HttpHandlerFn, HttpEvent } from '@angular/common/http';
+import { HttpInterceptorFn, HttpRequest, HttpHandlerFn, HttpEvent, HttpClient } from '@angular/common/http';
 import { authInterceptor } from './auth.interceptor';
 import { Observable, of } from 'rxjs';
 
@@ -29,7 +29,11 @@ describe('authInterceptor', () => {
 
     mockNext = jasmine.createSpy('next').and.returnValue(of({} as HttpEvent<unknown>));
 
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+      providers: [
+        { provide: HttpClient, useValue: jasmine.createSpyObj('HttpClient', { get: of({}) }) }
+      ]
+    });
   });
 
   it('should add Authorization header when token exists', () => {

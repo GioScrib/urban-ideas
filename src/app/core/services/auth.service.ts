@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -7,17 +8,30 @@ import { Router } from '@angular/router';
 export class AuthService {
   private readonly TOKEN_KEY = 'auth_token';
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private http: HttpClient) { }
 
   /**
-   * Salva il token di autenticazione nel localStorage
+   * Salva il token di autenticazione nel localStorage e lo valida
    * @param token - Il token Bearer da salvare
    */
   login(token: string): void {
     if (token?.trim()) {
       localStorage.setItem(this.TOKEN_KEY, token.trim());
-      console.log('AuthService: token salvato con successo');
-      this.router.navigate(['/users']);
+      console.log('AuthService: token salvato, in validazione...');
+
+      // Valida il token effettuando una richiesta
+      this.http.get('https://gorest.co.in/public/v2/users', { params: { per_page: 1 } })
+        .subscribe({
+          next: () => {
+            console.log('AuthService: token valido');
+            this.router.navigate(['/users']);
+          },
+          error: (err: any) => {
+            console.log('AuthService: token non valido', err);
+            // L'interceptor catchError() su 401 farà automaticamente 
+            // `logoutWithError` che rimanderà a /auth con messaggio di errore.
+          }
+        });
     } else {
       console.log('AuthService: nessun token fornito');
     }
