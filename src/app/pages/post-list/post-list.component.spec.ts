@@ -8,7 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideRouter } from '@angular/router';
 import { of, throwError } from 'rxjs';
 import { Post } from '../../shared/post.model';
-import {HttpHeaders, HttpResponse} from '@angular/common/http';
+import { HttpHeaders, HttpResponse } from '@angular/common/http';
 
 describe('PostListComponent', () => {
   let component: PostListComponent;
@@ -63,15 +63,15 @@ describe('PostListComponent', () => {
 
   it('should load posts on init', () => {
     expect(mockApiService.getPostList).toHaveBeenCalled();
-    expect(component.allPosts).toEqual(mockPosts);
-    expect(component.filteredPosts).toEqual(mockPosts);
-    expect(component.total).toBe(3);
+    expect(component.allPosts()).toEqual(mockPosts);
+    expect(component.filteredPosts()).toEqual(mockPosts);
+    expect(component.total()).toBe(3);
     expect(component.isLoading).toBe(false);
   });
 
   it('should update grid columns', () => {
     component.onClickGridCols(3);
-    expect(component.gridCols).toBe(3);
+    expect(component.gridCols()).toBe(3);
   });
 
   it('should open create post dialog', () => {
@@ -137,29 +137,29 @@ describe('PostListComponent', () => {
   it('should filter posts by title', () => {
     component.onSearchKeyValue('first');
 
-    expect(component.filteredPosts.length).toBe(1);
-    expect(component.filteredPosts[0].title).toContain('First');
+    expect(component.filteredPosts().length).toBe(1);
+    expect(component.filteredPosts()[0].title).toContain('First');
   });
 
   it('should filter posts by body', () => {
     component.onSearchKeyValue('second post body');
 
-    expect(component.filteredPosts.length).toBe(1);
-    expect(component.filteredPosts[0].body).toContain('second post body');
+    expect(component.filteredPosts().length).toBe(1);
+    expect(component.filteredPosts()[0].body).toContain('second post body');
   });
 
   it('should reset filter when search is empty', () => {
     component.onSearchKeyValue('first');
-    expect(component.filteredPosts.length).toBe(1);
+    expect(component.filteredPosts().length).toBe(1);
 
     component.onSearchKeyValue('');
-    expect(component.filteredPosts).toEqual(mockPosts);
+    expect(component.filteredPosts()).toEqual(mockPosts);
   });
 
   it('should be case insensitive when filtering', () => {
     component.onSearchKeyValue('FIRST');
 
-    expect(component.filteredPosts.length).toBe(1);
+    expect(component.filteredPosts().length).toBe(1);
   });
 
   it('should not call addUserPost when dialog is cancelled', () => {
@@ -185,7 +185,7 @@ describe('PostListComponent', () => {
   });
 
   it('should display "No match found" when filtered posts is empty and not loading', () => {
-    component.filteredPosts = [];
+    component.allPosts.set([]);
     component.isLoading = false;
     fixture.detectChanges();
 

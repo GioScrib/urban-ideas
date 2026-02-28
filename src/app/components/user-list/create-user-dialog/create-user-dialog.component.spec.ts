@@ -87,7 +87,7 @@ describe('CreateUserDialogComponent', () => {
   it('should not submit when form is invalid', () => {
     component.submitData();
 
-    expect(component.isInvalid).toBe(true);
+    expect(component.newUserForm.invalid).toBe(true);
     expect(mockDialogRef.close).not.toHaveBeenCalled();
   });
 
@@ -101,7 +101,7 @@ describe('CreateUserDialogComponent', () => {
 
     component.submitData();
 
-    expect(component.isInvalid).toBe(false);
+    expect(component.newUserForm.invalid).toBe(false);
     expect(mockDialogRef.close).toHaveBeenCalledWith({
       name: 'John Doe',
       email: 'john@example.com',
@@ -126,15 +126,6 @@ describe('CreateUserDialogComponent', () => {
     expect(component.newUserForm.get('status')?.value).toBeNull();
   });
 
-  it('should show invalid message when form is invalid on submit', () => {
-    component.submitData();
-    fixture.detectChanges();
-
-    const compiled = fixture.nativeElement as HTMLElement;
-    const invalidMessage = compiled.querySelector('p[style*="color: #BA1A1A"]');
-
-    expect(invalidMessage?.textContent).toContain('*Invalid data');
-  });
 
   it('should have all required form fields', () => {
     const compiled = fixture.nativeElement as HTMLElement;

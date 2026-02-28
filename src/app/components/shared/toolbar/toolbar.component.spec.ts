@@ -39,12 +39,12 @@ describe('ToolbarComponent', () => {
   });
 
   it('should return true if on login page', () => {
-    (router as any).url = '/auth';
+    Object.defineProperty(router, 'url', { get: () => '/auth' });
     expect(component.isLoginPage()).toBe(true);
   });
 
   it('should return false if not on login page', () => {
-    (router as any).url = '/users';
+    Object.defineProperty(router, 'url', { get: () => '/users' });
     expect(component.isLoginPage()).toBe(false);
   });
 });

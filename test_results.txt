@@ -1,0 +1,958 @@
+
+> urban-ideas@0.0.0 test
+> ng test --watch=false
+
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+❯ Building...
+✔ Building...
+Initial chunk files                                                                          | Names                                                                                     |  Raw size
+chunk-QLOTLLV4.js                                                                            | -                                                                                         |   2.30 MB | 
+polyfills.js                                                                                 | polyfills                                                                                 |   1.04 MB | 
+chunk-YFVLFPZF.js                                                                            | -                                                                                         | 286.65 kB | 
+chunk-PHY3UFQ7.js                                                                            | -                                                                                         | 242.93 kB | 
+chunk-NHKDZ3QA.js                                                                            | -                                                                                         | 231.93 kB | 
+chunk-QXIU56QM.js                                                                            | -                                                                                         | 197.74 kB | 
+chunk-BM472JBC.js                                                                            | -                                                                                         | 181.78 kB | 
+chunk-MAQ44VZZ.js                                                                            | -                                                                                         | 174.77 kB | 
+chunk-3IFKKSX4.js                                                                            | -                                                                                         | 137.46 kB | 
+chunk-XBOGN5DQ.js                                                                            | -                                                                                         | 106.18 kB | 
+chunk-YBYZPC2H.js                                                                            | -                                                                                         |  96.30 kB | 
+chunk-AACFEB7E.js                                                                            | -                                                                                         |  84.07 kB | 
+chunk-KL7PJ4SB.js                                                                            | -                                                                                         |  80.58 kB | 
+chunk-RO46XWLZ.js                                                                            | -                                                                                         |  72.53 kB | 
+jasmine-cleanup-1.js                                                                         | jasmine-cleanup-1                                                                         |  67.20 kB | 
+spec-app-pages-post-list-post-list.component.spec.js                                         | spec-app-pages-post-list-post-list.component.spec                                         |  65.49 kB | 
+chunk-Q6R6JLJI.js                                                                            | -                                                                                         |  53.84 kB | 
+chunk-TCZIDJMM.js                                                                            | -                                                                                         |  43.48 kB | 
+chunk-WU6BRQQI.js                                                                            | -                                                                                         |  43.30 kB | 
+chunk-RTPWBMMQ.js                                                                            | -                                                                                         |  39.72 kB | 
+spec-app-features-auth-pages-login-login.component.spec.js                                   | spec-app-features-auth-pages-login-login.component.spec                                   |  37.32 kB | 
+chunk-LI6HQ2FW.js                                                                            | -                                                                                         |  27.11 kB | 
+chunk-SE6EWP3G.js                                                                            | -                                                                                         |  22.59 kB | 
+test_main.js                                                                                 | test_main                                                                                 |  21.90 kB | 
+chunk-Q2WTLX6K.js                                                                            | -                                                                                         |  15.47 kB | 
+chunk-KBMI4CTW.js                                                                            | -                                                                                         |  13.91 kB | 
+spec-app-components-user-list-create-user-dialog-create-user-dialog.component.spec.js        | spec-app-components-user-list-create-user-dialog-create-user-dialog.component.spec        |  13.19 kB | 
+spec-app-components-user-list-user-card-user-card.component.spec.js                          | spec-app-components-user-list-user-card-user-card.component.spec                          |  11.19 kB | 
+spec-app-components-user-list-user-list-header-user-list-header.component.spec.js            | spec-app-components-user-list-user-list-header-user-list-header.component.spec            |  10.99 kB | 
+chunk-FL2JZA3V.js                                                                            | -                                                                                         |   9.83 kB | 
+styles.css                                                                                   | styles                                                                                    |   9.38 kB | 
+spec-app-components-user-details-user-details-header-user-details-header.component.spec.js   | spec-app-components-user-details-user-details-header-user-details-header.component.spec   |   9.35 kB | 
+chunk-VHYOVGBQ.js                                                                            | -                                                                                         |   7.62 kB | 
+spec-app-services-users-api.service.spec.js                                                  | spec-app-services-users-api.service.spec                                                  |   7.61 kB | 
+chunk-3LG2AUBQ.js                                                                            | -                                                                                         |   7.56 kB | 
+chunk-FGYJ74IX.js                                                                            | -                                                                                         |   7.31 kB | 
+spec-app-components-shared-confirm-dialog-confirm-dialog.component.spec.js                   | spec-app-components-shared-confirm-dialog-confirm-dialog.component.spec                   |   6.50 kB | 
+spec-app-components-post-list-create-post-dialog-create-post-dialog.component.spec.js        | spec-app-components-post-list-create-post-dialog-create-post-dialog.component.spec        |   5.31 kB | 
+spec-app-components-shared-add-comment-dialog-add-comment-dialog.component.spec.js           | spec-app-components-shared-add-comment-dialog-add-comment-dialog.component.spec           |   4.95 kB | 
+spec-app-components-shared-custom-button-custom-button.component.spec.js                     | spec-app-components-shared-custom-button-custom-button.component.spec                     |   4.29 kB | 
+chunk-CSVG5QDP.js                                                                            | -                                                                                         |   4.08 kB | 
+spec-app-components-post-list-post-list-page-header-post-list-page-header.component.spec.js  | spec-app-components-post-list-post-list-page-header-post-list-page-header.component.spec  |   3.63 kB | 
+spec-app-components-shared-custom-grid-custom-grid.component.spec.js                         | spec-app-components-shared-custom-grid-custom-grid.component.spec                         |   3.63 kB | 
+spec-app-core-interceptors-auth.interceptor.spec.js                                          | spec-app-core-interceptors-auth.interceptor.spec                                          |   3.48 kB | 
+chunk-VW5QM3AC.js                                                                            | -                                                                                         |   3.47 kB | 
+chunk-Q4C7YONE.js                                                                            | -                                                                                         |   3.37 kB | 
+spec-app-components-shared-custom-search-custom-search.component.spec.js                     | spec-app-components-shared-custom-search-custom-search.component.spec                     |   3.32 kB | 
+spec-app-core-guards-auth.guard.spec.js                                                      | spec-app-core-guards-auth.guard.spec                                                      |   3.14 kB | 
+spec-app-app.component.spec.js                                                               | spec-app-app.component.spec                                                               |   3.05 kB | 
+spec-app-core-services-auth.service.spec.js                                                  | spec-app-core-services-auth.service.spec                                                  |   2.79 kB | 
+chunk-CF5HMCZX.js                                                                            | -                                                                                         |   2.77 kB | 
+spec-app-components-shared-toolbar-toolbar.component.spec.js                                 | spec-app-components-shared-toolbar-toolbar.component.spec                                 |   2.64 kB | 
+spec-app-components-shared-custom-dialog-container-custom-dialog-container.component.spec.js | spec-app-components-shared-custom-dialog-container-custom-dialog-container.component.spec |   2.49 kB | 
+chunk-ST2Y4D2N.js                                                                            | -                                                                                         |   2.48 kB | 
+chunk-V6FC2DIM.js                                                                            | -                                                                                         |   2.42 kB | 
+spec-app-components-shared-custom-paginator-custom-paginator.component.spec.js               | spec-app-components-shared-custom-paginator-custom-paginator.component.spec               |   1.49 kB | 
+spec-app-components-shared-custom-post-card-header-custom-post-card-header.component.spec.js | spec-app-components-shared-custom-post-card-header-custom-post-card-header.component.spec |   1.31 kB | 
+chunk-QOOUN7VE.js                                                                            | -                                                                                         | 936 bytes | 
+jasmine-cleanup-0.js                                                                         | jasmine-cleanup-0                                                                         | 519 bytes | 
+chunk-3FGBZWFJ.js                                                                            | -                                                                                         | 403 bytes | 
+chunk-KMXVMNV3.js                                                                            | -                                                                                         | 393 bytes | 
+spec-app-components-user-details-post-comments-dialog-post-comments-dialog.component.spec.js | spec-app-components-user-details-post-comments-dialog-post-comments-dialog.component.spec | 118 bytes | 
+spec-app-components-user-details-user-details-card-user-details-page-card.component.spec.js  | spec-app-components-user-details-user-details-card-user-details-page-card.component.spec  | 117 bytes | 
+spec-app-components-shared-user-post-card-user-post-card.component.spec.js                   | spec-app-components-shared-user-post-card-user-post-card.component.spec                   | 100 bytes | 
+spec-app-pages-user-details-page-user-details-page.component.spec.js                         | spec-app-pages-user-details-page-user-details-page.component.spec                         |  94 bytes | 
+spec-app-pages-user-list-user-list.component.spec.js                                         | spec-app-pages-user-list-user-list.component.spec                                         |  78 bytes | 
+
+                                                                                             | Initial total                                                                             |   5.85 MB
+
+Application bundle generation complete. [1.167 seconds] - 2026-02-28T12:35:04.651Z
+
+[32m28 02 2026 13:35:04.714:INFO [karma-server]: [39mKarma v6.4.4 server started at http://localhost:9877/
+[32m28 02 2026 13:35:04.714:INFO [launcher]: [39mLaunching browsers Chrome with concurrency unlimited
+[32m28 02 2026 13:35:04.716:INFO [launcher]: [39mStarting browser Chrome
+[32m28 02 2026 13:35:05.544:INFO [Chrome 145.0.0.0 (Mac OS 10.15.7)]: [39mConnected on socket L6oWCMi-qcraeY-JAAAB with id 13670406
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 0 of 167[32m SUCCESS[39m (0 secs / 0 secs)
+[1A[2KLOG: [36m'AuthGuard dice: no token'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 0 of 167[32m SUCCESS[39m (0 secs / 0 secs)
+LOG: 'AuthGuard dice: no token'
+[1A[2KLOG: [36m'AuthGuard dice: false'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 0 of 167[32m SUCCESS[39m (0 secs / 0 secs)
+LOG: 'AuthGuard dice: false'
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 1 of 167[32m SUCCESS[39m (0 secs / 0.005 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 2 of 167[32m SUCCESS[39m (0 secs / 0.006 secs)
+[1A[2KLOG: [36m'AuthGuard dice: no token'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 2 of 167[32m SUCCESS[39m (0 secs / 0.006 secs)
+LOG: 'AuthGuard dice: no token'
+[1A[2KLOG: [36m'AuthGuard dice: false'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 2 of 167[32m SUCCESS[39m (0 secs / 0.006 secs)
+LOG: 'AuthGuard dice: false'
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 3 of 167[32m SUCCESS[39m (0 secs / 0.007 secs)
+[1A[2KLOG: [36m'AuthGuard dice: true'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 3 of 167[32m SUCCESS[39m (0 secs / 0.007 secs)
+LOG: 'AuthGuard dice: true'
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 4 of 167[32m SUCCESS[39m (0 secs / 0.007 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 5 of 167[32m SUCCESS[39m (0 secs / 0.008 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 6 of 167[32m SUCCESS[39m (0 secs / 0.008 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 7 of 167[32m SUCCESS[39m (0 secs / 0.008 secs)
+[1A[2KLOG: [36m'AuthService: logout effettuato'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 7 of 167[32m SUCCESS[39m (0 secs / 0.008 secs)
+LOG: 'AuthService: logout effettuato'
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 8 of 167[32m SUCCESS[39m (0 secs / 0.009 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 9 of 167[32m SUCCESS[39m (0 secs / 0.009 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 10 of 167[32m SUCCESS[39m (0 secs / 0.009 secs)
+[1A[2KLOG: [36m'AuthService: token salvato con successo'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 10 of 167[32m SUCCESS[39m (0 secs / 0.009 secs)
+LOG: 'AuthService: token salvato con successo'
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 11 of 167[32m SUCCESS[39m (0 secs / 0.009 secs)
+[1A[2KLOG: [36m'AuthService: nessun token fornito'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 11 of 167[32m SUCCESS[39m (0 secs / 0.009 secs)
+LOG: 'AuthService: nessun token fornito'
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 12 of 167[32m SUCCESS[39m (0 secs / 0.009 secs)
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 12 of 167[32m SUCCESS[39m (0 secs / 0.009 secs)
+LOG: ''
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 13 of 167[32m SUCCESS[39m (0 secs / 0.027 secs)
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 13 of 167[32m SUCCESS[39m (0 secs / 0.027 secs)
+LOG: ''
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 14 of 167[32m SUCCESS[39m (0 secs / 0.03 secs)
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 14 of 167[32m SUCCESS[39m (0 secs / 0.03 secs)
+LOG: ''
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 15 of 167[32m SUCCESS[39m (0 secs / 0.032 secs)
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 15 of 167[32m SUCCESS[39m (0 secs / 0.032 secs)
+LOG: ''
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 16 of 167[32m SUCCESS[39m (0 secs / 0.035 secs)
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 16 of 167[32m SUCCESS[39m (0 secs / 0.035 secs)
+LOG: ''
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 17 of 167[32m SUCCESS[39m (0 secs / 0.041 secs)
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 17 of 167[32m SUCCESS[39m (0 secs / 0.041 secs)
+LOG: ''
+[1A[2KLOG: [36m'Navigated to posts'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 17 of 167[32m SUCCESS[39m (0 secs / 0.041 secs)
+LOG: 'Navigated to posts'
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 18 of 167[32m SUCCESS[39m (0 secs / 0.044 secs)
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 18 of 167[32m SUCCESS[39m (0 secs / 0.044 secs)
+LOG: ''
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 19 of 167[32m SUCCESS[39m (0 secs / 0.046 secs)
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 19 of 167[32m SUCCESS[39m (0 secs / 0.046 secs)
+LOG: ''
+[1A[2KLOG: [36m'user-list-header says grid cols clicked: ', 3[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 19 of 167[32m SUCCESS[39m (0 secs / 0.046 secs)
+LOG: 'user-list-header says grid cols clicked: ', 3
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 20 of 167[32m SUCCESS[39m (0 secs / 0.049 secs)
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 20 of 167[32m SUCCESS[39m (0 secs / 0.049 secs)
+LOG: ''
+[1A[2KLOG: [36m'user-list-header says: new user clicked'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 20 of 167[32m SUCCESS[39m (0 secs / 0.049 secs)
+LOG: 'user-list-header says: new user clicked'
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 21 of 167[32m SUCCESS[39m (0 secs / 0.051 secs)
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 21 of 167[32m SUCCESS[39m (0 secs / 0.051 secs)
+LOG: ''
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 22 of 167[32m SUCCESS[39m (0 secs / 0.053 secs)
+[1A[2KLOG: [36m'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender=female'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 22 of 167[32m SUCCESS[39m (0 secs / 0.053 secs)
+LOG: 'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender=female'
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 23 of 167[32m SUCCESS[39m (0 secs / 0.058 secs)
+[1A[2KLOG: [36m'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender=female'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 23 of 167[32m SUCCESS[39m (0 secs / 0.058 secs)
+LOG: 'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender=female'
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 24 of 167[32m SUCCESS[39m (0 secs / 0.06 secs)
+[1A[2KLOG: [36m'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender=female'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 24 of 167[32m SUCCESS[39m (0 secs / 0.06 secs)
+LOG: 'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender=female'
+[1A[2KLOG: [36m'user-card says open details of user with id: ', 1[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 24 of 167[32m SUCCESS[39m (0 secs / 0.06 secs)
+LOG: 'user-card says open details of user with id: ', 1
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 25 of 167[32m SUCCESS[39m (0 secs / 0.061 secs)
+[1A[2KLOG: [36m'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender=female'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 25 of 167[32m SUCCESS[39m (0 secs / 0.061 secs)
+LOG: 'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender=female'
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 26 of 167[32m SUCCESS[39m (0 secs / 0.062 secs)
+[1A[2KLOG: [36m'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender=female'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 26 of 167[32m SUCCESS[39m (0 secs / 0.062 secs)
+LOG: 'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender=female'
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 27 of 167[32m SUCCESS[39m (0 secs / 0.064 secs)
+[1A[2KLOG: [36m'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender=female'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 27 of 167[32m SUCCESS[39m (0 secs / 0.064 secs)
+LOG: 'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender=female'
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 28 of 167[32m SUCCESS[39m (0 secs / 0.065 secs)
+[1A[2KLOG: [36m'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender=female'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 28 of 167[32m SUCCESS[39m (0 secs / 0.065 secs)
+LOG: 'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender=female'
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 29 of 167[32m SUCCESS[39m (0 secs / 0.066 secs)
+[1A[2KLOG: [36m'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender=female'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 29 of 167[32m SUCCESS[39m (0 secs / 0.066 secs)
+LOG: 'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender=female'
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 30 of 167[32m SUCCESS[39m (0 secs / 0.067 secs)
+[1A[2KLOG: [36m'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender=female'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 30 of 167[32m SUCCESS[39m (0 secs / 0.067 secs)
+LOG: 'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender=female'
+[1A[2KLOG: [36m'user-card says delete user with id: ', 1[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 30 of 167[32m SUCCESS[39m (0 secs / 0.067 secs)
+LOG: 'user-card says delete user with id: ', 1
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 31 of 167[32m SUCCESS[39m (0 secs / 0.068 secs)
+[1A[2KLOG: [36m'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender=female'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 31 of 167[32m SUCCESS[39m (0 secs / 0.068 secs)
+LOG: 'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender=female'
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 32 of 167[32m SUCCESS[39m (0 secs / 0.069 secs)
+[1A[2KLOG: [36m'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender=female'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 32 of 167[32m SUCCESS[39m (0 secs / 0.069 secs)
+LOG: 'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender=female'
+[1A[2KLOG: [36m'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=2&gender=female'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 32 of 167[32m SUCCESS[39m (0 secs / 0.069 secs)
+LOG: 'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=2&gender=female'
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 33 of 167[32m SUCCESS[39m (0 secs / 0.07 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 34 of 167[32m SUCCESS[39m (0 secs / 0.084 secs)
+[1A[2KLOG: [36m'create-user-dialog says: ', FormGroup{_pendingDirty: false, _hasOwnPendingAsyncValidator: null, _pendingTouched: false, _onCollectionChange: () => this._updateDomValue(), _updateOn: undefined, _parent: null, _asyncValidationSubscription: undefined, _composedValidatorFn: null, _composedAsyncValidatorFn: null, _rawValidators: null, _rawAsyncValidators: null, value: Object{name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, _status: [Computed: VALID], statusReactive: [Signal: VALID], errors: null, _pristine: [Computed: true], pristineReactive: [Signal: true], _touched: [Computed: false], touchedReactive: [Signal: false], _events: Subject{closed: false, currentObservers: [], observers: [], isStopped: false, hasError: false, thrownError: null}, events: _Observable{source: Subject{closed: ..., currentObservers: ..., observers: ..., isStopped: ..., hasError: ..., thrownError: ...}}, valueChanges: EventEmitter_{closed: false, currentObservers: [], observers: [], isStopped: false, hasError: false, thrownError: null, __isAsync: false, destroyRef: NodeInjectorDestroyRef{_lView: ...}, pendingTasks: _PendingTasksInternal{taskId: ..., pendingTasks: ..., destroyed: ..., pendingTask: ...}}, statusChanges: EventEmitter_{closed: false, currentObservers: [], observers: [], isStopped: false, hasError: false, thrownError: null, __isAsync: false, destroyRef: NodeInjectorDestroyRef{_lView: ...}, pendingTasks: _PendingTasksInternal{taskId: ..., pendingTasks: ..., destroyed: ..., pendingTask: ...}}, _onDisabledChange: [], controls: Object{name: FormControl2{_pendingDirty: ..., _hasOwnPendingAsyncValidator: ..., _pendingTouched: ..., _onCollectionChange: ..., _updateOn: ..., _parent: ..., _asyncValidationSubscription: ..., _composedValidatorFn: ..., _composedAsyncValidatorFn: ..., _rawValidators: ..., _rawAsyncValidators: ..., value: ..., _status: ..., statusReactive: ..., errors: ..., _pristine: ..., pristineReactive: ..., _touched: ..., touchedReactive: ..., _events: ..., events: ..., valueChanges: ..., statusChanges: ..., _onDisabledChange: ..., defaultValue: ..., _onChange: ..., _pendingValue: ..., _pendingChange: ...}, email: FormControl2{_pendingDirty: ..., _hasOwnPendingAsyncValidator: ..., _pendingTouched: ..., _onCollectionChange: ..., _updateOn: ..., _parent: ..., _asyncValidationSubscription: ..., _composedValidatorFn: ..., _composedAsyncValidatorFn: ..., _rawValidators: ..., _rawAsyncValidators: ..., value: ..., _status: ..., statusReactive: ..., errors: ..., _pristine: ..., pristineReactive: ..., _touched: ..., touchedReactive: ..., _events: ..., events: ..., valueChanges: ..., statusChanges: ..., _onDisabledChange: ..., defaultValue: ..., _onChange: ..., _pendingValue: ..., _pendingChange: ...}, gender: FormControl2{_pendingDirty: ..., _hasOwnPendingAsyncValidator: ..., _pendingTouched: ..., _onCollectionChange: ..., _updateOn: ..., _parent: ..., _asyncValidationSubscription: ..., _composedValidatorFn: ..., _composedAsyncValidatorFn: ..., _rawValidators: ..., _rawAsyncValidators: ..., value: ..., _status: ..., statusReactive: ..., errors: ..., _pristine: ..., pristineReactive: ..., _touched: ..., touchedReactive: ..., _events: ..., events: ..., valueChanges: ..., statusChanges: ..., _onDisabledChange: ..., defaultValue: ..., _onChange: ..., _pendingValue: ..., _pendingChange: ...}, status: FormControl2{_pendingDirty: ..., _hasOwnPendingAsyncValidator: ..., _pendingTouched: ..., _onCollectionChange: ..., _updateOn: ..., _parent: ..., _asyncValidationSubscription: ..., _composedValidatorFn: ..., _composedAsyncValidatorFn: ..., _rawValidators: ..., _rawAsyncValidators: ..., value: ..., _status: ..., statusReactive: ..., errors: ..., _pristine: ..., pristineReactive: ..., _touched: ..., touchedReactive: ..., _events: ..., events: ..., valueChanges: ..., statusChanges: ..., _onDisabledChange: ..., defaultValue: ..., _onChange: ..., _pendingValue: ..., _pendingChange: ...}}}[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 34 of 167[32m SUCCESS[39m (0 secs / 0.084 secs)
+LOG: 'create-user-dialog says: ', FormGroup{_pendingDirty: false, _hasOwnPendingAsyncValidator: null, _pendingTouched: false, _onCollectionChange: () => this._updateDomValue(), _updateOn: undefined, _parent: null, _asyncValidationSubscription: undefined, _composedValidatorFn: null, _composedAsyncValidatorFn: null, _rawValidators: null, _rawAsyncValidators: null, value: Object{name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, _status: [Computed: VALID], statusReactive: [Signal: VALID], errors: null, _pristine: [Computed: true], pristineReactive: [Signal: true], _touched: [Computed: false], touchedReactive: [Signal: false], _events: Subject{closed: false, currentObservers: [], observers: [], isStopped: false, hasError: false, thrownError: null}, events: _Observable{source: Subject{closed: ..., currentObservers: ..., observers: ..., isStopped: ..., hasError: ..., thrownError: ...}}, valueChanges: EventEmitter_{closed: false, currentObservers: [], observers: [], isStopped: false, hasError: false, thrownError: null, __isAsync: false, destroyRef: NodeInjectorDestroyRef{_lView: ...}, pendingTasks: _PendingTasksInternal{taskId: ..., pendingTasks: ..., destroyed: ..., pendingTask: ...}}, statusChanges: EventEmitter_{closed: false, currentObservers: [], observers: [], isStopped: false, hasError: false, thrownError: null, __isAsync: false, destroyRef: NodeInjectorDestroyRef{_lView: ...}, pendingTasks: _PendingTasksInternal{taskId: ..., pendingTasks: ..., destroyed: ..., pendingTask: ...}}, _onDisabledChange: [], controls: Object{name: FormControl2{_pendingDirty: ..., _hasOwnPendingAsyncValidator: ..., _pendingTouched: ..., _onCollectionChange: ..., _updateOn: ..., _parent: ..., _asyncValidationSubscription: ..., _composedValidatorFn: ..., _composedAsyncValidatorFn: ..., _rawValidators: ..., _rawAsyncValidators: ..., value: ..., _status: ..., statusReactive: ..., errors: ..., _pristine: ..., pristineReactive: ..., _touched: ..., touchedReactive: ..., _events: ..., events: ..., valueChanges: ..., statusChanges: ..., _onDisabledChange: ..., defaultValue: ..., _onChange: ..., _pendingValue: ..., _pendingChange: ...}, email: FormControl2{_pendingDirty: ..., _hasOwnPendingAsyncValidator: ..., _pendingTouched: ..., _onCollectionChange: ..., _updateOn: ..., _parent: ..., _asyncValidationSubscription: ..., _composedValidatorFn: ..., _composedAsyncValidatorFn: ..., _rawValidators: ..., _rawAsyncValidators: ..., value: ..., _status: ..., statusReactive: ..., errors: ..., _pristine: ..., pristineReactive: ..., _touched: ..., touchedReactive: ..., _events: ..., events: ..., valueChanges: ..., statusChanges: ..., _onDisabledChange: ..., defaultValue: ..., _onChange: ..., _pendingValue: ..., _pendingChange: ...}, gender: FormControl2{_pendingDirty: ..., _hasOwnPendingAsyncValidator: ..., _pendingTouched: ..., _onCollectionChange: ..., _updateOn: ..., _parent: ..., _asyncValidationSubscription: ..., _composedValidatorFn: ..., _composedAsyncValidatorFn: ..., _rawValidators: ..., _rawAsyncValidators: ..., value: ..., _status: ..., statusReactive: ..., errors: ..., _pristine: ..., pristineReactive: ..., _touched: ..., touchedReactive: ..., _events: ..., events: ..., valueChanges: ..., statusChanges: ..., _onDisabledChange: ..., defaultValue: ..., _onChange: ..., _pendingValue: ..., _pendingChange: ...}, status: FormControl2{_pendingDirty: ..., _hasOwnPendingAsyncValidator: ..., _pendingTouched: ..., _onCollectionChange: ..., _updateOn: ..., _parent: ..., _asyncValidationSubscription: ..., _composedValidatorFn: ..., _composedAsyncValidatorFn: ..., _rawValidators: ..., _rawAsyncValidators: ..., value: ..., _status: ..., statusReactive: ..., errors: ..., _pristine: ..., pristineReactive: ..., _touched: ..., touchedReactive: ..., _events: ..., events: ..., valueChanges: ..., statusChanges: ..., _onDisabledChange: ..., defaultValue: ..., _onChange: ..., _pendingValue: ..., _pendingChange: ...}}}
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 35 of 167[32m SUCCESS[39m (0 secs / 0.089 secs)
+[1A[2KLOG: [36m'create-user-dialog says: form invalid'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 35 of 167[32m SUCCESS[39m (0 secs / 0.089 secs)
+LOG: 'create-user-dialog says: form invalid'
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 36 of 167[32m SUCCESS[39m (0 secs / 0.094 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 37 of 167[32m SUCCESS[39m (0 secs / 0.097 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 38 of 167[32m SUCCESS[39m (0 secs / 0.101 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 39 of 167[32m SUCCESS[39m (0 secs / 0.104 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 40 of 167[32m SUCCESS[39m (0 secs / 0.107 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 41 of 167[32m SUCCESS[39m (0 secs / 0.11 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 42 of 167[32m SUCCESS[39m (0 secs / 0.113 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 43 of 167[32m SUCCESS[39m (0 secs / 0.116 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 44 of 167[32m SUCCESS[39m (0 secs / 0.119 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 45 of 167[32m SUCCESS[39m (0 secs / 0.122 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 46 of 167[32m SUCCESS[39m (0 secs / 0.125 secs)
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 46 of 167[32m SUCCESS[39m (0 secs / 0.125 secs)
+LOG: ''
+[1A[2KLOG: [36m'user-details-header says: emitting', ''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 46 of 167[32m SUCCESS[39m (0 secs / 0.125 secs)
+LOG: 'user-details-header says: emitting', ''
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 47 of 167[32m SUCCESS[39m (0 secs / 0.129 secs)
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 47 of 167[32m SUCCESS[39m (0 secs / 0.129 secs)
+LOG: ''
+[1A[2KLOG: [36m'user-details-header says: emitting', ''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 47 of 167[32m SUCCESS[39m (0 secs / 0.129 secs)
+LOG: 'user-details-header says: emitting', ''
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 48 of 167[32m SUCCESS[39m (0 secs / 0.131 secs)
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 48 of 167[32m SUCCESS[39m (0 secs / 0.131 secs)
+LOG: ''
+[1A[2KLOG: [36m'user-details-header says: emitting', ''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 48 of 167[32m SUCCESS[39m (0 secs / 0.131 secs)
+LOG: 'user-details-header says: emitting', ''
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 49 of 167[32m SUCCESS[39m (0 secs / 0.132 secs)
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 49 of 167[32m SUCCESS[39m (0 secs / 0.132 secs)
+LOG: ''
+[1A[2KLOG: [36m'user-details-header says: emitting', ''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 49 of 167[32m SUCCESS[39m (0 secs / 0.132 secs)
+LOG: 'user-details-header says: emitting', ''
+[1A[2KLOG: [36m'user-list-header says: new user clicked'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 49 of 167[32m SUCCESS[39m (0 secs / 0.132 secs)
+LOG: 'user-list-header says: new user clicked'
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 50 of 167[32m SUCCESS[39m (0 secs / 0.133 secs)
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 50 of 167[32m SUCCESS[39m (0 secs / 0.133 secs)
+LOG: ''
+[1A[2KLOG: [36m'user-details-header says: emitting', ''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 50 of 167[32m SUCCESS[39m (0 secs / 0.133 secs)
+LOG: 'user-details-header says: emitting', ''
+[1A[2KLOG: [36m'user-details-header says: emitting', 'test'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 50 of 167[32m SUCCESS[39m (0 secs / 0.133 secs)
+LOG: 'user-details-header says: emitting', 'test'
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 51 of 167[32m SUCCESS[39m (0 secs / 0.134 secs)
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 51 of 167[32m SUCCESS[39m (0 secs / 0.134 secs)
+LOG: ''
+[1A[2KLOG: [36m'user-details-header says: emitting', ''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 51 of 167[32m SUCCESS[39m (0 secs / 0.134 secs)
+LOG: 'user-details-header says: emitting', ''
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 52 of 167[32m SUCCESS[39m (0 secs / 0.135 secs)
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 52 of 167[32m SUCCESS[39m (0 secs / 0.135 secs)
+LOG: ''
+[1A[2KLOG: [36m'user-details-header says: emitting', ''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 52 of 167[32m SUCCESS[39m (0 secs / 0.135 secs)
+LOG: 'user-details-header says: emitting', ''
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 53 of 167[32m SUCCESS[39m (0 secs / 0.136 secs)
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 53 of 167[32m SUCCESS[39m (0 secs / 0.136 secs)
+LOG: ''
+[1A[2KLOG: [36m'user-details-header says: emitting', ''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 53 of 167[32m SUCCESS[39m (0 secs / 0.136 secs)
+LOG: 'user-details-header says: emitting', ''
+[1A[2KLOG: [36m'user-list-header says grid cols clicked: ', 3[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 53 of 167[32m SUCCESS[39m (0 secs / 0.136 secs)
+LOG: 'user-list-header says grid cols clicked: ', 3
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 54 of 167[32m SUCCESS[39m (0 secs / 0.137 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 55 of 167[32m SUCCESS[39m (0 secs / 0.138 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 56 of 167[32m SUCCESS[39m (0 secs / 0.138 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 57 of 167[32m SUCCESS[39m (0 secs / 0.139 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 58 of 167[32m SUCCESS[39m (0 secs / 0.14 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 59 of 167[32m SUCCESS[39m (0 secs / 0.142 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 60 of 167[32m SUCCESS[39m (0 secs / 0.143 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 61 of 167[32m SUCCESS[39m (0 secs / 0.143 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 62 of 167[32m SUCCESS[39m (0 secs / 0.144 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 63 of 167[32m SUCCESS[39m (0 secs / 0.145 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 64 of 167[32m SUCCESS[39m (0 secs / 0.145 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 65 of 167[32m SUCCESS[39m (0 secs / 0.146 secs)
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 65 of 167[32m SUCCESS[39m (0 secs / 0.146 secs)
+LOG: ''
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 66 of 167[32m SUCCESS[39m (0 secs / 0.148 secs)
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 66 of 167[32m SUCCESS[39m (0 secs / 0.148 secs)
+LOG: ''
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 67 of 167[32m SUCCESS[39m (0 secs / 0.148 secs)
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 67 of 167[32m SUCCESS[39m (0 secs / 0.148 secs)
+LOG: ''
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 68 of 167[32m SUCCESS[39m (0 secs / 0.149 secs)
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 68 of 167[32m SUCCESS[39m (0 secs / 0.149 secs)
+LOG: ''
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 69 of 167[32m SUCCESS[39m (0 secs / 0.15 secs)
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 69 of 167[32m SUCCESS[39m (0 secs / 0.15 secs)
+LOG: ''
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 70 of 167[32m SUCCESS[39m (0 secs / 0.151 secs)
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 70 of 167[32m SUCCESS[39m (0 secs / 0.151 secs)
+LOG: ''
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 71 of 167[32m SUCCESS[39m (0 secs / 0.151 secs)
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 71 of 167[32m SUCCESS[39m (0 secs / 0.151 secs)
+LOG: ''
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 72 of 167[32m SUCCESS[39m (0 secs / 0.152 secs)
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 72 of 167[32m SUCCESS[39m (0 secs / 0.152 secs)
+LOG: ''
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 73 of 167[32m SUCCESS[39m (0 secs / 0.152 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 74 of 167[32m SUCCESS[39m (0 secs / 0.153 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 75 of 167[32m SUCCESS[39m (0 secs / 0.153 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 76 of 167[32m SUCCESS[39m (0 secs / 0.153 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 77 of 167[32m SUCCESS[39m (0 secs / 0.153 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 78 of 167[32m SUCCESS[39m (0 secs / 0.153 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 79 of 167[32m SUCCESS[39m (0 secs / 0.157 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 80 of 167[32m SUCCESS[39m (0 secs / 0.158 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 81 of 167[32m SUCCESS[39m (0 secs / 0.159 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 82 of 167[32m SUCCESS[39m (0 secs / 0.159 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 83 of 167[32m SUCCESS[39m (0 secs / 0.163 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 84 of 167[32m SUCCESS[39m (0 secs / 0.164 secs)
+[1A[2KLOG: [36m'custom button[Input Signal: ]says clicked'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 84 of 167[32m SUCCESS[39m (0 secs / 0.164 secs)
+LOG: 'custom button[Input Signal: ]says clicked'
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 85 of 167[32m SUCCESS[39m (0 secs / 0.164 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 86 of 167[32m SUCCESS[39m (0 secs / 0.165 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 87 of 167[32m SUCCESS[39m (0 secs / 0.165 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 88 of 167[32m SUCCESS[39m (0 secs / 0.166 secs)
+[1A[2KLOG: [36m'PostListComponent says: initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 88 of 167[32m SUCCESS[39m (0 secs / 0.166 secs)
+LOG: 'PostListComponent says: initialized'
+[1A[2KLOG: [36m'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]][39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 88 of 167[32m SUCCESS[39m (0 secs / 0.166 secs)
+LOG: 'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]]
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 88 of 167[32m SUCCESS[39m (0 secs / 0.166 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 88 of 167[32m SUCCESS[39m (0 secs / 0.166 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 88 of 167[32m SUCCESS[39m (0 secs / 0.166 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 88 of 167[32m SUCCESS[39m (0 secs / 0.166 secs)
+LOG: ''
+[1A[2KLOG: [36m'post-list says: searching for key ', ''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 88 of 167[32m SUCCESS[39m (0 secs / 0.166 secs)
+LOG: 'post-list says: searching for key ', ''
+[1A[2KLOG: [36m'post-list-component says: open create post dialog'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 88 of 167[32m SUCCESS[39m (0 secs / 0.166 secs)
+LOG: 'post-list-component says: open create post dialog'
+[1A[2KLOG: [36m'post-list-component says: dialog closed with data: ', null[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 88 of 167[32m SUCCESS[39m (0 secs / 0.166 secs)
+LOG: 'post-list-component says: dialog closed with data: ', null
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 89 of 167[32m SUCCESS[39m (0 secs / 0.175 secs)
+[1A[2KLOG: [36m'PostListComponent says: initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 89 of 167[32m SUCCESS[39m (0 secs / 0.175 secs)
+LOG: 'PostListComponent says: initialized'
+[1A[2KLOG: [36m'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]][39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 89 of 167[32m SUCCESS[39m (0 secs / 0.175 secs)
+LOG: 'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]]
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 89 of 167[32m SUCCESS[39m (0 secs / 0.175 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 89 of 167[32m SUCCESS[39m (0 secs / 0.175 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 89 of 167[32m SUCCESS[39m (0 secs / 0.175 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 89 of 167[32m SUCCESS[39m (0 secs / 0.175 secs)
+LOG: ''
+[1A[2KLOG: [36m'post-list says: searching for key ', ''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 89 of 167[32m SUCCESS[39m (0 secs / 0.175 secs)
+LOG: 'post-list says: searching for key ', ''
+[1A[2KLOG: [36m'post-list says: searching for key ', 'second post body'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 89 of 167[32m SUCCESS[39m (0 secs / 0.175 secs)
+LOG: 'post-list says: searching for key ', 'second post body'
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 90 of 167[32m SUCCESS[39m (0 secs / 0.179 secs)
+[1A[2KLOG: [36m'PostListComponent says: initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 90 of 167[32m SUCCESS[39m (0 secs / 0.179 secs)
+LOG: 'PostListComponent says: initialized'
+[1A[2KLOG: [36m'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]][39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 90 of 167[32m SUCCESS[39m (0 secs / 0.179 secs)
+LOG: 'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]]
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 90 of 167[32m SUCCESS[39m (0 secs / 0.179 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 90 of 167[32m SUCCESS[39m (0 secs / 0.179 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 90 of 167[32m SUCCESS[39m (0 secs / 0.179 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 90 of 167[32m SUCCESS[39m (0 secs / 0.179 secs)
+LOG: ''
+[1A[2KLOG: [36m'post-list says: searching for key ', ''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 90 of 167[32m SUCCESS[39m (0 secs / 0.179 secs)
+LOG: 'post-list says: searching for key ', ''
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 91 of 167[32m SUCCESS[39m (0 secs / 0.183 secs)
+[1A[2KLOG: [36m'PostListComponent says: initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 91 of 167[32m SUCCESS[39m (0 secs / 0.183 secs)
+LOG: 'PostListComponent says: initialized'
+[1A[2KLOG: [36m'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]][39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 91 of 167[32m SUCCESS[39m (0 secs / 0.183 secs)
+LOG: 'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]]
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 91 of 167[32m SUCCESS[39m (0 secs / 0.183 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 91 of 167[32m SUCCESS[39m (0 secs / 0.183 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 91 of 167[32m SUCCESS[39m (0 secs / 0.183 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 91 of 167[32m SUCCESS[39m (0 secs / 0.183 secs)
+LOG: ''
+[1A[2KLOG: [36m'post-list says: searching for key ', ''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 91 of 167[32m SUCCESS[39m (0 secs / 0.183 secs)
+LOG: 'post-list says: searching for key ', ''
+[1A[2KLOG: [36m'post-list says: searching for key ', 'first'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 91 of 167[32m SUCCESS[39m (0 secs / 0.183 secs)
+LOG: 'post-list says: searching for key ', 'first'
+[1A[2KLOG: [36m'post-list says: searching for key ', ''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 91 of 167[32m SUCCESS[39m (0 secs / 0.183 secs)
+LOG: 'post-list says: searching for key ', ''
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 92 of 167[32m SUCCESS[39m (0 secs / 0.186 secs)
+[1A[2KLOG: [36m'PostListComponent says: initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 92 of 167[32m SUCCESS[39m (0 secs / 0.186 secs)
+LOG: 'PostListComponent says: initialized'
+[1A[2KLOG: [36m'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]][39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 92 of 167[32m SUCCESS[39m (0 secs / 0.186 secs)
+LOG: 'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]]
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 92 of 167[32m SUCCESS[39m (0 secs / 0.186 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 92 of 167[32m SUCCESS[39m (0 secs / 0.186 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 92 of 167[32m SUCCESS[39m (0 secs / 0.186 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 92 of 167[32m SUCCESS[39m (0 secs / 0.186 secs)
+LOG: ''
+[1A[2KLOG: [36m'post-list says: searching for key ', ''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 92 of 167[32m SUCCESS[39m (0 secs / 0.186 secs)
+LOG: 'post-list says: searching for key ', ''
+[1A[2KLOG: [36m'post-list-component says grid cols clicked: ', 3[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 92 of 167[32m SUCCESS[39m (0 secs / 0.186 secs)
+LOG: 'post-list-component says grid cols clicked: ', 3
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 93 of 167[32m SUCCESS[39m (0 secs / 0.189 secs)
+[1A[2KLOG: [36m'PostListComponent says: initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 93 of 167[32m SUCCESS[39m (0 secs / 0.189 secs)
+LOG: 'PostListComponent says: initialized'
+[1A[2KLOG: [36m'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]][39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 93 of 167[32m SUCCESS[39m (0 secs / 0.189 secs)
+LOG: 'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]]
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 93 of 167[32m SUCCESS[39m (0 secs / 0.189 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 93 of 167[32m SUCCESS[39m (0 secs / 0.189 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 93 of 167[32m SUCCESS[39m (0 secs / 0.189 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 93 of 167[32m SUCCESS[39m (0 secs / 0.189 secs)
+LOG: ''
+[1A[2KLOG: [36m'post-list says: searching for key ', ''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 93 of 167[32m SUCCESS[39m (0 secs / 0.189 secs)
+LOG: 'post-list says: searching for key ', ''
+[1A[2KLOG: [36m'post-list-component says: new post clicked'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 93 of 167[32m SUCCESS[39m (0 secs / 0.189 secs)
+LOG: 'post-list-component says: new post clicked'
+[1A[2KLOG: [36m'post-list-component says: open create post dialog'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 93 of 167[32m SUCCESS[39m (0 secs / 0.189 secs)
+LOG: 'post-list-component says: open create post dialog'
+[1A[2KLOG: [36m'post-list-component says: dialog closed with data: ', null[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 93 of 167[32m SUCCESS[39m (0 secs / 0.189 secs)
+LOG: 'post-list-component says: dialog closed with data: ', null
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 94 of 167[32m SUCCESS[39m (0 secs / 0.192 secs)
+[1A[2KLOG: [36m'PostListComponent says: initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 94 of 167[32m SUCCESS[39m (0 secs / 0.192 secs)
+LOG: 'PostListComponent says: initialized'
+[1A[2KLOG: [36m'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]][39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 94 of 167[32m SUCCESS[39m (0 secs / 0.192 secs)
+LOG: 'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]]
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 94 of 167[32m SUCCESS[39m (0 secs / 0.192 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 94 of 167[32m SUCCESS[39m (0 secs / 0.192 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 94 of 167[32m SUCCESS[39m (0 secs / 0.192 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 94 of 167[32m SUCCESS[39m (0 secs / 0.192 secs)
+LOG: ''
+[1A[2KLOG: [36m'post-list says: searching for key ', ''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 94 of 167[32m SUCCESS[39m (0 secs / 0.192 secs)
+LOG: 'post-list says: searching for key ', ''
+[1A[2KLOG: [36m'post-list-component says: open create post dialog'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 94 of 167[32m SUCCESS[39m (0 secs / 0.192 secs)
+LOG: 'post-list-component says: open create post dialog'
+[1A[2KLOG: [36m'post-list-component says: dialog closed with data: ', undefined[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 94 of 167[32m SUCCESS[39m (0 secs / 0.192 secs)
+LOG: 'post-list-component says: dialog closed with data: ', undefined
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 95 of 167[32m SUCCESS[39m (0 secs / 0.195 secs)
+[1A[2KLOG: [36m'PostListComponent says: initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 95 of 167[32m SUCCESS[39m (0 secs / 0.195 secs)
+LOG: 'PostListComponent says: initialized'
+[1A[2KLOG: [36m'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]][39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 95 of 167[32m SUCCESS[39m (0 secs / 0.195 secs)
+LOG: 'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]]
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 95 of 167[32m SUCCESS[39m (0 secs / 0.195 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 95 of 167[32m SUCCESS[39m (0 secs / 0.195 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 95 of 167[32m SUCCESS[39m (0 secs / 0.195 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 95 of 167[32m SUCCESS[39m (0 secs / 0.195 secs)
+LOG: ''
+[1A[2KLOG: [36m'post-list says: searching for key ', ''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 95 of 167[32m SUCCESS[39m (0 secs / 0.195 secs)
+LOG: 'post-list says: searching for key ', ''
+[1A[2KLOG: [36m'post-list-component says: open create post dialog'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 95 of 167[32m SUCCESS[39m (0 secs / 0.195 secs)
+LOG: 'post-list-component says: open create post dialog'
+[1A[2KLOG: [36m'post-list-component says: dialog closed with data: ', Object{id: 4, user_id: 1, title: 'New Post', body: 'New post body'}[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 95 of 167[32m SUCCESS[39m (0 secs / 0.195 secs)
+LOG: 'post-list-component says: dialog closed with data: ', Object{id: 4, user_id: 1, title: 'New Post', body: 'New post body'}
+[1A[2KLOG: [36m'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]][39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 95 of 167[32m SUCCESS[39m (0 secs / 0.195 secs)
+LOG: 'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]]
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 96 of 167[32m SUCCESS[39m (0 secs / 0.198 secs)
+[1A[2KLOG: [36m'PostListComponent says: initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 96 of 167[32m SUCCESS[39m (0 secs / 0.198 secs)
+LOG: 'PostListComponent says: initialized'
+[1A[2KLOG: [36m'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]][39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 96 of 167[32m SUCCESS[39m (0 secs / 0.198 secs)
+LOG: 'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]]
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 96 of 167[32m SUCCESS[39m (0 secs / 0.198 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 96 of 167[32m SUCCESS[39m (0 secs / 0.198 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 96 of 167[32m SUCCESS[39m (0 secs / 0.198 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 96 of 167[32m SUCCESS[39m (0 secs / 0.198 secs)
+LOG: ''
+[1A[2KLOG: [36m'post-list says: searching for key ', ''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 96 of 167[32m SUCCESS[39m (0 secs / 0.198 secs)
+LOG: 'post-list says: searching for key ', ''
+[1A[2KLOG: [36m'post-list says: searching for key ', 'FIRST'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 96 of 167[32m SUCCESS[39m (0 secs / 0.198 secs)
+LOG: 'post-list says: searching for key ', 'FIRST'
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 97 of 167[32m SUCCESS[39m (0 secs / 0.201 secs)
+[1A[2KLOG: [36m'PostListComponent says: initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 97 of 167[32m SUCCESS[39m (0 secs / 0.201 secs)
+LOG: 'PostListComponent says: initialized'
+[1A[2KLOG: [36m'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]][39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 97 of 167[32m SUCCESS[39m (0 secs / 0.201 secs)
+LOG: 'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]]
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 97 of 167[32m SUCCESS[39m (0 secs / 0.201 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 97 of 167[32m SUCCESS[39m (0 secs / 0.201 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 97 of 167[32m SUCCESS[39m (0 secs / 0.201 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 97 of 167[32m SUCCESS[39m (0 secs / 0.201 secs)
+LOG: ''
+[1A[2KLOG: [36m'post-list says: searching for key ', ''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 97 of 167[32m SUCCESS[39m (0 secs / 0.201 secs)
+LOG: 'post-list says: searching for key ', ''
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 98 of 167[32m SUCCESS[39m (0 secs / 0.204 secs)
+[1A[2KLOG: [36m'PostListComponent says: initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 98 of 167[32m SUCCESS[39m (0 secs / 0.204 secs)
+LOG: 'PostListComponent says: initialized'
+[1A[2KLOG: [36m'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]][39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 98 of 167[32m SUCCESS[39m (0 secs / 0.204 secs)
+LOG: 'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]]
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 98 of 167[32m SUCCESS[39m (0 secs / 0.204 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 98 of 167[32m SUCCESS[39m (0 secs / 0.204 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 98 of 167[32m SUCCESS[39m (0 secs / 0.204 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 98 of 167[32m SUCCESS[39m (0 secs / 0.204 secs)
+LOG: ''
+[1A[2KLOG: [36m'post-list says: searching for key ', ''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 98 of 167[32m SUCCESS[39m (0 secs / 0.204 secs)
+LOG: 'post-list says: searching for key ', ''
+[1A[2KLOG: [36m'post-list-component says: open create post dialog'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 98 of 167[32m SUCCESS[39m (0 secs / 0.204 secs)
+LOG: 'post-list-component says: open create post dialog'
+[1A[2KLOG: [36m'post-list-component says: dialog closed with data: ', Object{id: 4, user_id: 1, title: 'New Post', body: 'New post body'}[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 98 of 167[32m SUCCESS[39m (0 secs / 0.204 secs)
+LOG: 'post-list-component says: dialog closed with data: ', Object{id: 4, user_id: 1, title: 'New Post', body: 'New post body'}
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 99 of 167[32m SUCCESS[39m (0 secs / 0.207 secs)
+[1A[2KLOG: [36m'PostListComponent says: initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 99 of 167[32m SUCCESS[39m (0 secs / 0.207 secs)
+LOG: 'PostListComponent says: initialized'
+[1A[2KLOG: [36m'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]][39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 99 of 167[32m SUCCESS[39m (0 secs / 0.207 secs)
+LOG: 'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]]
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 99 of 167[32m SUCCESS[39m (0 secs / 0.207 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 99 of 167[32m SUCCESS[39m (0 secs / 0.207 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 99 of 167[32m SUCCESS[39m (0 secs / 0.207 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 99 of 167[32m SUCCESS[39m (0 secs / 0.207 secs)
+LOG: ''
+[1A[2KLOG: [36m'post-list says: searching for key ', ''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 99 of 167[32m SUCCESS[39m (0 secs / 0.207 secs)
+LOG: 'post-list says: searching for key ', ''
+[1A[2KLOG: [36m'post-list says: searching for key ', 'first'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 99 of 167[32m SUCCESS[39m (0 secs / 0.207 secs)
+LOG: 'post-list says: searching for key ', 'first'
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 100 of 167[32m SUCCESS[39m (0 secs / 0.21 secs)
+[1A[2KLOG: [36m'PostListComponent says: initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 100 of 167[32m SUCCESS[39m (0 secs / 0.21 secs)
+LOG: 'PostListComponent says: initialized'
+[1A[2KLOG: [36m'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]][39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 100 of 167[32m SUCCESS[39m (0 secs / 0.21 secs)
+LOG: 'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]]
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 100 of 167[32m SUCCESS[39m (0 secs / 0.21 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 100 of 167[32m SUCCESS[39m (0 secs / 0.21 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m'user-post-card initialized'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 100 of 167[32m SUCCESS[39m (0 secs / 0.21 secs)
+LOG: 'user-post-card initialized'
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 100 of 167[32m SUCCESS[39m (0 secs / 0.21 secs)
+LOG: ''
+[1A[2KLOG: [36m'post-list says: searching for key ', ''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 100 of 167[32m SUCCESS[39m (0 secs / 0.21 secs)
+LOG: 'post-list says: searching for key ', ''
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 101 of 167[32m SUCCESS[39m (0 secs / 0.213 secs)
+[1A[2KLOG: [36m'ApiService says: added new mapping', 1, 'http://example.com/image.jpg'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 101 of 167[32m SUCCESS[39m (0 secs / 0.213 secs)
+LOG: 'ApiService says: added new mapping', 1, 'http://example.com/image.jpg'
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 102 of 167[32m SUCCESS[39m (0 secs / 0.213 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 103 of 167[32m SUCCESS[39m (0 secs / 0.214 secs)
+[1A[2KLOG: [36m'ApiService says: added new mapping', 1, 'http://example.com/old.jpg'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 103 of 167[32m SUCCESS[39m (0 secs / 0.214 secs)
+LOG: 'ApiService says: added new mapping', 1, 'http://example.com/old.jpg'
+[1A[2KLOG: [36m'ApiService says: deleted existing mapping for id: 1'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 103 of 167[32m SUCCESS[39m (0 secs / 0.214 secs)
+LOG: 'ApiService says: deleted existing mapping for id: 1'
+[1A[2KLOG: [36m'ApiService says: added new mapping', 1, 'http://example.com/new.jpg'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 103 of 167[32m SUCCESS[39m (0 secs / 0.214 secs)
+LOG: 'ApiService says: added new mapping', 1, 'http://example.com/new.jpg'
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 104 of 167[32m SUCCESS[39m (0 secs / 0.214 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 105 of 167[32m SUCCESS[39m (0 secs / 0.214 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 106 of 167[32m SUCCESS[39m (0 secs / 0.214 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 107 of 167[32m SUCCESS[39m (0 secs / 0.214 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 108 of 167[32m SUCCESS[39m (0 secs / 0.214 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 109 of 167[32m SUCCESS[39m (0 secs / 0.214 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 110 of 167[32m SUCCESS[39m (0 secs / 0.214 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 111 of 167[32m SUCCESS[39m (0 secs / 0.214 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 112 of 167[32m SUCCESS[39m (0 secs / 0.215 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 113 of 167[32m SUCCESS[39m (0 secs / 0.215 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 114 of 167[32m SUCCESS[39m (0 secs / 0.215 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 115 of 167[32m SUCCESS[39m (0 secs / 0.215 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 116 of 167[32m SUCCESS[39m (0 secs / 0.215 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 117 of 167[32m SUCCESS[39m (0 secs / 0.216 secs)
+[1A[2KLOG: [36m'custom-dialog-container says closed'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 117 of 167[32m SUCCESS[39m (0 secs / 0.216 secs)
+LOG: 'custom-dialog-container says closed'
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 118 of 167[32m SUCCESS[39m (0 secs / 0.216 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 119 of 167[32m SUCCESS[39m (0 secs / 0.217 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 120 of 167[32m SUCCESS[39m (0 secs / 0.217 secs)
+[1A[2K[31mChrome 145.0.0.0 (Mac OS 10.15.7) LoginComponent should render the login form FAILED[39m
+	TypeError: Cannot read properties of undefined (reading 'root')
+	    at Object.rootRoute [as useFactory] (node_modules/@angular/router/fesm2022/router_module.mjs:1023:31)
+	    at Object.factory (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2290:38)
+	    at node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2187:47
+	    at runInInjectorProfilerContext (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:746:9)
+	    at R3Injector.hydrate (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2185:21)
+	    at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2033:33)
+	    at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2045:33)
+	    at ChainedInjector.get (node_modules/@angular/core/fesm2022/debug_node.mjs:13418:36)
+	    at lookupTokenUsingModuleInjector (node_modules/@angular/core/fesm2022/debug_node.mjs:1718:39)
+	    at getOrCreateInjectable (node_modules/@angular/core/fesm2022/debug_node.mjs:1766:12)
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 121 of 167[31m (1 FAILED)[39m (0 secs / 0.335 secs)
+[1A[2K[31mChrome 145.0.0.0 (Mac OS 10.15.7) LoginComponent should trim token before saving FAILED[39m
+	TypeError: Cannot read properties of undefined (reading 'root')
+	    at Object.rootRoute [as useFactory] (node_modules/@angular/router/fesm2022/router_module.mjs:1023:31)
+	    at Object.factory (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2290:38)
+	    at node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2187:47
+	    at runInInjectorProfilerContext (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:746:9)
+	    at R3Injector.hydrate (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2185:21)
+	    at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2033:33)
+	    at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2045:33)
+	    at ChainedInjector.get (node_modules/@angular/core/fesm2022/debug_node.mjs:13418:36)
+	    at lookupTokenUsingModuleInjector (node_modules/@angular/core/fesm2022/debug_node.mjs:1718:39)
+	    at getOrCreateInjectable (node_modules/@angular/core/fesm2022/debug_node.mjs:1766:12)
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 122 of 167[31m (2 FAILED)[39m (0 secs / 0.337 secs)
+[1A[2K[31mChrome 145.0.0.0 (Mac OS 10.15.7) LoginComponent should not save empty token FAILED[39m
+	TypeError: Cannot read properties of undefined (reading 'root')
+	    at Object.rootRoute [as useFactory] (node_modules/@angular/router/fesm2022/router_module.mjs:1023:31)
+	    at Object.factory (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2290:38)
+	    at node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2187:47
+	    at runInInjectorProfilerContext (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:746:9)
+	    at R3Injector.hydrate (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2185:21)
+	    at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2033:33)
+	    at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2045:33)
+	    at ChainedInjector.get (node_modules/@angular/core/fesm2022/debug_node.mjs:13418:36)
+	    at lookupTokenUsingModuleInjector (node_modules/@angular/core/fesm2022/debug_node.mjs:1718:39)
+	    at getOrCreateInjectable (node_modules/@angular/core/fesm2022/debug_node.mjs:1766:12)
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 123 of 167[31m (3 FAILED)[39m (0 secs / 0.338 secs)
+[1A[2K[31mChrome 145.0.0.0 (Mac OS 10.15.7) LoginComponent should create FAILED[39m
+	TypeError: Cannot read properties of undefined (reading 'root')
+	    at Object.rootRoute [as useFactory] (node_modules/@angular/router/fesm2022/router_module.mjs:1023:31)
+	    at Object.factory (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2290:38)
+	    at node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2187:47
+	    at runInInjectorProfilerContext (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:746:9)
+	    at R3Injector.hydrate (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2185:21)
+	    at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2033:33)
+	    at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2045:33)
+	    at ChainedInjector.get (node_modules/@angular/core/fesm2022/debug_node.mjs:13418:36)
+	    at lookupTokenUsingModuleInjector (node_modules/@angular/core/fesm2022/debug_node.mjs:1718:39)
+	    at getOrCreateInjectable (node_modules/@angular/core/fesm2022/debug_node.mjs:1766:12)
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 124 of 167[31m (4 FAILED)[39m (0 secs / 0.339 secs)
+[1A[2K[31mChrome 145.0.0.0 (Mac OS 10.15.7) LoginComponent should not save whitespace-only token FAILED[39m
+	TypeError: Cannot read properties of undefined (reading 'root')
+	    at Object.rootRoute [as useFactory] (node_modules/@angular/router/fesm2022/router_module.mjs:1023:31)
+	    at Object.factory (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2290:38)
+	    at node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2187:47
+	    at runInInjectorProfilerContext (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:746:9)
+	    at R3Injector.hydrate (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2185:21)
+	    at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2033:33)
+	    at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2045:33)
+	    at ChainedInjector.get (node_modules/@angular/core/fesm2022/debug_node.mjs:13418:36)
+	    at lookupTokenUsingModuleInjector (node_modules/@angular/core/fesm2022/debug_node.mjs:1718:39)
+	    at getOrCreateInjectable (node_modules/@angular/core/fesm2022/debug_node.mjs:1766:12)
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 125 of 167[31m (5 FAILED)[39m (0 secs / 0.339 secs)
+[1A[2K[31mChrome 145.0.0.0 (Mac OS 10.15.7) LoginComponent should initialize with empty token FAILED[39m
+	TypeError: Cannot read properties of undefined (reading 'root')
+	    at Object.rootRoute [as useFactory] (node_modules/@angular/router/fesm2022/router_module.mjs:1023:31)
+	    at Object.factory (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2290:38)
+	    at node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2187:47
+	    at runInInjectorProfilerContext (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:746:9)
+	    at R3Injector.hydrate (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2185:21)
+	    at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2033:33)
+	    at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2045:33)
+	    at ChainedInjector.get (node_modules/@angular/core/fesm2022/debug_node.mjs:13418:36)
+	    at lookupTokenUsingModuleInjector (node_modules/@angular/core/fesm2022/debug_node.mjs:1718:39)
+	    at getOrCreateInjectable (node_modules/@angular/core/fesm2022/debug_node.mjs:1766:12)
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 126 of 167[31m (6 FAILED)[39m (0 secs / 0.34 secs)
+[1A[2K[31mChrome 145.0.0.0 (Mac OS 10.15.7) LoginComponent should save token and navigate to /users when token is valid FAILED[39m
+	TypeError: Cannot read properties of undefined (reading 'root')
+	    at Object.rootRoute [as useFactory] (node_modules/@angular/router/fesm2022/router_module.mjs:1023:31)
+	    at Object.factory (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2290:38)
+	    at node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2187:47
+	    at runInInjectorProfilerContext (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:746:9)
+	    at R3Injector.hydrate (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2185:21)
+	    at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2033:33)
+	    at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2045:33)
+	    at ChainedInjector.get (node_modules/@angular/core/fesm2022/debug_node.mjs:13418:36)
+	    at lookupTokenUsingModuleInjector (node_modules/@angular/core/fesm2022/debug_node.mjs:1718:39)
+	    at getOrCreateInjectable (node_modules/@angular/core/fesm2022/debug_node.mjs:1766:12)
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 127 of 167[31m (7 FAILED)[39m (0 secs / 0.341 secs)
+[1A[2K[31mChrome 145.0.0.0 (Mac OS 10.15.7) LoginComponent should have a link to gorest.co.in FAILED[39m
+	TypeError: Cannot read properties of undefined (reading 'root')
+	    at Object.rootRoute [as useFactory] (node_modules/@angular/router/fesm2022/router_module.mjs:1023:31)
+	    at Object.factory (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2290:38)
+	    at node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2187:47
+	    at runInInjectorProfilerContext (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:746:9)
+	    at R3Injector.hydrate (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2185:21)
+	    at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2033:33)
+	    at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2045:33)
+	    at ChainedInjector.get (node_modules/@angular/core/fesm2022/debug_node.mjs:13418:36)
+	    at lookupTokenUsingModuleInjector (node_modules/@angular/core/fesm2022/debug_node.mjs:1718:39)
+	    at getOrCreateInjectable (node_modules/@angular/core/fesm2022/debug_node.mjs:1766:12)
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 128 of 167[31m (8 FAILED)[39m (0 secs / 0.341 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 129 of 167[31m (8 FAILED)[39m (0 secs / 0.342 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 130 of 167[31m (8 FAILED)[39m (0 secs / 0.343 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 131 of 167[31m (8 FAILED)[39m (0 secs / 0.343 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 132 of 167[31m (8 FAILED)[39m (0 secs / 0.352 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 133 of 167[31m (8 FAILED)[39m (0 secs / 0.354 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 134 of 167[31m (8 FAILED)[39m (0 secs / 0.356 secs)
+[1A[2KLOG: [36m'add-comment-dialog says: form submitted', FormGroup{_pendingDirty: false, _hasOwnPendingAsyncValidator: null, _pendingTouched: false, _onCollectionChange: () => this._updateDomValue(), _updateOn: undefined, _parent: null, _asyncValidationSubscription: undefined, _composedValidatorFn: null, _composedAsyncValidatorFn: null, _rawValidators: null, _rawAsyncValidators: null, value: Object{title: 'Test Comment', email: 'test@example.com', body: 'Test comment body'}, _status: [Computed: VALID], statusReactive: [Signal: VALID], errors: null, _pristine: [Computed: true], pristineReactive: [Signal: true], _touched: [Computed: false], touchedReactive: [Signal: false], _events: Subject{closed: false, currentObservers: [], observers: [], isStopped: false, hasError: false, thrownError: null}, events: _Observable{source: Subject{closed: ..., currentObservers: ..., observers: ..., isStopped: ..., hasError: ..., thrownError: ...}}, valueChanges: EventEmitter_{closed: false, currentObservers: [], observers: [], isStopped: false, hasError: false, thrownError: null, __isAsync: false, destroyRef: NodeInjectorDestroyRef{_lView: ...}, pendingTasks: _PendingTasksInternal{taskId: ..., pendingTasks: ..., destroyed: ..., pendingTask: ...}}, statusChanges: EventEmitter_{closed: false, currentObservers: [], observers: [], isStopped: false, hasError: false, thrownError: null, __isAsync: false, destroyRef: NodeInjectorDestroyRef{_lView: ...}, pendingTasks: _PendingTasksInternal{taskId: ..., pendingTasks: ..., destroyed: ..., pendingTask: ...}}, _onDisabledChange: [], controls: Object{title: FormControl2{_pendingDirty: ..., _hasOwnPendingAsyncValidator: ..., _pendingTouched: ..., _onCollectionChange: ..., _updateOn: ..., _parent: ..., _asyncValidationSubscription: ..., _composedValidatorFn: ..., _composedAsyncValidatorFn: ..., _rawValidators: ..., _rawAsyncValidators: ..., value: ..., _status: ..., statusReactive: ..., errors: ..., _pristine: ..., pristineReactive: ..., _touched: ..., touchedReactive: ..., _events: ..., events: ..., valueChanges: ..., statusChanges: ..., _onDisabledChange: ..., defaultValue: ..., _onChange: ..., _pendingValue: ..., _pendingChange: ...}, email: FormControl2{_pendingDirty: ..., _hasOwnPendingAsyncValidator: ..., _pendingTouched: ..., _onCollectionChange: ..., _updateOn: ..., _parent: ..., _asyncValidationSubscription: ..., _composedValidatorFn: ..., _composedAsyncValidatorFn: ..., _rawValidators: ..., _rawAsyncValidators: ..., value: ..., _status: ..., statusReactive: ..., errors: ..., _pristine: ..., pristineReactive: ..., _touched: ..., touchedReactive: ..., _events: ..., events: ..., valueChanges: ..., statusChanges: ..., _onDisabledChange: ..., defaultValue: ..., _onChange: ..., _pendingValue: ..., _pendingChange: ...}, body: FormControl2{_pendingDirty: ..., _hasOwnPendingAsyncValidator: ..., _pendingTouched: ..., _onCollectionChange: ..., _updateOn: ..., _parent: ..., _asyncValidationSubscription: ..., _composedValidatorFn: ..., _composedAsyncValidatorFn: ..., _rawValidators: ..., _rawAsyncValidators: ..., value: ..., _status: ..., statusReactive: ..., errors: ..., _pristine: ..., pristineReactive: ..., _touched: ..., touchedReactive: ..., _events: ..., events: ..., valueChanges: ..., statusChanges: ..., _onDisabledChange: ..., defaultValue: ..., _onChange: ..., _pendingValue: ..., _pendingChange: ...}}}[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 134 of 167[31m (8 FAILED)[39m (0 secs / 0.356 secs)
+LOG: 'add-comment-dialog says: form submitted', FormGroup{_pendingDirty: false, _hasOwnPendingAsyncValidator: null, _pendingTouched: false, _onCollectionChange: () => this._updateDomValue(), _updateOn: undefined, _parent: null, _asyncValidationSubscription: undefined, _composedValidatorFn: null, _composedAsyncValidatorFn: null, _rawValidators: null, _rawAsyncValidators: null, value: Object{title: 'Test Comment', email: 'test@example.com', body: 'Test comment body'}, _status: [Computed: VALID], statusReactive: [Signal: VALID], errors: null, _pristine: [Computed: true], pristineReactive: [Signal: true], _touched: [Computed: false], touchedReactive: [Signal: false], _events: Subject{closed: false, currentObservers: [], observers: [], isStopped: false, hasError: false, thrownError: null}, events: _Observable{source: Subject{closed: ..., currentObservers: ..., observers: ..., isStopped: ..., hasError: ..., thrownError: ...}}, valueChanges: EventEmitter_{closed: false, currentObservers: [], observers: [], isStopped: false, hasError: false, thrownError: null, __isAsync: false, destroyRef: NodeInjectorDestroyRef{_lView: ...}, pendingTasks: _PendingTasksInternal{taskId: ..., pendingTasks: ..., destroyed: ..., pendingTask: ...}}, statusChanges: EventEmitter_{closed: false, currentObservers: [], observers: [], isStopped: false, hasError: false, thrownError: null, __isAsync: false, destroyRef: NodeInjectorDestroyRef{_lView: ...}, pendingTasks: _PendingTasksInternal{taskId: ..., pendingTasks: ..., destroyed: ..., pendingTask: ...}}, _onDisabledChange: [], controls: Object{title: FormControl2{_pendingDirty: ..., _hasOwnPendingAsyncValidator: ..., _pendingTouched: ..., _onCollectionChange: ..., _updateOn: ..., _parent: ..., _asyncValidationSubscription: ..., _composedValidatorFn: ..., _composedAsyncValidatorFn: ..., _rawValidators: ..., _rawAsyncValidators: ..., value: ..., _status: ..., statusReactive: ..., errors: ..., _pristine: ..., pristineReactive: ..., _touched: ..., touchedReactive: ..., _events: ..., events: ..., valueChanges: ..., statusChanges: ..., _onDisabledChange: ..., defaultValue: ..., _onChange: ..., _pendingValue: ..., _pendingChange: ...}, email: FormControl2{_pendingDirty: ..., _hasOwnPendingAsyncValidator: ..., _pendingTouched: ..., _onCollectionChange: ..., _updateOn: ..., _parent: ..., _asyncValidationSubscription: ..., _composedValidatorFn: ..., _composedAsyncValidatorFn: ..., _rawValidators: ..., _rawAsyncValidators: ..., value: ..., _status: ..., statusReactive: ..., errors: ..., _pristine: ..., pristineReactive: ..., _touched: ..., touchedReactive: ..., _events: ..., events: ..., valueChanges: ..., statusChanges: ..., _onDisabledChange: ..., defaultValue: ..., _onChange: ..., _pendingValue: ..., _pendingChange: ...}, body: FormControl2{_pendingDirty: ..., _hasOwnPendingAsyncValidator: ..., _pendingTouched: ..., _onCollectionChange: ..., _updateOn: ..., _parent: ..., _asyncValidationSubscription: ..., _composedValidatorFn: ..., _composedAsyncValidatorFn: ..., _rawValidators: ..., _rawAsyncValidators: ..., value: ..., _status: ..., statusReactive: ..., errors: ..., _pristine: ..., pristineReactive: ..., _touched: ..., touchedReactive: ..., _events: ..., events: ..., valueChanges: ..., statusChanges: ..., _onDisabledChange: ..., defaultValue: ..., _onChange: ..., _pendingValue: ..., _pendingChange: ...}}}
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 135 of 167[31m (8 FAILED)[39m (0 secs / 0.358 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 136 of 167[31m (8 FAILED)[39m (0 secs / 0.36 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 137 of 167[31m (8 FAILED)[39m (0 secs / 0.362 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 138 of 167[31m (8 FAILED)[39m (0 secs / 0.364 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 139 of 167[31m (8 FAILED)[39m (0 secs / 0.366 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 140 of 167[31m (8 FAILED)[39m (0 secs / 0.367 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 141 of 167[31m (8 FAILED)[39m (0 secs / 0.368 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 142 of 167[31m (8 FAILED)[39m (0 secs / 0.37 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 143 of 167[31m (8 FAILED)[39m (0 secs / 0.371 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 144 of 167[31m (8 FAILED)[39m (0 secs / 0.371 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 145 of 167[31m (8 FAILED)[39m (0 secs / 0.372 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 146 of 167[31m (8 FAILED)[39m (0 secs / 0.372 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 147 of 167[31m (8 FAILED)[39m (0 secs / 0.373 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 148 of 167[31m (8 FAILED)[39m (0 secs / 0.373 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 149 of 167[31m (8 FAILED)[39m (0 secs / 0.373 secs)
+[1A[2KLOG: [36m'create-post-dialog says: loaded users', [Object{id: 1, name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, Object{id: 2, name: 'Jane Smith', email: 'jane@example.com', gender: 'female', status: 'active'}][39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 149 of 167[31m (8 FAILED)[39m (0 secs / 0.373 secs)
+LOG: 'create-post-dialog says: loaded users', [Object{id: 1, name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, Object{id: 2, name: 'Jane Smith', email: 'jane@example.com', gender: 'female', status: 'active'}]
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 150 of 167[31m (8 FAILED)[39m (0 secs / 0.378 secs)
+[1A[2KLOG: [36m'create-post-dialog says: loaded users', [Object{id: 1, name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, Object{id: 2, name: 'Jane Smith', email: 'jane@example.com', gender: 'female', status: 'active'}][39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 150 of 167[31m (8 FAILED)[39m (0 secs / 0.378 secs)
+LOG: 'create-post-dialog says: loaded users', [Object{id: 1, name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, Object{id: 2, name: 'Jane Smith', email: 'jane@example.com', gender: 'female', status: 'active'}]
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 151 of 167[31m (8 FAILED)[39m (0 secs / 0.38 secs)
+[1A[2KLOG: [36m'create-post-dialog says: loaded users', [Object{id: 1, name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, Object{id: 2, name: 'Jane Smith', email: 'jane@example.com', gender: 'female', status: 'active'}][39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 151 of 167[31m (8 FAILED)[39m (0 secs / 0.38 secs)
+LOG: 'create-post-dialog says: loaded users', [Object{id: 1, name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, Object{id: 2, name: 'Jane Smith', email: 'jane@example.com', gender: 'female', status: 'active'}]
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 152 of 167[31m (8 FAILED)[39m (0 secs / 0.382 secs)
+[1A[2KLOG: [36m'create-post-dialog says: loaded users', [Object{id: 1, name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, Object{id: 2, name: 'Jane Smith', email: 'jane@example.com', gender: 'female', status: 'active'}][39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 152 of 167[31m (8 FAILED)[39m (0 secs / 0.382 secs)
+LOG: 'create-post-dialog says: loaded users', [Object{id: 1, name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, Object{id: 2, name: 'Jane Smith', email: 'jane@example.com', gender: 'female', status: 'active'}]
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 153 of 167[31m (8 FAILED)[39m (0 secs / 0.384 secs)
+[1A[2KLOG: [36m'create-post-dialog says: loaded users', [Object{id: 1, name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, Object{id: 2, name: 'Jane Smith', email: 'jane@example.com', gender: 'female', status: 'active'}][39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 153 of 167[31m (8 FAILED)[39m (0 secs / 0.384 secs)
+LOG: 'create-post-dialog says: loaded users', [Object{id: 1, name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, Object{id: 2, name: 'Jane Smith', email: 'jane@example.com', gender: 'female', status: 'active'}]
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 154 of 167[31m (8 FAILED)[39m (0 secs / 0.386 secs)
+[1A[2KLOG: [36m'create-post-dialog says: loaded users', [Object{id: 1, name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, Object{id: 2, name: 'Jane Smith', email: 'jane@example.com', gender: 'female', status: 'active'}][39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 154 of 167[31m (8 FAILED)[39m (0 secs / 0.386 secs)
+LOG: 'create-post-dialog says: loaded users', [Object{id: 1, name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, Object{id: 2, name: 'Jane Smith', email: 'jane@example.com', gender: 'female', status: 'active'}]
+[1A[2KLOG: [36m'new-poster-dialog says: ', FormGroup{_pendingDirty: false, _hasOwnPendingAsyncValidator: null, _pendingTouched: false, _onCollectionChange: () => this._updateDomValue(), _updateOn: undefined, _parent: null, _asyncValidationSubscription: undefined, _composedValidatorFn: null, _composedAsyncValidatorFn: null, _rawValidators: null, _rawAsyncValidators: null, value: Object{userName: 'john@example.com', title: 'Test Post', body: 'Test body that is long enough'}, _status: [Computed: VALID], statusReactive: [Signal: VALID], errors: null, _pristine: [Computed: true], pristineReactive: [Signal: true], _touched: [Computed: false], touchedReactive: [Signal: false], _events: Subject{closed: false, currentObservers: [], observers: [], isStopped: false, hasError: false, thrownError: null}, events: _Observable{source: Subject{closed: ..., currentObservers: ..., observers: ..., isStopped: ..., hasError: ..., thrownError: ...}}, valueChanges: EventEmitter_{closed: false, currentObservers: [], observers: [], isStopped: false, hasError: false, thrownError: null, __isAsync: false, destroyRef: NodeInjectorDestroyRef{_lView: ...}, pendingTasks: _PendingTasksInternal{taskId: ..., pendingTasks: ..., destroyed: ..., pendingTask: ...}}, statusChanges: EventEmitter_{closed: false, currentObservers: [], observers: [], isStopped: false, hasError: false, thrownError: null, __isAsync: false, destroyRef: NodeInjectorDestroyRef{_lView: ...}, pendingTasks: _PendingTasksInternal{taskId: ..., pendingTasks: ..., destroyed: ..., pendingTask: ...}}, _onDisabledChange: [], controls: Object{userName: FormControl2{_pendingDirty: ..., _hasOwnPendingAsyncValidator: ..., _pendingTouched: ..., _onCollectionChange: ..., _updateOn: ..., _parent: ..., _asyncValidationSubscription: ..., _composedValidatorFn: ..., _composedAsyncValidatorFn: ..., _rawValidators: ..., _rawAsyncValidators: ..., value: ..., _status: ..., statusReactive: ..., errors: ..., _pristine: ..., pristineReactive: ..., _touched: ..., touchedReactive: ..., _events: ..., events: ..., valueChanges: ..., statusChanges: ..., _onDisabledChange: ..., defaultValue: ..., _onChange: ..., _pendingValue: ..., _pendingChange: ...}, title: FormControl2{_pendingDirty: ..., _hasOwnPendingAsyncValidator: ..., _pendingTouched: ..., _onCollectionChange: ..., _updateOn: ..., _parent: ..., _asyncValidationSubscription: ..., _composedValidatorFn: ..., _composedAsyncValidatorFn: ..., _rawValidators: ..., _rawAsyncValidators: ..., value: ..., _status: ..., statusReactive: ..., errors: ..., _pristine: ..., pristineReactive: ..., _touched: ..., touchedReactive: ..., _events: ..., events: ..., valueChanges: ..., statusChanges: ..., _onDisabledChange: ..., defaultValue: ..., _onChange: ..., _pendingValue: ..., _pendingChange: ...}, body: FormControl2{_pendingDirty: ..., _hasOwnPendingAsyncValidator: ..., _pendingTouched: ..., _onCollectionChange: ..., _updateOn: ..., _parent: ..., _asyncValidationSubscription: ..., _composedValidatorFn: ..., _composedAsyncValidatorFn: ..., _rawValidators: ..., _rawAsyncValidators: ..., value: ..., _status: ..., statusReactive: ..., errors: ..., _pristine: ..., pristineReactive: ..., _touched: ..., touchedReactive: ..., _events: ..., events: ..., valueChanges: ..., statusChanges: ..., _onDisabledChange: ..., defaultValue: ..., _onChange: ..., _pendingValue: ..., _pendingChange: ...}}}[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 154 of 167[31m (8 FAILED)[39m (0 secs / 0.386 secs)
+LOG: 'new-poster-dialog says: ', FormGroup{_pendingDirty: false, _hasOwnPendingAsyncValidator: null, _pendingTouched: false, _onCollectionChange: () => this._updateDomValue(), _updateOn: undefined, _parent: null, _asyncValidationSubscription: undefined, _composedValidatorFn: null, _composedAsyncValidatorFn: null, _rawValidators: null, _rawAsyncValidators: null, value: Object{userName: 'john@example.com', title: 'Test Post', body: 'Test body that is long enough'}, _status: [Computed: VALID], statusReactive: [Signal: VALID], errors: null, _pristine: [Computed: true], pristineReactive: [Signal: true], _touched: [Computed: false], touchedReactive: [Signal: false], _events: Subject{closed: false, currentObservers: [], observers: [], isStopped: false, hasError: false, thrownError: null}, events: _Observable{source: Subject{closed: ..., currentObservers: ..., observers: ..., isStopped: ..., hasError: ..., thrownError: ...}}, valueChanges: EventEmitter_{closed: false, currentObservers: [], observers: [], isStopped: false, hasError: false, thrownError: null, __isAsync: false, destroyRef: NodeInjectorDestroyRef{_lView: ...}, pendingTasks: _PendingTasksInternal{taskId: ..., pendingTasks: ..., destroyed: ..., pendingTask: ...}}, statusChanges: EventEmitter_{closed: false, currentObservers: [], observers: [], isStopped: false, hasError: false, thrownError: null, __isAsync: false, destroyRef: NodeInjectorDestroyRef{_lView: ...}, pendingTasks: _PendingTasksInternal{taskId: ..., pendingTasks: ..., destroyed: ..., pendingTask: ...}}, _onDisabledChange: [], controls: Object{userName: FormControl2{_pendingDirty: ..., _hasOwnPendingAsyncValidator: ..., _pendingTouched: ..., _onCollectionChange: ..., _updateOn: ..., _parent: ..., _asyncValidationSubscription: ..., _composedValidatorFn: ..., _composedAsyncValidatorFn: ..., _rawValidators: ..., _rawAsyncValidators: ..., value: ..., _status: ..., statusReactive: ..., errors: ..., _pristine: ..., pristineReactive: ..., _touched: ..., touchedReactive: ..., _events: ..., events: ..., valueChanges: ..., statusChanges: ..., _onDisabledChange: ..., defaultValue: ..., _onChange: ..., _pendingValue: ..., _pendingChange: ...}, title: FormControl2{_pendingDirty: ..., _hasOwnPendingAsyncValidator: ..., _pendingTouched: ..., _onCollectionChange: ..., _updateOn: ..., _parent: ..., _asyncValidationSubscription: ..., _composedValidatorFn: ..., _composedAsyncValidatorFn: ..., _rawValidators: ..., _rawAsyncValidators: ..., value: ..., _status: ..., statusReactive: ..., errors: ..., _pristine: ..., pristineReactive: ..., _touched: ..., touchedReactive: ..., _events: ..., events: ..., valueChanges: ..., statusChanges: ..., _onDisabledChange: ..., defaultValue: ..., _onChange: ..., _pendingValue: ..., _pendingChange: ...}, body: FormControl2{_pendingDirty: ..., _hasOwnPendingAsyncValidator: ..., _pendingTouched: ..., _onCollectionChange: ..., _updateOn: ..., _parent: ..., _asyncValidationSubscription: ..., _composedValidatorFn: ..., _composedAsyncValidatorFn: ..., _rawValidators: ..., _rawAsyncValidators: ..., value: ..., _status: ..., statusReactive: ..., errors: ..., _pristine: ..., pristineReactive: ..., _touched: ..., touchedReactive: ..., _events: ..., events: ..., valueChanges: ..., statusChanges: ..., _onDisabledChange: ..., defaultValue: ..., _onChange: ..., _pendingValue: ..., _pendingChange: ...}}}
+[1A[2KLOG: [36m'new-poster-dialog-says: post created', Object{user_id: 1, title: 'Test Post', body: 'Test body that is long enough'}[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 154 of 167[31m (8 FAILED)[39m (0 secs / 0.386 secs)
+LOG: 'new-poster-dialog-says: post created', Object{user_id: 1, title: 'Test Post', body: 'Test body that is long enough'}
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 155 of 167[31m (8 FAILED)[39m (0 secs / 0.389 secs)
+[1A[2KLOG: [36m'create-post-dialog says: loaded users', [Object{id: 1, name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, Object{id: 2, name: 'Jane Smith', email: 'jane@example.com', gender: 'female', status: 'active'}][39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 155 of 167[31m (8 FAILED)[39m (0 secs / 0.389 secs)
+LOG: 'create-post-dialog says: loaded users', [Object{id: 1, name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, Object{id: 2, name: 'Jane Smith', email: 'jane@example.com', gender: 'female', status: 'active'}]
+[1A[2KLOG: [36m'new-poster-dialog says: form invalid'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 155 of 167[31m (8 FAILED)[39m (0 secs / 0.389 secs)
+LOG: 'new-poster-dialog says: form invalid'
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 156 of 167[31m (8 FAILED)[39m (0 secs / 0.391 secs)
+[1A[2KLOG: [36m'create-post-dialog says: loaded users', [Object{id: 1, name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, Object{id: 2, name: 'Jane Smith', email: 'jane@example.com', gender: 'female', status: 'active'}][39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 156 of 167[31m (8 FAILED)[39m (0 secs / 0.391 secs)
+LOG: 'create-post-dialog says: loaded users', [Object{id: 1, name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, Object{id: 2, name: 'Jane Smith', email: 'jane@example.com', gender: 'female', status: 'active'}]
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 157 of 167[31m (8 FAILED)[39m (0 secs / 0.392 secs)
+[1A[2KLOG: [36m'create-post-dialog says: loaded users', [Object{id: 1, name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, Object{id: 2, name: 'Jane Smith', email: 'jane@example.com', gender: 'female', status: 'active'}][39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 157 of 167[31m (8 FAILED)[39m (0 secs / 0.392 secs)
+LOG: 'create-post-dialog says: loaded users', [Object{id: 1, name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, Object{id: 2, name: 'Jane Smith', email: 'jane@example.com', gender: 'female', status: 'active'}]
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 158 of 167[31m (8 FAILED)[39m (0 secs / 0.394 secs)
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 158 of 167[31m (8 FAILED)[39m (0 secs / 0.394 secs)
+LOG: ''
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 159 of 167[31m (8 FAILED)[39m (0 secs / 0.395 secs)
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 159 of 167[31m (8 FAILED)[39m (0 secs / 0.395 secs)
+LOG: ''
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 160 of 167[31m (8 FAILED)[39m (0 secs / 0.396 secs)
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 160 of 167[31m (8 FAILED)[39m (0 secs / 0.396 secs)
+LOG: ''
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 161 of 167[31m (8 FAILED)[39m (0 secs / 0.401 secs)
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 161 of 167[31m (8 FAILED)[39m (0 secs / 0.401 secs)
+LOG: ''
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 162 of 167[31m (8 FAILED)[39m (0 secs / 0.402 secs)
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 162 of 167[31m (8 FAILED)[39m (0 secs / 0.402 secs)
+LOG: ''
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 163 of 167[31m (8 FAILED)[39m (0 secs / 0.403 secs)
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 163 of 167[31m (8 FAILED)[39m (0 secs / 0.403 secs)
+LOG: ''
+[1A[2KLOG: [36m'post-list-page-header says: new post clicked'[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 163 of 167[31m (8 FAILED)[39m (0 secs / 0.403 secs)
+LOG: 'post-list-page-header says: new post clicked'
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 164 of 167[31m (8 FAILED)[39m (0 secs / 0.405 secs)
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 164 of 167[31m (8 FAILED)[39m (0 secs / 0.405 secs)
+LOG: ''
+[1A[2KLOG: [36m'post-list-page-header says grid cols clicked: ', 3[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 164 of 167[31m (8 FAILED)[39m (0 secs / 0.405 secs)
+LOG: 'post-list-page-header says grid cols clicked: ', 3
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 165 of 167[31m (8 FAILED)[39m (0 secs / 0.406 secs)
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 165 of 167[31m (8 FAILED)[39m (0 secs / 0.406 secs)
+LOG: ''
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 166 of 167[31m (8 FAILED)[39m (0 secs / 0.407 secs)
+[1A[2KLOG: [36m''[39m
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 166 of 167[31m (8 FAILED)[39m (0 secs / 0.407 secs)
+LOG: ''
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 167 of 167[31m (8 FAILED)[39m (0 secs / 0.407 secs)
+[1A[2KChrome 145.0.0.0 (Mac OS 10.15.7): Executed 167 of 167[31m (8 FAILED)[39m (0.434 secs / 0.407 secs)
+[31mTOTAL: 8 FAILED, 159 SUCCESS[39m

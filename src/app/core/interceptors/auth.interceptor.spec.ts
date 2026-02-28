@@ -37,7 +37,9 @@ describe('authInterceptor', () => {
 
     const req = new HttpRequest('GET', '/api/test');
 
-    authInterceptor(req, mockNext);
+    TestBed.runInInjectionContext(() => {
+      authInterceptor(req, mockNext);
+    });
 
     expect(mockNext).toHaveBeenCalled();
     const modifiedReq = mockNext.calls.mostRecent().args[0] as HttpRequest<unknown>;
@@ -49,7 +51,9 @@ describe('authInterceptor', () => {
 
     const req = new HttpRequest('GET', '/api/test');
 
-    authInterceptor(req, mockNext);
+    TestBed.runInInjectionContext(() => {
+      authInterceptor(req, mockNext);
+    });
 
     expect(mockNext).toHaveBeenCalled();
     const modifiedReq = mockNext.calls.mostRecent().args[0] as HttpRequest<unknown>;
@@ -61,7 +65,9 @@ describe('authInterceptor', () => {
 
     const req = new HttpRequest('GET', '/api/test');
 
-    authInterceptor(req, mockNext);
+    TestBed.runInInjectionContext(() => {
+      authInterceptor(req, mockNext);
+    });
 
     expect(mockNext).toHaveBeenCalledWith(req);
   });
@@ -71,7 +77,9 @@ describe('authInterceptor', () => {
 
     const req = new HttpRequest('GET', '/api/test');
 
-    authInterceptor(req, mockNext);
+    TestBed.runInInjectionContext(() => {
+      authInterceptor(req, mockNext);
+    });
 
     const modifiedReq = mockNext.calls.mostRecent().args[0] as HttpRequest<unknown>;
     expect(modifiedReq.headers.has('Authorization')).toBe(false);

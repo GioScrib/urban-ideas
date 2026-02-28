@@ -1,0 +1,753 @@
+
+✘ [ERROR] TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Signal<Post[]>'.
+  Property '0' does not exist on type 'Signal<Post[]>'. [plugin angular-compiler]
+
+    src/app/pages/post-list/post-list.component.spec.ts:148:11:
+      148 │     expect(component.filteredPosts[0].body).toContain('second pos...
+          ╵            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2322: Type 'never[]' is not assignable to type 'Signal<Post[]>'.
+  Type 'never[]' is not assignable to type '() => Post[]'.
+    Type 'never[]' provides no match for the signature '(): Post[]'. [plugin angular-compiler]
+
+    src/app/pages/post-list/post-list.component.spec.ts:188:4:
+      188 │     component.filteredPosts = [];
+          ╵     ~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Watch mode enabled. Watching for file changes...
+^C
+Mac:urban-ideas giovanni$ clear
+Mac:urban-ideas giovanni$ nm run test:ci
+/Library/Developer/CommandLineTools/usr/bin/nm: error: run: No such file or directory
+/Library/Developer/CommandLineTools/usr/bin/nm: error: test:ci: No such file or directory
+Mac:urban-ideas giovanni$ ls
+README.md                       karma.conf.js                   public
+angular.json                    node_modules                    src
+coverage                        package-lock.json               tsconfig.app.json
+create_user_test_result.txt     package.json                    tsconfig.json
+dist                            post_list_test_result.txt       tsconfig.spec.json
+Mac:urban-ideas giovanni$ npm test
+
+> urban-ideas@0.0.0 test
+> ng test
+
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+Initial chunk files                                                                          | Names                                                                                     |  Raw size
+chunk-QLOTLLV4.js                                                                            | -                                                                                         |   2.30 MB | 
+polyfills.js                                                                                 | polyfills                                                                                 |   1.04 MB | 
+chunk-YFVLFPZF.js                                                                            | -                                                                                         | 286.65 kB | 
+chunk-PHY3UFQ7.js                                                                            | -                                                                                         | 242.93 kB | 
+chunk-NHKDZ3QA.js                                                                            | -                                                                                         | 231.93 kB | 
+chunk-QXIU56QM.js                                                                            | -                                                                                         | 197.74 kB | 
+chunk-BM472JBC.js                                                                            | -                                                                                         | 181.78 kB | 
+chunk-MAQ44VZZ.js                                                                            | -                                                                                         | 174.77 kB | 
+chunk-3IFKKSX4.js                                                                            | -                                                                                         | 137.46 kB | 
+chunk-XBOGN5DQ.js                                                                            | -                                                                                         | 106.18 kB | 
+chunk-YBYZPC2H.js                                                                            | -                                                                                         |  96.30 kB | 
+chunk-AACFEB7E.js                                                                            | -                                                                                         |  84.07 kB | 
+chunk-KL7PJ4SB.js                                                                            | -                                                                                         |  80.58 kB | 
+chunk-RO46XWLZ.js                                                                            | -                                                                                         |  72.53 kB | 
+jasmine-cleanup-1.js                                                                         | jasmine-cleanup-1                                                                         |  67.20 kB | 
+spec-app-pages-post-list-post-list.component.spec.js                                         | spec-app-pages-post-list-post-list.component.spec                                         |  65.49 kB | 
+chunk-Q6R6JLJI.js                                                                            | -                                                                                         |  53.84 kB | 
+chunk-TCZIDJMM.js                                                                            | -                                                                                         |  43.48 kB | 
+chunk-WU6BRQQI.js                                                                            | -                                                                                         |  43.30 kB | 
+chunk-RTPWBMMQ.js                                                                            | -                                                                                         |  39.72 kB | 
+spec-app-features-auth-pages-login-login.component.spec.js                                   | spec-app-features-auth-pages-login-login.component.spec                                   |  37.27 kB | 
+chunk-LI6HQ2FW.js                                                                            | -                                                                                         |  27.11 kB | 
+chunk-SE6EWP3G.js                                                                            | -                                                                                         |  22.59 kB | 
+test_main.js                                                                                 | test_main                                                                                 |  21.90 kB | 
+chunk-Q2WTLX6K.js                                                                            | -                                                                                         |  15.47 kB | 
+chunk-JVGFBO7M.js                                                                            | -                                                                                         |  13.91 kB | 
+spec-app-components-user-list-create-user-dialog-create-user-dialog.component.spec.js        | spec-app-components-user-list-create-user-dialog-create-user-dialog.component.spec        |  13.19 kB | 
+spec-app-components-user-list-user-card-user-card.component.spec.js                          | spec-app-components-user-list-user-card-user-card.component.spec                          |  11.19 kB | 
+spec-app-components-user-list-user-list-header-user-list-header.component.spec.js            | spec-app-components-user-list-user-list-header-user-list-header.component.spec            |  10.99 kB | 
+chunk-FL2JZA3V.js                                                                            | -                                                                                         |   9.83 kB | 
+styles.css                                                                                   | styles                                                                                    |   9.38 kB | 
+spec-app-components-user-details-user-details-header-user-details-header.component.spec.js   | spec-app-components-user-details-user-details-header-user-details-header.component.spec   |   9.35 kB | 
+chunk-INVW3PUN.js                                                                            | -                                                                                         |   7.62 kB | 
+spec-app-services-users-api.service.spec.js                                                  | spec-app-services-users-api.service.spec                                                  |   7.61 kB | 
+chunk-UICR5ROF.js                                                                            | -                                                                                         |   7.56 kB | 
+chunk-SRBNFJRP.js                                                                            | -                                                                                         |   7.31 kB | 
+spec-app-components-shared-confirm-dialog-confirm-dialog.component.spec.js                   | spec-app-components-shared-confirm-dialog-confirm-dialog.component.spec                   |   6.50 kB | 
+spec-app-components-post-list-create-post-dialog-create-post-dialog.component.spec.js        | spec-app-components-post-list-create-post-dialog-create-post-dialog.component.spec        |   5.37 kB | 
+spec-app-components-shared-add-comment-dialog-add-comment-dialog.component.spec.js           | spec-app-components-shared-add-comment-dialog-add-comment-dialog.component.spec           |   4.95 kB | 
+spec-app-components-shared-custom-button-custom-button.component.spec.js                     | spec-app-components-shared-custom-button-custom-button.component.spec                     |   4.29 kB | 
+chunk-CSVG5QDP.js                                                                            | -                                                                                         |   4.08 kB | 
+spec-app-components-post-list-post-list-page-header-post-list-page-header.component.spec.js  | spec-app-components-post-list-post-list-page-header-post-list-page-header.component.spec  |   3.63 kB | 
+spec-app-components-shared-custom-grid-custom-grid.component.spec.js                         | spec-app-components-shared-custom-grid-custom-grid.component.spec                         |   3.63 kB | 
+chunk-VW5QM3AC.js                                                                            | -                                                                                         |   3.47 kB | 
+chunk-Q4C7YONE.js                                                                            | -                                                                                         |   3.37 kB | 
+spec-app-components-shared-custom-search-custom-search.component.spec.js                     | spec-app-components-shared-custom-search-custom-search.component.spec                     |   3.32 kB | 
+spec-app-core-interceptors-auth.interceptor.spec.js                                          | spec-app-core-interceptors-auth.interceptor.spec                                          |   3.27 kB | 
+spec-app-core-guards-auth.guard.spec.js                                                      | spec-app-core-guards-auth.guard.spec                                                      |   3.14 kB | 
+spec-app-app.component.spec.js                                                               | spec-app-app.component.spec                                                               |   3.05 kB | 
+spec-app-core-services-auth.service.spec.js                                                  | spec-app-core-services-auth.service.spec                                                  |   2.79 kB | 
+chunk-CF5HMCZX.js                                                                            | -                                                                                         |   2.77 kB | 
+spec-app-components-shared-toolbar-toolbar.component.spec.js                                 | spec-app-components-shared-toolbar-toolbar.component.spec                                 |   2.56 kB | 
+spec-app-components-shared-custom-dialog-container-custom-dialog-container.component.spec.js | spec-app-components-shared-custom-dialog-container-custom-dialog-container.component.spec |   2.49 kB | 
+chunk-ST2Y4D2N.js                                                                            | -                                                                                         |   2.48 kB | 
+chunk-V6FC2DIM.js                                                                            | -                                                                                         |   2.42 kB | 
+spec-app-components-shared-custom-paginator-custom-paginator.component.spec.js               | spec-app-components-shared-custom-paginator-custom-paginator.component.spec               |   1.49 kB | 
+spec-app-components-shared-custom-post-card-header-custom-post-card-header.component.spec.js | spec-app-components-shared-custom-post-card-header-custom-post-card-header.component.spec |   1.31 kB | 
+chunk-QOOUN7VE.js                                                                            | -                                                                                         | 936 bytes | 
+jasmine-cleanup-0.js                                                                         | jasmine-cleanup-0                                                                         | 519 bytes | 
+chunk-3FGBZWFJ.js                                                                            | -                                                                                         | 403 bytes | 
+chunk-KMXVMNV3.js                                                                            | -                                                                                         | 393 bytes | 
+spec-app-components-user-details-post-comments-dialog-post-comments-dialog.component.spec.js | spec-app-components-user-details-post-comments-dialog-post-comments-dialog.component.spec | 118 bytes | 
+spec-app-components-user-details-user-details-card-user-details-page-card.component.spec.js  | spec-app-components-user-details-user-details-card-user-details-page-card.component.spec  | 117 bytes | 
+spec-app-components-shared-user-post-card-user-post-card.component.spec.js                   | spec-app-components-shared-user-post-card-user-post-card.component.spec                   | 100 bytes | 
+spec-app-pages-user-details-page-user-details-page.component.spec.js                         | spec-app-pages-user-details-page-user-details-page.component.spec                         |  94 bytes | 
+spec-app-pages-user-list-user-list.component.spec.js                                         | spec-app-pages-user-list-user-list.component.spec                                         |  78 bytes | 
+
+                                                                                             | Initial total                                                                             |   5.84 MB
+
+Application bundle generation complete. [1.162 seconds] - 2026-02-28T12:16:13.324Z
+
+Watch mode enabled. Watching for file changes...
+28 02 2026 13:16:13.403:WARN [karma]: No captured browser, open http://localhost:9876/
+28 02 2026 13:16:13.434:INFO [karma-server]: Karma v6.4.4 server started at http://localhost:9876/
+28 02 2026 13:16:13.434:INFO [launcher]: Launching browsers Chrome with concurrency unlimited
+28 02 2026 13:16:13.437:INFO [launcher]: Starting browser Chrome
+28 02 2026 13:16:14.175:INFO [Chrome 145.0.0.0 (Mac OS 10.15.7)]: Connected on socket eBbi57wYv6kp0qkyAAAB with id 20483318
+Chrome 145.0.0.0 (Mac OS 10.15.7) authInterceptor should not add Authorization header when token does not exist FAILED
+        Error: NG0203: The `AuthService2` token injection failed. `inject()` function must be called from an injection context such as a constructor, a factory function, a field initializer, or a function used with `runInInjectionContext`. Find more at https://v20.angular.dev/errors/NG0203
+        error properties: Object({ code: -203 })
+            at injectInjectorOnly (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:1036:15)
+            at ɵɵinject (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:1058:42)
+            at inject2 (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:1144:12)
+            at authInterceptor (src/app/core/interceptors/auth.interceptor.ts:8:23)
+            at UserContext.<anonymous> (src/app/core/interceptors/auth.interceptor.spec.ts:52:5)
+            at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:398:28)
+            at _ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:2132:39)
+            at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:397:34)
+            at ZoneImpl.run (node_modules/zone.js/fesm2015/zone.js:113:43)
+            at runInTestZone (node_modules/zone.js/fesm2015/zone-testing.js:216:38)
+Chrome 145.0.0.0 (Mac OS 10.15.7) authInterceptor should pass through the request when no token FAILED
+        Error: NG0203: The `AuthService2` token injection failed. `inject()` function must be called from an injection context such as a constructor, a factory function, a field initializer, or a function used with `runInInjectionContext`. Find more at https://v20.angular.dev/errors/NG0203
+        error properties: Object({ code: -203 })
+            at injectInjectorOnly (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:1036:15)
+            at ɵɵinject (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:1058:42)
+            at inject2 (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:1144:12)
+            at authInterceptor (src/app/core/interceptors/auth.interceptor.ts:8:23)
+            at UserContext.<anonymous> (src/app/core/interceptors/auth.interceptor.spec.ts:64:5)
+            at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:398:28)
+            at _ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:2132:39)
+            at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:397:34)
+            at ZoneImpl.run (node_modules/zone.js/fesm2015/zone.js:113:43)
+            at runInTestZone (node_modules/zone.js/fesm2015/zone-testing.js:216:38)
+Chrome 145.0.0.0 (Mac OS 10.15.7) authInterceptor should handle empty token as no token FAILED
+        Error: NG0203: The `AuthService2` token injection failed. `inject()` function must be called from an injection context such as a constructor, a factory function, a field initializer, or a function used with `runInInjectionContext`. Find more at https://v20.angular.dev/errors/NG0203
+        error properties: Object({ code: -203 })
+            at injectInjectorOnly (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:1036:15)
+            at ɵɵinject (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:1058:42)
+            at inject2 (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:1144:12)
+            at authInterceptor (src/app/core/interceptors/auth.interceptor.ts:8:23)
+            at UserContext.<anonymous> (src/app/core/interceptors/auth.interceptor.spec.ts:74:5)
+            at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:398:28)
+            at _ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:2132:39)
+            at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:397:34)
+            at ZoneImpl.run (node_modules/zone.js/fesm2015/zone.js:113:43)
+            at runInTestZone (node_modules/zone.js/fesm2015/zone-testing.js:216:38)
+Chrome 145.0.0.0 (Mac OS 10.15.7) authInterceptor should add Authorization header when token exists FAILED
+        Error: NG0203: The `AuthService2` token injection failed. `inject()` function must be called from an injection context such as a constructor, a factory function, a field initializer, or a function used with `runInInjectionContext`. Find more at https://v20.angular.dev/errors/NG0203
+        error properties: Object({ code: -203 })
+            at injectInjectorOnly (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:1036:15)
+            at ɵɵinject (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:1058:42)
+            at inject2 (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:1144:12)
+            at authInterceptor (src/app/core/interceptors/auth.interceptor.ts:8:23)
+            at UserContext.<anonymous> (src/app/core/interceptors/auth.interceptor.spec.ts:40:5)
+            at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:398:28)
+            at _ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:2132:39)
+            at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:397:34)
+            at ZoneImpl.run (node_modules/zone.js/fesm2015/zone.js:113:43)
+            at runInTestZone (node_modules/zone.js/fesm2015/zone-testing.js:216:38)
+LOG: 'AuthService: nessun token fornito'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 6 of 167 (4 FAILED) (0 secs / 0.106 secs)
+LOG: 'AuthService: logout effettuato'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 7 of 167 (4 FAILED) (0 secs / 0.107 secs)
+LOG: 'AuthService: token salvato con successo'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 11 of 167 (4 FAILED) (0 secs / 0.109 secs)
+LOG: 'AuthGuard dice: no token'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 12 of 167 (4 FAILED) (0 secs / 0.11 secs)
+LOG: 'AuthGuard dice: false'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 12 of 167 (4 FAILED) (0 secs / 0.11 secs)
+LOG: 'AuthGuard dice: no token'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 13 of 167 (4 FAILED) (0 secs / 0.111 secs)
+LOG: 'AuthGuard dice: false'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 13 of 167 (4 FAILED) (0 secs / 0.111 secs)
+LOG: 'AuthGuard dice: true'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 14 of 167 (4 FAILED) (0 secs / 0.111 secs)
+Chrome 145.0.0.0 (Mac OS 10.15.7) LoginComponent should not save empty token FAILED
+        ɵNotFound: NG0201: No provider found for `ActivatedRoute`. Source: Standalone[LoginComponent2]. Find more at https://v20.angular.dev/errors/NG0201
+        error properties: Object({ code: -201, ngErrorCode: -201, ngErrorMessage: 'No provider found for `ActivatedRoute`.', ngTokenPath: [ 'ActivatedRoute' ] })
+        ɵNotFound: NG0201: No provider found for `ActivatedRoute`. Source: Standalone[LoginComponent2]. Find more at https://v20.angular.dev/errors/NG0201
+            at createRuntimeError (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:921:19)
+            at NullInjector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:1489:27)
+            at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2045:33)
+            at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2045:33)
+            at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2045:33)
+            at ChainedInjector.get (node_modules/@angular/core/fesm2022/debug_node.mjs:13418:36)
+            at lookupTokenUsingModuleInjector (node_modules/@angular/core/fesm2022/debug_node.mjs:1718:39)
+            at getOrCreateInjectable (node_modules/@angular/core/fesm2022/debug_node.mjs:1766:12)
+            at ɵɵdirectiveInject (node_modules/@angular/core/fesm2022/debug_node.mjs:13469:19)
+            at NodeInjectorFactory.LoginComponent2_Factory [as factory] (ng:///LoginComponent2/ɵfac.js:5:7)
+Chrome 145.0.0.0 (Mac OS 10.15.7) LoginComponent should not save whitespace-only token FAILED
+        ɵNotFound: NG0201: No provider found for `ActivatedRoute`. Source: Standalone[LoginComponent2]. Find more at https://v20.angular.dev/errors/NG0201
+        error properties: Object({ code: -201, ngErrorCode: -201, ngErrorMessage: 'No provider found for `ActivatedRoute`.', ngTokenPath: [ 'ActivatedRoute' ] })
+        ɵNotFound: NG0201: No provider found for `ActivatedRoute`. Source: Standalone[LoginComponent2]. Find more at https://v20.angular.dev/errors/NG0201
+            at createRuntimeError (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:921:19)
+            at NullInjector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:1489:27)
+            at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2045:33)
+            at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2045:33)
+            at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2045:33)
+            at ChainedInjector.get (node_modules/@angular/core/fesm2022/debug_node.mjs:13418:36)
+            at lookupTokenUsingModuleInjector (node_modules/@angular/core/fesm2022/debug_node.mjs:1718:39)
+            at getOrCreateInjectable (node_modules/@angular/core/fesm2022/debug_node.mjs:1766:12)
+            at ɵɵdirectiveInject (node_modules/@angular/core/fesm2022/debug_node.mjs:13469:19)
+            at NodeInjectorFactory.LoginComponent2_Factory [as factory] (ng:///LoginComponent2/ɵfac.js:5:7)
+Chrome 145.0.0.0 (Mac OS 10.15.7) LoginComponent should save token and navigate to /users when token is valid FAILED
+        ɵNotFound: NG0201: No provider found for `ActivatedRoute`. Source: Standalone[LoginComponent2]. Find more at https://v20.angular.dev/errors/NG0201
+        error properties: Object({ code: -201, ngErrorCode: -201, ngErrorMessage: 'No provider found for `ActivatedRoute`.', ngTokenPath: [ 'ActivatedRoute' ] })
+        ɵNotFound: NG0201: No provider found for `ActivatedRoute`. Source: Standalone[LoginComponent2]. Find more at https://v20.angular.dev/errors/NG0201
+            at createRuntimeError (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:921:19)
+            at NullInjector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:1489:27)
+            at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2045:33)
+            at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2045:33)
+            at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2045:33)
+            at ChainedInjector.get (node_modules/@angular/core/fesm2022/debug_node.mjs:13418:36)
+            at lookupTokenUsingModuleInjector (node_modules/@angular/core/fesm2022/debug_node.mjs:1718:39)
+            at getOrCreateInjectable (node_modules/@angular/core/fesm2022/debug_node.mjs:1766:12)
+            at ɵɵdirectiveInject (node_modules/@angular/core/fesm2022/debug_node.mjs:13469:19)
+            at NodeInjectorFactory.LoginComponent2_Factory [as factory] (ng:///LoginComponent2/ɵfac.js:5:7)
+Chrome 145.0.0.0 (Mac OS 10.15.7) LoginComponent should trim token before saving FAILED
+        ɵNotFound: NG0201: No provider found for `ActivatedRoute`. Source: Standalone[LoginComponent2]. Find more at https://v20.angular.dev/errors/NG0201
+        error properties: Object({ code: -201, ngErrorCode: -201, ngErrorMessage: 'No provider found for `ActivatedRoute`.', ngTokenPath: [ 'ActivatedRoute' ] })
+        ɵNotFound: NG0201: No provider found for `ActivatedRoute`. Source: Standalone[LoginComponent2]. Find more at https://v20.angular.dev/errors/NG0201
+            at createRuntimeError (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:921:19)
+            at NullInjector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:1489:27)
+            at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2045:33)
+            at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2045:33)
+            at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2045:33)
+            at ChainedInjector.get (node_modules/@angular/core/fesm2022/debug_node.mjs:13418:36)
+            at lookupTokenUsingModuleInjector (node_modules/@angular/core/fesm2022/debug_node.mjs:1718:39)
+            at getOrCreateInjectable (node_modules/@angular/core/fesm2022/debug_node.mjs:1766:12)
+            at ɵɵdirectiveInject (node_modules/@angular/core/fesm2022/debug_node.mjs:13469:19)
+            at NodeInjectorFactory.LoginComponent2_Factory [as factory] (ng:///LoginComponent2/ɵfac.js:5:7)
+Chrome 145.0.0.0 (Mac OS 10.15.7) LoginComponent should render the login form FAILED
+        ɵNotFound: NG0201: No provider found for `ActivatedRoute`. Source: Standalone[LoginComponent2]. Find more at https://v20.angular.dev/errors/NG0201
+        error properties: Object({ code: -201, ngErrorCode: -201, ngErrorMessage: 'No provider found for `ActivatedRoute`.', ngTokenPath: [ 'ActivatedRoute' ] })
+        ɵNotFound: NG0201: No provider found for `ActivatedRoute`. Source: Standalone[LoginComponent2]. Find more at https://v20.angular.dev/errors/NG0201
+            at createRuntimeError (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:921:19)
+            at NullInjector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:1489:27)
+            at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2045:33)
+            at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2045:33)
+            at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2045:33)
+            at ChainedInjector.get (node_modules/@angular/core/fesm2022/debug_node.mjs:13418:36)
+            at lookupTokenUsingModuleInjector (node_modules/@angular/core/fesm2022/debug_node.mjs:1718:39)
+            at getOrCreateInjectable (node_modules/@angular/core/fesm2022/debug_node.mjs:1766:12)
+            at ɵɵdirectiveInject (node_modules/@angular/core/fesm2022/debug_node.mjs:13469:19)
+            at NodeInjectorFactory.LoginComponent2_Factory [as factory] (ng:///LoginComponent2/ɵfac.js:5:7)
+Chrome 145.0.0.0 (Mac OS 10.15.7) LoginComponent should have a link to gorest.co.in FAILED
+        ɵNotFound: NG0201: No provider found for `ActivatedRoute`. Source: Standalone[LoginComponent2]. Find more at https://v20.angular.dev/errors/NG0201
+        error properties: Object({ code: -201, ngErrorCode: -201, ngErrorMessage: 'No provider found for `ActivatedRoute`.', ngTokenPath: [ 'ActivatedRoute' ] })
+        ɵNotFound: NG0201: No provider found for `ActivatedRoute`. Source: Standalone[LoginComponent2]. Find more at https://v20.angular.dev/errors/NG0201
+            at createRuntimeError (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:921:19)
+            at NullInjector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:1489:27)
+            at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2045:33)
+            at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2045:33)
+            at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2045:33)
+            at ChainedInjector.get (node_modules/@angular/core/fesm2022/debug_node.mjs:13418:36)
+            at lookupTokenUsingModuleInjector (node_modules/@angular/core/fesm2022/debug_node.mjs:1718:39)
+            at getOrCreateInjectable (node_modules/@angular/core/fesm2022/debug_node.mjs:1766:12)
+            at ɵɵdirectiveInject (node_modules/@angular/core/fesm2022/debug_node.mjs:13469:19)
+            at NodeInjectorFactory.LoginComponent2_Factory [as factory] (ng:///LoginComponent2/ɵfac.js:5:7)
+Chrome 145.0.0.0 (Mac OS 10.15.7) LoginComponent should create FAILED
+        ɵNotFound: NG0201: No provider found for `ActivatedRoute`. Source: Standalone[LoginComponent2]. Find more at https://v20.angular.dev/errors/NG0201
+        error properties: Object({ code: -201, ngErrorCode: -201, ngErrorMessage: 'No provider found for `ActivatedRoute`.', ngTokenPath: [ 'ActivatedRoute' ] })
+        ɵNotFound: NG0201: No provider found for `ActivatedRoute`. Source: Standalone[LoginComponent2]. Find more at https://v20.angular.dev/errors/NG0201
+            at createRuntimeError (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:921:19)
+            at NullInjector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:1489:27)
+            at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2045:33)
+            at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2045:33)
+            at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2045:33)
+            at ChainedInjector.get (node_modules/@angular/core/fesm2022/debug_node.mjs:13418:36)
+            at lookupTokenUsingModuleInjector (node_modules/@angular/core/fesm2022/debug_node.mjs:1718:39)
+            at getOrCreateInjectable (node_modules/@angular/core/fesm2022/debug_node.mjs:1766:12)
+            at ɵɵdirectiveInject (node_modules/@angular/core/fesm2022/debug_node.mjs:13469:19)
+            at NodeInjectorFactory.LoginComponent2_Factory [as factory] (ng:///LoginComponent2/ɵfac.js:5:7)
+Chrome 145.0.0.0 (Mac OS 10.15.7) LoginComponent should initialize with empty token FAILED
+        ɵNotFound: NG0201: No provider found for `ActivatedRoute`. Source: Standalone[LoginComponent2]. Find more at https://v20.angular.dev/errors/NG0201
+        error properties: Object({ code: -201, ngErrorCode: -201, ngErrorMessage: 'No provider found for `ActivatedRoute`.', ngTokenPath: [ 'ActivatedRoute' ] })
+        ɵNotFound: NG0201: No provider found for `ActivatedRoute`. Source: Standalone[LoginComponent2]. Find more at https://v20.angular.dev/errors/NG0201
+            at createRuntimeError (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:921:19)
+            at NullInjector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:1489:27)
+            at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2045:33)
+            at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2045:33)
+            at R3Injector.get (node_modules/@angular/core/fesm2022/root_effect_scheduler.mjs:2045:33)
+            at ChainedInjector.get (node_modules/@angular/core/fesm2022/debug_node.mjs:13418:36)
+            at lookupTokenUsingModuleInjector (node_modules/@angular/core/fesm2022/debug_node.mjs:1718:39)
+            at getOrCreateInjectable (node_modules/@angular/core/fesm2022/debug_node.mjs:1766:12)
+            at ɵɵdirectiveInject (node_modules/@angular/core/fesm2022/debug_node.mjs:13469:19)
+            at NodeInjectorFactory.LoginComponent2_Factory [as factory] (ng:///LoginComponent2/ɵfac.js:5:7)
+LOG: 'PostListComponent says: initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 24 of 167 (12 FAILED) (0 secs / 0.134 secs)
+LOG: 'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]]
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 24 of 167 (12 FAILED) (0 secs / 0.134 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 24 of 167 (12 FAILED) (0 secs / 0.134 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 24 of 167 (12 FAILED) (0 secs / 0.134 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 24 of 167 (12 FAILED) (0 secs / 0.134 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 24 of 167 (12 FAILED) (0 secs / 0.134 secs)
+LOG: 'post-list says: searching for key ', ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 24 of 167 (12 FAILED) (0 secs / 0.134 secs)
+LOG: 'post-list says: searching for key ', 'first'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 24 of 167 (12 FAILED) (0 secs / 0.134 secs)
+LOG: 'post-list says: searching for key ', ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 24 of 167 (12 FAILED) (0 secs / 0.134 secs)
+LOG: 'PostListComponent says: initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 25 of 167 (12 FAILED) (0 secs / 0.163 secs)
+LOG: 'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]]
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 25 of 167 (12 FAILED) (0 secs / 0.163 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 25 of 167 (12 FAILED) (0 secs / 0.163 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 25 of 167 (12 FAILED) (0 secs / 0.163 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 25 of 167 (12 FAILED) (0 secs / 0.163 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 25 of 167 (12 FAILED) (0 secs / 0.163 secs)
+LOG: 'post-list says: searching for key ', ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 25 of 167 (12 FAILED) (0 secs / 0.163 secs)
+LOG: 'post-list says: searching for key ', 'FIRST'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 25 of 167 (12 FAILED) (0 secs / 0.163 secs)
+LOG: 'PostListComponent says: initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 26 of 167 (12 FAILED) (0 secs / 0.17 secs)
+LOG: 'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]]
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 26 of 167 (12 FAILED) (0 secs / 0.17 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 26 of 167 (12 FAILED) (0 secs / 0.17 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 26 of 167 (12 FAILED) (0 secs / 0.17 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 26 of 167 (12 FAILED) (0 secs / 0.17 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 26 of 167 (12 FAILED) (0 secs / 0.17 secs)
+LOG: 'post-list says: searching for key ', ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 26 of 167 (12 FAILED) (0 secs / 0.17 secs)
+LOG: 'PostListComponent says: initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 27 of 167 (12 FAILED) (0 secs / 0.176 secs)
+LOG: 'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]]
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 27 of 167 (12 FAILED) (0 secs / 0.176 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 27 of 167 (12 FAILED) (0 secs / 0.176 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 27 of 167 (12 FAILED) (0 secs / 0.176 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 27 of 167 (12 FAILED) (0 secs / 0.176 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 27 of 167 (12 FAILED) (0 secs / 0.176 secs)
+LOG: 'post-list says: searching for key ', ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 27 of 167 (12 FAILED) (0 secs / 0.176 secs)
+LOG: 'post-list says: searching for key ', 'first'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 27 of 167 (12 FAILED) (0 secs / 0.176 secs)
+LOG: 'PostListComponent says: initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 28 of 167 (12 FAILED) (0 secs / 0.182 secs)
+LOG: 'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]]
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 28 of 167 (12 FAILED) (0 secs / 0.182 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 28 of 167 (12 FAILED) (0 secs / 0.182 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 28 of 167 (12 FAILED) (0 secs / 0.182 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 28 of 167 (12 FAILED) (0 secs / 0.182 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 28 of 167 (12 FAILED) (0 secs / 0.182 secs)
+LOG: 'post-list says: searching for key ', ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 28 of 167 (12 FAILED) (0 secs / 0.182 secs)
+LOG: 'post-list says: searching for key ', 'second post body'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 28 of 167 (12 FAILED) (0 secs / 0.182 secs)
+LOG: 'PostListComponent says: initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 29 of 167 (12 FAILED) (0 secs / 0.188 secs)
+LOG: 'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]]
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 29 of 167 (12 FAILED) (0 secs / 0.188 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 29 of 167 (12 FAILED) (0 secs / 0.188 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 29 of 167 (12 FAILED) (0 secs / 0.188 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 29 of 167 (12 FAILED) (0 secs / 0.188 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 29 of 167 (12 FAILED) (0 secs / 0.188 secs)
+LOG: 'post-list says: searching for key ', ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 29 of 167 (12 FAILED) (0 secs / 0.188 secs)
+LOG: 'post-list-component says: open create post dialog'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 29 of 167 (12 FAILED) (0 secs / 0.188 secs)
+LOG: 'post-list-component says: dialog closed with data: ', undefined
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 29 of 167 (12 FAILED) (0 secs / 0.188 secs)
+LOG: 'PostListComponent says: initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 30 of 167 (12 FAILED) (0 secs / 0.193 secs)
+LOG: 'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]]
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 30 of 167 (12 FAILED) (0 secs / 0.193 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 30 of 167 (12 FAILED) (0 secs / 0.193 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 30 of 167 (12 FAILED) (0 secs / 0.193 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 30 of 167 (12 FAILED) (0 secs / 0.193 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 30 of 167 (12 FAILED) (0 secs / 0.193 secs)
+LOG: 'post-list says: searching for key ', ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 30 of 167 (12 FAILED) (0 secs / 0.193 secs)
+LOG: 'PostListComponent says: initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 31 of 167 (12 FAILED) (0 secs / 0.198 secs)
+LOG: 'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]]
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 31 of 167 (12 FAILED) (0 secs / 0.198 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 31 of 167 (12 FAILED) (0 secs / 0.198 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 31 of 167 (12 FAILED) (0 secs / 0.198 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 31 of 167 (12 FAILED) (0 secs / 0.198 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 31 of 167 (12 FAILED) (0 secs / 0.198 secs)
+LOG: 'post-list says: searching for key ', ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 31 of 167 (12 FAILED) (0 secs / 0.198 secs)
+LOG: 'post-list-component says: open create post dialog'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 31 of 167 (12 FAILED) (0 secs / 0.198 secs)
+LOG: 'post-list-component says: dialog closed with data: ', Object{id: 4, user_id: 1, title: 'New Post', body: 'New post body'}
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 31 of 167 (12 FAILED) (0 secs / 0.198 secs)
+LOG: 'post-list-component says: dialog closed with data: ', Object{id: 4, user_id: 1, title: 'New Post', body: 'N
+LOG: 'PostListComponent says: initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 32 of 167 (12 FAILED) (0 secs / 0.203 secs)
+LOG: 'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]]
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 32 of 167 (12 FAILED) (0 secs / 0.203 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 32 of 167 (12 FAILED) (0 secs / 0.203 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 32 of 167 (12 FAILED) (0 secs / 0.203 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 32 of 167 (12 FAILED) (0 secs / 0.203 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 32 of 167 (12 FAILED) (0 secs / 0.203 secs)
+LOG: 'post-list says: searching for key ', ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 32 of 167 (12 FAILED) (0 secs / 0.203 secs)
+LOG: 'post-list-component says: open create post dialog'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 32 of 167 (12 FAILED) (0 secs / 0.203 secs)
+LOG: 'post-list-component says: dialog closed with data: ', Object{id: 4, user_id: 1, title: 'New Post', body: 'New post body'}
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 32 of 167 (12 FAILED) (0 secs / 0.203 secs)
+LOG: 'post-list-component says: dialog closed with data: ', Object{id: 4, user_id: 1, title: 'New Post', body: 'N
+LOG: 'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]]
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 32 of 167 (12 FAILED) (0 secs / 0.203 secs)
+LOG: 'PostListComponent says: initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 33 of 167 (12 FAILED) (0 secs / 0.208 secs)
+LOG: 'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]]
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 33 of 167 (12 FAILED) (0 secs / 0.208 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 33 of 167 (12 FAILED) (0 secs / 0.208 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 33 of 167 (12 FAILED) (0 secs / 0.208 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 33 of 167 (12 FAILED) (0 secs / 0.208 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 33 of 167 (12 FAILED) (0 secs / 0.208 secs)
+LOG: 'post-list says: searching for key ', ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 33 of 167 (12 FAILED) (0 secs / 0.208 secs)
+LOG: 'PostListComponent says: initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 34 of 167 (12 FAILED) (0 secs / 0.212 secs)
+LOG: 'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]]
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 34 of 167 (12 FAILED) (0 secs / 0.212 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 34 of 167 (12 FAILED) (0 secs / 0.212 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 34 of 167 (12 FAILED) (0 secs / 0.212 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 34 of 167 (12 FAILED) (0 secs / 0.212 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 34 of 167 (12 FAILED) (0 secs / 0.212 secs)
+LOG: 'post-list says: searching for key ', ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 34 of 167 (12 FAILED) (0 secs / 0.212 secs)
+LOG: 'post-list-component says: open create post dialog'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 34 of 167 (12 FAILED) (0 secs / 0.212 secs)
+LOG: 'post-list-component says: dialog closed with data: ', null
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 34 of 167 (12 FAILED) (0 secs / 0.212 secs)
+LOG: 'PostListComponent says: initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 35 of 167 (12 FAILED) (0 secs / 0.216 secs)
+LOG: 'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]]
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 35 of 167 (12 FAILED) (0 secs / 0.216 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 35 of 167 (12 FAILED) (0 secs / 0.216 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 35 of 167 (12 FAILED) (0 secs / 0.216 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 35 of 167 (12 FAILED) (0 secs / 0.216 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 35 of 167 (12 FAILED) (0 secs / 0.216 secs)
+LOG: 'post-list says: searching for key ', ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 35 of 167 (12 FAILED) (0 secs / 0.216 secs)
+LOG: 'post-list-component says: new post clicked'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 35 of 167 (12 FAILED) (0 secs / 0.216 secs)
+LOG: 'post-list-component says: open create post dialog'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 35 of 167 (12 FAILED) (0 secs / 0.216 secs)
+LOG: 'post-list-component says: dialog closed with data: ', null
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 35 of 167 (12 FAILED) (0 secs / 0.216 secs)
+LOG: 'PostListComponent says: initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 36 of 167 (12 FAILED) (0 secs / 0.22 secs)
+LOG: 'post-list-component says: ', [Signal: [object Object],[object Object],[object Object]]
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 36 of 167 (12 FAILED) (0 secs / 0.22 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 36 of 167 (12 FAILED) (0 secs / 0.22 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 36 of 167 (12 FAILED) (0 secs / 0.22 secs)
+LOG: 'user-post-card initialized'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 36 of 167 (12 FAILED) (0 secs / 0.22 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 36 of 167 (12 FAILED) (0 secs / 0.22 secs)
+LOG: 'post-list says: searching for key ', ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 36 of 167 (12 FAILED) (0 secs / 0.22 secs)
+LOG: 'post-list-component says grid cols clicked: ', 3
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 36 of 167 (12 FAILED) (0 secs / 0.22 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 40 of 167 (12 FAILED) (0 secs / 0.228 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 41 of 167 (12 FAILED) (0 secs / 0.231 secs)
+LOG: 'Navigated to posts'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 41 of 167 (12 FAILED) (0 secs / 0.231 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 42 of 167 (12 FAILED) (0 secs / 0.232 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 43 of 167 (12 FAILED) (0 secs / 0.233 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 44 of 167 (12 FAILED) (0 secs / 0.234 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 45 of 167 (12 FAILED) (0 secs / 0.236 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 46 of 167 (12 FAILED) (0 secs / 0.237 secs)
+LOG: 'user-list-header says: new user clicked'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 46 of 167 (12 FAILED) (0 secs / 0.237 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 47 of 167 (12 FAILED) (0 secs / 0.239 secs)
+LOG: 'user-list-header says grid cols clicked: ', 3
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 47 of 167 (12 FAILED) (0 secs / 0.239 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 48 of 167 (12 FAILED) (0 secs / 0.24 secs)
+Chrome 145.0.0.0 (Mac OS 10.15.7) UserListHeaderComponent should have toolbar FAILED
+        Expected null to be truthy.
+            at <Jasmine>
+            at UserContext.<anonymous> (src/app/components/user-list/user-list-header/user-list-header.component.spec.ts:70:51)
+            at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:398:28)
+            at _ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:2132:39)
+            at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:397:34)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 49 of 167 (13 FAILED) (0 secs / 0.241 secs)
+LOG: 'create-post-dialog says: loaded users', [Object{id: 1, name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, Object{id: 2, name: 'Jane Smith', email: 'jane@example.com', gender: 'female', status: 'active'}]
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 50 of 167 (13 FAILED) (0 secs / 0.242 secs)
+LOG: 'create-post-dialog says: loaded users', [Object{id: 1, name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, Object{id: 2, name: 'Jane Smith', email: 'jane@example.com', gender: 'female', status
+LOG: 'create-post-dialog says: loaded users', [Object{id: 1, name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, Object{id: 2, name: 'Jane Smith', email: 'jane@example.com', gender: 'female', status: 'active'}]
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 51 of 167 (13 FAILED) (0 secs / 0.253 secs)
+LOG: 'create-post-dialog says: loaded users', [Object{id: 1, name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, Object{id: 2, name: 'Jane Smith', email: 'jane@example.com', gender: 'female', status
+LOG: 'new-poster-dialog says: form invalid'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 51 of 167 (13 FAILED) (0 secs / 0.253 secs)
+Chrome 145.0.0.0 (Mac OS 10.15.7) CreatePostDialogComponent should not submit when form is invalid FAILED
+        Expected false to be true.
+            at <Jasmine>
+            at UserContext.<anonymous> (src/app/components/post-list/create-post-dialog/create-post-dialog.component.spec.ts:71:33)
+            at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:398:28)
+            at _ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:2132:39)
+            at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:397:34)
+LOG: 'create-post-dialog says: loaded users', [Object{id: 1, name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, Object{id: 2, name: 'Jane Smith', email: 'jane@example.com', gender: 'female', status: 'active'}]
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 52 of 167 (14 FAILED) (0 secs / 0.256 secs)
+LOG: 'create-post-dialog says: loaded users', [Object{id: 1, name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, Object{id: 2, name: 'Jane Smith', email: 'jane@example.com', gender: 'female', status
+LOG: 'new-poster-dialog says: form invalid'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 52 of 167 (14 FAILED) (0 secs / 0.256 secs)
+Chrome 145.0.0.0 (Mac OS 10.15.7) CreatePostDialogComponent should submit valid form data FAILED
+        Expected spy MatDialogRef.close to have been called with:
+          [ Object({ user_id: 1, title: 'Test Post', body: 'Test body' }) ]
+        but it was never called.
+            at <Jasmine>
+            at UserContext.<anonymous> (src/app/components/post-list/create-post-dialog/create-post-dialog.component.spec.ts:85:33)
+            at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:398:28)
+            at _ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:2132:39)
+            at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:397:34)
+LOG: 'create-post-dialog says: loaded users', [Object{id: 1, name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, Object{id: 2, name: 'Jane Smith', email: 'jane@example.com', gender: 'female', status: 'active'}]
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 53 of 167 (15 FAILED) (0 secs / 0.258 secs)
+LOG: 'create-post-dialog says: loaded users', [Object{id: 1, name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, Object{id: 2, name: 'Jane Smith', email: 'jane@example.com', gender: 'female', status
+LOG: 'create-post-dialog says: loaded users', [Object{id: 1, name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, Object{id: 2, name: 'Jane Smith', email: 'jane@example.com', gender: 'female', status: 'active'}]
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 54 of 167 (15 FAILED) (0 secs / 0.261 secs)
+LOG: 'create-post-dialog says: loaded users', [Object{id: 1, name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, Object{id: 2, name: 'Jane Smith', email: 'jane@example.com', gender: 'female', status
+LOG: 'create-post-dialog says: loaded users', [Object{id: 1, name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, Object{id: 2, name: 'Jane Smith', email: 'jane@example.com', gender: 'female', status: 'active'}]
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 55 of 167 (15 FAILED) (0 secs / 0.263 secs)
+LOG: 'create-post-dialog says: loaded users', [Object{id: 1, name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, Object{id: 2, name: 'Jane Smith', email: 'jane@example.com', gender: 'female', status
+LOG: 'create-post-dialog says: loaded users', [Object{id: 1, name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, Object{id: 2, name: 'Jane Smith', email: 'jane@example.com', gender: 'female', status: 'active'}]
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 56 of 167 (15 FAILED) (0 secs / 0.265 secs)
+LOG: 'create-post-dialog says: loaded users', [Object{id: 1, name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, Object{id: 2, name: 'Jane Smith', email: 'jane@example.com', gender: 'female', status
+LOG: 'create-post-dialog says: loaded users', [Object{id: 1, name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, Object{id: 2, name: 'Jane Smith', email: 'jane@example.com', gender: 'female', status: 'active'}]
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 57 of 167 (15 FAILED) (0 secs / 0.267 secs)
+LOG: 'create-post-dialog says: loaded users', [Object{id: 1, name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, Object{id: 2, name: 'Jane Smith', email: 'jane@example.com', gender: 'female', status
+LOG: 'create-post-dialog says: loaded users', [Object{id: 1, name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, Object{id: 2, name: 'Jane Smith', email: 'jane@example.com', gender: 'female', status: 'active'}]
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 58 of 167 (15 FAILED) (0 secs / 0.269 secs)
+LOG: 'create-post-dialog says: loaded users', [Object{id: 1, name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, Object{id: 2, name: 'Jane Smith', email: 'jane@example.com', gender: 'female', status
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 59 of 167 (15 FAILED) (0 secs / 0.271 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 60 of 167 (15 FAILED) (0 secs / 0.273 secs)
+Chrome 145.0.0.0 (Mac OS 10.15.7) PostListPageHeaderComponent should have toolbar FAILED
+        Expected null to be truthy.
+            at <Jasmine>
+            at UserContext.<anonymous> (src/app/components/post-list/post-list-page-header/post-list-page-header.component.spec.ts:59:51)
+            at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:398:28)
+            at _ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:2132:39)
+            at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:397:34)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 61 of 167 (16 FAILED) (0 secs / 0.274 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 62 of 167 (16 FAILED) (0 secs / 0.275 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 63 of 167 (16 FAILED) (0 secs / 0.276 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 64 of 167 (16 FAILED) (0 secs / 0.277 secs)
+LOG: 'post-list-page-header says: new post clicked'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 64 of 167 (16 FAILED) (0 secs / 0.277 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 65 of 167 (16 FAILED) (0 secs / 0.278 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 66 of 167 (16 FAILED) (0 secs / 0.279 secs)
+LOG: 'post-list-page-header says grid cols clicked: ', 3
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 66 of 167 (16 FAILED) (0 secs / 0.279 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 67 of 167 (16 FAILED) (0 secs / 0.28 secs)
+LOG: 'custom button[Input Signal: ]says clicked'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 84 of 167 (16 FAILED) (0 secs / 0.293 secs)
+LOG: 'custom-dialog-container says closed'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 85 of 167 (16 FAILED) (0 secs / 0.293 secs)
+LOG: 'create-user-dialog says: ', FormGroup{_pendingDirty: false, _hasOwnPendingAsyncValidator: null, _pendingTouched: false, _onCollectionChange: () => this._updateDomValue(), _updateOn: undefined, _parent: null, _asyncValidationSubscription: undefined, _composedValidatorFn: null, _composedAsyncValidatorFn: null, _rawValidators: null, _rawAsyncValidators: null, value: Object{name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, _status: [Computed: VALID], statusReactive: [Signal: VALID], errors: null, _pristine: [Computed: true], pristineReactive: [Signal: true], _touched: [Computed: false], touchedReactive: [Signal: false], _events: Subject{closed: false, currentObservers: [], observers: [], isStopped: false, hasError: false, thrownError: null}, events: _Observable{source: Subject{closed: ..., currentObservers: ..., observers: ..., isStopped: ..., hasError: ..., thrownError: ...}}, valueChanges: EventEmitter_{closed: false, currentObservers: [], observers: [], isStopped: false, hasError: false, thrownError: null, __isAsync: false, destroyRef: NodeInjectorDestroyRef{_lView: ...}, pendingTasks: _PendingTasksInternal{taskId: ..., pendingTasks: ..., destroyed: ..., pendingTask: ...}}, statusChanges: EventEmitter_{closed: false, currentObservers: [], observers: [], isStopped: false, hasError: false, thrownError: null, __isAsync: false, destroyRef: NodeInjectorDestroyRef{_lView: ...}, pendingTasks: _PendingTasksInternal{taskId: ..., pendingTasks: ..., destroyed: ..., pendingTask: ...}}, _onDisabledChange: [], controls: Object{name: FormControl2{_pendingDirty: ..., _hasOwnPendingAsyncValidator: ..., _pendingTouched: ..., _onCollectionChange: ..., _updateOn: ..., _parent: ..., _asyncValidationSubscription: ..., _composedValidatorFn: ..., _composedAsyncValidatorFn: ..., _rawValidators: ..., _rawAsyncValidators: ..., value: ..., _status: ..., statusReactive: ..., errors: ..., _pristine: ..., pristineReactive: ..., _touched: ..., touchedReactive: ..., _events: ..., events: ..., valueChanges: ..., statusChanges: ..., _onDisabledChange: ..., defaultValue: ..., _onChange: ..., _pendingValue: ..., _pendingChange: ...}, email: FormControl2{_pendingDirty: ..., _hasOwnPendingAsyncValidator: ..., _pendingTouched: ..., _onCollectionChange: ..., _updateOn: ..., _parent: ..., _asyncValidationSubscription: ..., _composedValidatorFn: ..., _composedAsyncValidatorFn: ..., _rawValidators: ..., _rawAsyncValidators: ..., value: ..., _status: ..., statusReactive: ..., errors: ..., _pristine: ..., pristineReactive: ..., _touched: ..., touchedReactive: ..., _events: ..., events: ..., valueChanges: ..., statusChanges: ..., _onDisabledChange: ..., defaultValue: ..., _onChange: ..., _pendingValue: ..., _pendingChange: ...}, gender: FormControl2{_pendingDirty: ..., _hasOwnPendingAsyncValidator: ..., _pendingTouched: ..., _onCollectionChange: ..., _updateOn: ..., _parent: ..., _asyncValidationSubscription: ..., _composedValidatorFn: ..., _composedAsyncValidatorFn: ..., _rawValidators: ..., _rawAsyncValidators: ..., value: ..., _status: ..., statusReactive: ..., errors: ..., _pristine: ..., pristineReactive: ..., _touched: ..., touchedReactive: ..., _events: ..., events: ..., valueChanges: ..., statusChanges: ..., _onDisabledChange: ..., defaultValue: ..., _onChange: ..., _pendingValue: ..., _pendingChange: ...}, status: FormControl2{_pendingDirty: ..., _hasOwnPendingAsyncValidator: ..., _pendingTouched: ..., _onCollectionChange: ..., _updateOn: ..., _parent: ..., _asyncValidationSubscription: ..., _composedValidatorFn: ..., _composedAsyncValidatorFn: ..., _rawValidators: ..., _rawAsyncValidators: ..., value: ..., _status: ..., statusReactive: ..., errors: ..., _pristine: ..., pristineReactive: ..., _touched: ..., touchedReactive: ..., _events: ..., events: ..., valueChanges: ..., statusChanges: ..., _onDisabledChange: ..., defaultValue: ..., _onChange: ..., _pendingValue: ..., _pendingChange: ...}}}
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 96 of 167 (16 FAILED) (0 secs / 0.32 secs)
+LOG: 'create-user-dialog says: ', FormGroup{_pendingDirty: false, _hasOwnPendingAsyncValidator: null, _pendingTouched: false, _onCollectionChange: () => this._updateDomValue(), _updateOn: undefined, _parent: null, _asyncValidationSubscription: undefined, _composedValidatorFn: null, _composedAsyncValidatorFn: null, _rawValidators: null, _rawAsyncValidators: null, value: Object{name: 'John Doe', email: 'john@example.com', gender: 'male', status: 'active'}, _status: [Computed: VALID], statusReactive: [Signal: VALID], errors: null, _pristine: [Computed: true], pristineReactive: [Signal: true], _touched: [Computed: false], touchedReactive: [Signal: false], _events: Subject{closed: false, currentObservers: [], observers: [], isStopped: false, hasError: false, thrownError: null}, events: _Observable{source: Subject{closed: ..., currentObservers: ..., observers: ..., isStopped: ..., hasError: ..., thrownError: ...}}, valueChanges: EventEmitter_{closed: false, currentObservers: [], observers: [], isStopped: false, hasError: false, thrownError: null, __isAsync: false, destroyRef: NodeInjectorDestroyRef{_lView: ...}, pendingTasks: _PendingTasksInternal{taskId: ..., pendingTasks: ..., destroyed: ..., pendingTask: ...}}, statusChanges: EventEmitter_{closed: false, currentObservers: [], observers: [], isStopped: false, hasError: false, thrownError: null, __isAsync: false, destroyRef: NodeInjectorDestroyRef{_lView: ...}, pendingTasks: _PendingTasksInternal{taskId: ..., pendingTasks: ..., destroyed: ..., pendingTask: ...}}, _onDisabledChange: [], controls: Object{name: FormControl2{_pendingDirty: ..., _hasOwnPendingAsyncValidator: ..., _pendingTouched: ..., _onCollectionChange: ..., _updateOn: ..., _parent: ..., _asyncValidationSubscription: ..., _composedValidatorFn: ..., _composedAsyncValidatorFn: ..., _rawValidators: ..., _rawAsyncValidators: ..., value: ..., _status: ..., statusReactive: ..., errors: ..., _pristine: ..., pristineReactive: ..., _touched: ..., touchedReactive: ..., _events: ..., events: ..., valueChanges: ..., statusChanges: ..., _onDisabledChange: ..., defaultValue: ..., _onChange: ..., _pendingValue: ..., _pendingChange: ...}, email: FormControl2{_pendingDirty: ..., _hasOwnPendingAsyncValidator: ..., _pendingTouched: ..., _onCollectionChange: ..., _updateOn: ..., _parent: ..., _asyncValidationSubscription: ..., _composedValidatorFn: ..., _composedAsyncValidatorFn: ..., _rawValidators: ..., _rawAsyncValidators: ..., value: ..., _status: ..., statusReactive: ..., errors: ..., _pristine: ..., pristineReactive: ..., _touched: ..., touchedReactive: ..., _events: ..., events: ..., valueChanges: ..., statusChanges: ..., _onDisabledChange: ..., defaultValue: ..., _onChange: ..., _pendingValue: ..., _pendingChange: ...}, gender: FormControl2{_pendingDirty: ..., _hasOwnPendingAsyncValidator: ..., _pendingTouched: ..., _onCollectionChange: ..., _updateOn: ..., _parent: ..., _asyncValidationSubscription: ..., _composedValidatorFn: ..., _composedAsyncValidatorFn: ..., _rawValidators: ..., _rawAsyncValidators: ..., value: ..., _status: ..., statusReactive: ..., errors: ..., _pristine: ..., pristineReactive: ..., _touched: ..., touchedReactive: ..., _events: ..., events: ..., valueChanges: ..., statusChanges: ..., _onDisabledChange: ..., defaultValue: ..., _onChange: ..., _pendingValue: ..., _pendingChange: ...}, status: FormControl2{_pendingDirty: ..., _hasOwnPendingAsyncValidator: ..., _pendingTouched: ..., _onCollectionChange: ..., _updateOn: ..., _parent: ..., _asyncValidationSubscription: ..., _composedValidatorFn: ..., _composedAsyncValidatorFn: ..., _rawValidators: ..., _rawAsyncValidators: ..., value: ..., _status: ..., statusReactive: ..., errors: ..., _pristine: ..., pristineReactive: ..., _touched: ..., touchedReactive: ..., _events: ..., events: ..., valueChanges: ..., statusChanges: ..., _onDisabledChange: ..., defaultValue: ..., _onChange: ..., _pendingValue: ..., _pendingChange
+LOG: 'create-user-dialog says: form invalid'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 97 of 167 (16 FAILED) (0 secs / 0.324 secs)
+LOG: 'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender=female'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 102 of 167 (16 FAILED) (0 secs / 0.338 secs)
+LOG: 'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender
+LOG: 'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=2&gender=female'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 102 of 167 (16 FAILED) (0 secs / 0.338 secs)
+LOG: 'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=2&gender
+LOG: 'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender=female'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 103 of 167 (16 FAILED) (0 secs / 0.341 secs)
+LOG: 'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender
+LOG: 'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender=female'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 104 of 167 (16 FAILED) (0 secs / 0.342 secs)
+LOG: 'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender
+LOG: 'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender=female'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 105 of 167 (16 FAILED) (0 secs / 0.343 secs)
+LOG: 'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender
+LOG: 'user-card says open details of user with id: ', 1
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 105 of 167 (16 FAILED) (0 secs / 0.343 secs)
+LOG: 'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender=female'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 106 of 167 (16 FAILED) (0 secs / 0.344 secs)
+LOG: 'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender
+LOG: 'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender=female'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 107 of 167 (16 FAILED) (0 secs / 0.345 secs)
+LOG: 'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender
+LOG: 'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender=female'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 108 of 167 (16 FAILED) (0 secs / 0.346 secs)
+LOG: 'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender
+LOG: 'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender=female'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 109 of 167 (16 FAILED) (0 secs / 0.349 secs)
+LOG: 'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender
+LOG: 'user-card says delete user with id: ', 1
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 109 of 167 (16 FAILED) (0 secs / 0.349 secs)
+LOG: 'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender=female'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 110 of 167 (16 FAILED) (0 secs / 0.351 secs)
+LOG: 'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender
+LOG: 'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender=female'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 111 of 167 (16 FAILED) (0 secs / 0.352 secs)
+LOG: 'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender
+LOG: 'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender=female'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 112 of 167 (16 FAILED) (0 secs / 0.353 secs)
+LOG: 'UserCardComponent says user img requested on: ', 'https://api.dicebear.com/9.x/notionists/svg?seed=1&gender
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 114 of 167 (16 FAILED) (0 secs / 0.355 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 115 of 167 (16 FAILED) (0 secs / 0.355 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 116 of 167 (16 FAILED) (0 secs / 0.356 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 117 of 167 (16 FAILED) (0 secs / 0.357 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 118 of 167 (16 FAILED) (0 secs / 0.357 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 119 of 167 (16 FAILED) (0 secs / 0.358 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 120 of 167 (16 FAILED) (0 secs / 0.359 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 121 of 167 (16 FAILED) (0 secs / 0.359 secs)
+Chrome 145.0.0.0 (Mac OS 10.15.7) ToolbarComponent should return true if on login page FAILED
+        Expected false to be true.
+            at <Jasmine>
+            at UserContext.<anonymous> (src/app/components/shared/toolbar/toolbar.component.spec.ts:43:37)
+            at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:398:28)
+            at _ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:2132:39)
+            at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:397:34)
+LOG: 'ApiService says: added new mapping', 1, 'http://example.com/old.jpg'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 134 of 167 (17 FAILED) (0 secs / 0.364 secs)
+LOG: 'ApiService says: deleted existing mapping for id: 1'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 134 of 167 (17 FAILED) (0 secs / 0.364 secs)
+LOG: 'ApiService says: added new mapping', 1, 'http://example.com/new.jpg'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 134 of 167 (17 FAILED) (0 secs / 0.364 secs)
+LOG: 'ApiService says: added new mapping', 1, 'http://example.com/image.jpg'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 135 of 167 (17 FAILED) (0 secs / 0.364 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 141 of 167 (17 FAILED) (0 secs / 0.366 secs)
+LOG: 'user-details-header says: emitting', ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 141 of 167 (17 FAILED) (0 secs / 0.366 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 142 of 167 (17 FAILED) (0 secs / 0.369 secs)
+LOG: 'user-details-header says: emitting', ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 142 of 167 (17 FAILED) (0 secs / 0.369 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 143 of 167 (17 FAILED) (0 secs / 0.37 secs)
+LOG: 'user-details-header says: emitting', ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 143 of 167 (17 FAILED) (0 secs / 0.37 secs)
+Chrome 145.0.0.0 (Mac OS 10.15.7) UserListHeaderComponent should have toolbar FAILED
+        Expected null to be truthy.
+            at <Jasmine>
+            at UserContext.<anonymous> (src/app/components/user-details/user-details-header/user-details-header.component.spec.ts:59:51)
+            at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:398:28)
+            at _ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:2132:39)
+            at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:397:34)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 144 of 167 (18 FAILED) (0 secs / 0.372 secs)
+LOG: 'user-details-header says: emitting', ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 144 of 167 (18 FAILED) (0 secs / 0.372 secs)
+LOG: 'user-details-header says: emitting', 'test'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 144 of 167 (18 FAILED) (0 secs / 0.372 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 145 of 167 (18 FAILED) (0 secs / 0.373 secs)
+LOG: 'user-details-header says: emitting', ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 145 of 167 (18 FAILED) (0 secs / 0.373 secs)
+LOG: 'user-list-header says: new user clicked'
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 145 of 167 (18 FAILED) (0 secs / 0.373 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 146 of 167 (18 FAILED) (0 secs / 0.374 secs)
+LOG: 'user-details-header says: emitting', ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 146 of 167 (18 FAILED) (0 secs / 0.374 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 147 of 167 (18 FAILED) (0 secs / 0.375 secs)
+LOG: 'user-details-header says: emitting', ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 147 of 167 (18 FAILED) (0 secs / 0.375 secs)
+LOG: 'user-list-header says grid cols clicked: ', 3
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 147 of 167 (18 FAILED) (0 secs / 0.375 secs)
+LOG: ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 148 of 167 (18 FAILED) (0 secs / 0.376 secs)
+LOG: 'user-details-header says: emitting', ''
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 148 of 167 (18 FAILED) (0 secs / 0.376 secs)
+LOG: 'add-comment-dialog says: form submitted', FormGroup{_pendingDirty: false, _hasOwnPendingAsyncValidator: null, _pendingTouched: false, _onCollectionChange: () => this._updateDomValue(), _updateOn: undefined, _parent: null, _asyncValidationSubscription: undefined, _composedValidatorFn: null, _composedAsyncValidatorFn: null, _rawValidators: null, _rawAsyncValidators: null, value: Object{title: 'Test Comment', email: 'test@example.com', body: 'Test comment body'}, _status: [Computed: VALID], statusReactive: [Signal: VALID], errors: null, _pristine: [Computed: true], pristineReactive: [Signal: true], _touched: [Computed: false], touchedReactive: [Signal: false], _events: Subject{closed: false, currentObservers: [], observers: [], isStopped: false, hasError: false, thrownError: null}, events: _Observable{source: Subject{closed: ..., currentObservers: ..., observers: ..., isStopped: ..., hasError: ..., thrownError: ...}}, valueChanges: EventEmitter_{closed: false, currentObservers: [], observers: [], isStopped: false, hasError: false, thrownError: null, __isAsync: false, destroyRef: NodeInjectorDestroyRef{_lView: ...}, pendingTasks: _PendingTasksInternal{taskId: ..., pendingTasks: ..., destroyed: ..., pendingTask: ...}}, statusChanges: EventEmitter_{closed: false, currentObservers: [], observers: [], isStopped: false, hasError: false, thrownError: null, __isAsync: false, destroyRef: NodeInjectorDestroyRef{_lView: ...}, pendingTasks: _PendingTasksInternal{taskId: ..., pendingTasks: ..., destroyed: ..., pendingTask: ...}}, _onDisabledChange: [], controls: Object{title: FormControl2{_pendingDirty: ..., _hasOwnPendingAsyncValidator: ..., _pendingTouched: ..., _onCollectionChange: ..., _updateOn: ..., _parent: ..., _asyncValidationSubscription: ..., _composedValidatorFn: ..., _composedAsyncValidatorFn: ..., _rawValidators: ..., _rawAsyncValidators: ..., value: ..., _status: ..., statusReactive: ..., errors: ..., _pristine: ..., pristineReactive: ..., _touched: ..., touchedReactive: ..., _events: ..., events: ..., valueChanges: ..., statusChanges: ..., _onDisabledChange: ..., defaultValue: ..., _onChange: ..., _pendingValue: ..., _pendingChange: ...}, email: FormControl2{_pendingDirty: ..., _hasOwnPendingAsyncValidator: ..., _pendingTouched: ..., _onCollectionChange: ..., _updateOn: ..., _parent: ..., _asyncValidationSubscription: ..., _composedValidatorFn: ..., _composedAsyncValidatorFn: ..., _rawValidators: ..., _rawAsyncValidators: ..., value: ..., _status: ..., statusReactive: ..., errors: ..., _pristine: ..., pristineReactive: ..., _touched: ..., touchedReactive: ..., _events: ..., events: ..., valueChanges: ..., statusChanges: ..., _onDisabledChange: ..., defaultValue: ..., _onChange: ..., _pendingValue: ..., _pendingChange: ...}, body: FormControl2{_pendingDirty: ..., _hasOwnPendingAsyncValidator: ..., _pendingTouched: ..., _onCollectionChange: ..., _updateOn: ..., _parent: ..., _asyncValidationSubscription: ..., _composedValidatorFn: ..., _composedAsyncValidatorFn: ..., _rawValidators: ..., _rawAsyncValidators: ..., value: ..., _status: ..., statusReactive: ..., errors: ..., _pristine: ..., pristineReactive: ..., _touched: ..., touchedReactive: ..., _events: ..., events: ..., valueChanges: ..., statusChanges: ..., _onDisabledChange: ..., defaultValue: ..., _onChange: ..., _pendingValue: ..., _pendingChange: ...}}}
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 154 of 167 (18 FAILED) (0 secs / 0.387 secs)
+LOG: 'add-comment-dialog says: form submitted', FormGroup{_pendingDirty: false, _hasOwnPendingAsyncValidator: null, _pendingTouched: false, _onCollectionChange: () => this._updateDomValue(), _updateOn: undefined, _parent: null, _asyncValidationSubscription: undefined, _composedValidatorFn: null, _composedAsyncValidatorFn: null, _rawValidators: null, _rawAsyncValidators: null, value: Object{title: 'Test Comment', email: 'test@example.com', body: 'Test comment body'}, _status: [Computed: VALID], statusReactive: [Signal: VALID], errors: null, _pristine: [Computed: true], pristineReactive: [Signal: true], _touched: [Computed: false], touchedReactive: [Signal: false], _events: Subject{closed: false, currentObservers: [], observers: [], isStopped: false, hasError: false, thrownError: null}, events: _Observable{source: Subject{closed: ..., currentObservers: ..., observers: ..., isStopped: ..., hasError: ..., thrownError: ...}}, valueChanges: EventEmitter_{closed: false, currentObservers: [], observers: [], isStopped: false, hasError: false, thrownError: null, __isAsync: false, destroyRef: NodeInjectorDestroyRef{_lView: ...}, pendingTasks: _PendingTasksInternal{taskId: ..., pendingTasks: ..., destroyed: ..., pendingTask: ...}}, statusChanges: EventEmitter_{closed: false, currentObservers: [], observers: [], isStopped: false, hasError: false, thrownError: null, __isAsync: false, destroyRef: NodeInjectorDestroyRef{_lView: ...}, pendingTasks: _PendingTasksInternal{taskId: ..., pendingTasks: ..., destroyed: ..., pendingTask: ...}}, _onDisabledChange: [], controls: Object{title: FormControl2{_pendingDirty: ..., _hasOwnPendingAsyncValidator: ..., _pendingTouched: ..., _onCollectionChange: ..., _updateOn: ..., _parent: ..., _asyncValidationSubscription: ..., _composedValidatorFn: ..., _composedAsyncValidatorFn: ..., _rawValidators: ..., _rawAsyncValidators: ..., value: ..., _status: ..., statusReactive: ..., errors: ..., _pristine: ..., pristineReactive: ..., _touched: ..., touchedReactive: ..., _events: ..., events: ..., valueChanges: ..., statusChanges: ..., _onDisabledChange: ..., defaultValue: ..., _onChange: ..., _pendingValue: ..., _pendingChange: ...}, email: FormControl2{_pendingDirty: ..., _hasOwnPendingAsyncValidator: ..., _pendingTouched: ..., _onCollectionChange: ..., _updateOn: ..., _parent: ..., _asyncValidationSubscription: ..., _composedValidatorFn: ..., _composedAsyncValidatorFn: ..., _rawValidators: ..., _rawAsyncValidators: ..., value: ..., _status: ..., statusReactive: ..., errors: ..., _pristine: ..., pristineReactive: ..., _touched: ..., touchedReactive: ..., _events: ..., events: ..., valueChanges: ..., statusChanges: ..., _onDisabledChange: ..., defaultValue: ..., _onChange: ..., _pendingValue: ..., _pendingChange: ...}, body: FormControl2{_pendingDirty: ..., _hasOwnPendingAsyncValidator: ..., _pendingTouched: ..., _onCollectionChange: ..., _updateOn: ..., _parent: ..., _asyncValidationSubscription: ..., _composedValidatorFn: ..., _composedAsyncValidatorFn: ..., _rawValidators: ..., _rawAsyncValidators: ..., value: ..., _status: ..., statusReactive: ..., errors: ..., _pristine: ..., pristineReactive: ..., _touched: ..., touchedReactive: ..., _events: ..., events: ..., valueChanges: ..., statusChanges: ..., _o
+Chrome 145.0.0.0 (Mac OS 10.15.7): Executed 167 of 167 (18 FAILED) (0.44 secs / 0.401 secs)
+TOTAL: 18 FAILED, 149 SUCCESS

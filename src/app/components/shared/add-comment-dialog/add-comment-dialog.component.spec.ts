@@ -46,7 +46,7 @@ describe('AddCommentDialogComponent', () => {
   });
 
   it('should initialize form with empty values', () => {
-    expect(component.newCommentForm.get('name')?.value).toBe('');
+    expect(component.newCommentForm.get('title')?.value).toBe('');
     expect(component.newCommentForm.get('email')?.value).toBe('');
     expect(component.newCommentForm.get('body')?.value).toBe('');
   });
@@ -74,14 +74,14 @@ describe('AddCommentDialogComponent', () => {
 
   it('should submit valid form data', () => {
     component.newCommentForm.patchValue({
-      name: 'Test Comment',
+      title: 'Test Comment',
       email: 'test@example.com',
       body: 'Test comment body'
     });
 
     component.submitData();
 
-    expect(component.isValidForm).toBe(true);
+    expect(component.newCommentForm.valid).toBe(true);
     expect(mockDialogRef.close).toHaveBeenCalledWith({
       post_id: 1,
       name: 'Test Comment',
@@ -92,14 +92,14 @@ describe('AddCommentDialogComponent', () => {
 
   it('should clear form when onClearButton is called', () => {
     component.newCommentForm.patchValue({
-      name: 'Test Comment',
+      title: 'Test Comment',
       email: 'test@example.com',
       body: 'Test comment body'
     });
 
     component.onClearButton();
 
-    expect(component.newCommentForm.get('name')?.value).toBeNull();
+    expect(component.newCommentForm.get('title')?.value).toBeNull();
     expect(component.newCommentForm.get('email')?.value).toBeNull();
     expect(component.newCommentForm.get('body')?.value).toBeNull();
   });
@@ -107,7 +107,7 @@ describe('AddCommentDialogComponent', () => {
   it('should require all fields', () => {
     const form = component.newCommentForm;
 
-    expect(form.get('name')?.hasError('required')).toBe(true);
+    expect(form.get('title')?.hasError('required')).toBe(true);
     expect(form.get('email')?.hasError('required')).toBe(true);
     expect(form.get('body')?.hasError('required')).toBe(true);
   });

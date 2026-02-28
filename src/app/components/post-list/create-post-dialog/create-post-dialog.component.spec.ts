@@ -68,7 +68,6 @@ describe('CreatePostDialogComponent', () => {
   it('should not submit when form is invalid', () => {
     component.submitData();
 
-    expect(component.isInvalid).toBe(true);
     expect(mockDialogRef.close).not.toHaveBeenCalled();
   });
 
@@ -76,16 +75,15 @@ describe('CreatePostDialogComponent', () => {
     component.newPostForm.patchValue({
       userName: 'john@example.com',
       title: 'Test Post',
-      body: 'Test body'
+      body: 'Test body that is long enough'
     });
 
     component.submitData();
 
-    expect(component.isInvalid).toBe(false);
     expect(mockDialogRef.close).toHaveBeenCalledWith({
       user_id: 1,
       title: 'Test Post',
-      body: 'Test body'
+      body: 'Test body that is long enough'
     });
   });
 

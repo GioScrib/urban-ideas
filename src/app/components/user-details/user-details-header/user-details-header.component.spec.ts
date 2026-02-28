@@ -56,7 +56,7 @@ describe('UserListHeaderComponent', () => {
 
   it('should have toolbar', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('mat-toolbar')).toBeTruthy();
+    expect(compiled.querySelector('.mat-toolbar')).toBeTruthy();
   });
 
   it('should have back button', () => {
